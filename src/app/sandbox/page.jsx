@@ -1,5 +1,6 @@
+import Timeline from "@/components/timeline/timeline";
 function Page() {
-    return <div>Write your code here</div>;
+    return <div><Timeline/></div>;
 }
 
 export default Page;
