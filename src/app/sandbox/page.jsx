@@ -1,5 +1,5 @@
-function Page() {
-    return <div>Write your code here</div>;
-}
+import Herosection from "@/components/herosection/ main";
 
-export default Page;
+export default function RootLayout({ children }) {
+  return <Herosection />;
+}
