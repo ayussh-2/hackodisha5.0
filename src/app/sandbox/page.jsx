@@ -1,5 +1,12 @@
+import Footer from "@/components/shared/footer/footer";
+import HOC from "@/components/shared/hoc";
+
 function Page() {
-    return <div>Write your code here</div>;
+    return (
+        <HOC>
+            <Footer/>
+        </HOC>
+    );
 }
 
 export default Page;
