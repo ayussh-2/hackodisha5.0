@@ -15,6 +15,7 @@
     --font-bricolage-grotesque: var(--font-bricolage-grotesque);
     --font-clash-display: var(--font-clash-display);
     --font-helvetica: var(--font-helvetica);
+    
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,8 +25,17 @@
     }
 }
 
-body {
+/* body {
     background: var(--background);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
+} */
+@theme{
+    
 }
+.fit {
+        width: fit-content;
+        height: fit-content;
+}
+
+
