@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
                 className={`${archivo.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} antialiased`}
             >
                 <HOC>{children}</HOC>
-                <Prize />
             </body>
         </html>
     );
