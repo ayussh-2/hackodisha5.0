@@ -13,11 +13,12 @@ function Gold() {
         height={100} // Estimate height; adjust based on SVG shape
         className="w-[300px] scale-[1.45] h-auto"
       />
-      <div className="absolute inset-0 flex flex-col items-center left-10 -top-5 justify-center rotate-[-15deg] px-2">
+      <div className="absolute inset-0 flex flex-col items-center left-17 -top-1 justify-center rotate-[-16deg] px-2">
       <span className="text-black font-extrabold text-xl text-center leading-tight">
         CASH PRIZE
       </span>
-      <span className="text-yellow-500 font-extrabold text-sm text-center leading-tight">
+
+      <span className="text-yellow-500 font-extrabold text-3xl text-center leading-tight">
         ₹25k
       </span>
     </div>

@@ -7,7 +7,6 @@ import {
     helvetica,
 } from "@/fonts";
 import HOC from "../components/shared/hoc";
-import Prize from "@/components/Prize";
 
 export const metadata = {
     title: "Hackodisha 5.0",
