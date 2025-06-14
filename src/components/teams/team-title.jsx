@@ -7,7 +7,7 @@ export default function TeamTitle() {
         <img
         src="https://res.cloudinary.com/djqgs2pet/image/upload/v1749742278/circle-sticker-teams_ccxfdi.png"
         alt="Sticker"
-        className="absolute top-0 right-0 w-24 h-auto z-10 m-0 p-0"
+        className="absolute h-auto m-0 p-0 top-0 right-0 z-10 w-20 sm:w-28 md:w-32 lg:w-36"
         />
         </div>
 

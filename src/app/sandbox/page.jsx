@@ -1,14 +1,12 @@
 
-import Stickers from "@/components/shared/stickers"; 
-import TeamTitle from "@/components/shared/team-title";
 
-function Teams() {
+import Teams from '../../components/teams/teams';
+
+export default function Page() {
   return (
-     <div className="w-full h-full" style={{ backgroundColor: '#BC82FE' }}>
-     <TeamTitle />
-      <Stickers />
+    <div>
+      <Teams />
     </div>
   );
 }
 
-export default Teams;
