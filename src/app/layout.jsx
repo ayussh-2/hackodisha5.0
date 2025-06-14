@@ -7,6 +7,7 @@ import {
     helvetica,
 } from "@/fonts";
 import HOC from "../components/shared/hoc";
+import Prize from "@/components/Prize";
 
 export const metadata = {
     title: "Hackodisha 5.0",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
                 className={`${archivo.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} antialiased`}
             >
                 <HOC>{children}</HOC>
+                <Prize />
             </body>
         </html>
     );
