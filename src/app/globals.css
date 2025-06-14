@@ -30,9 +30,7 @@
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 } */
-@theme{
-    
-}
+
 .fit {
         width: fit-content;
         height: fit-content;

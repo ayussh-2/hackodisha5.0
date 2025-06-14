@@ -8,8 +8,8 @@ const RotatingDollarBagIcon = () => {
     const handleScrollBag = () => {
       const scrollY = window.scrollY;
         // Define scroll limits
-      const minScroll = 600; // Minimum scroll position to start rotation
-      const maxScroll = 1300; // Maximum scroll position to end rotation
+      const minScroll = 400; // Minimum scroll position to start rotation
+      const maxScroll = 1400; // Maximum scroll position to end rotation
      if (window.innerWidth < 700) return;
      if (scrollY < minScroll) {
         // Before scroll range — no rotation
@@ -27,7 +27,7 @@ const RotatingDollarBagIcon = () => {
         const rotation = progress * 360;
         const move= progress *100 ; // Adjust this value to control the horizontal movement
         if (dollarBagRef.current) {
-          dollarBagRef.current.style.transform = `rotate(${-1*rotation}deg) `; //translateX(${-1*move}
+          dollarBagRef.current.style.transform = `rotate(${1*rotation}deg) `; //translateX(${-1*move}
         }
       }
     };
@@ -37,7 +37,7 @@ const RotatingDollarBagIcon = () => {
   }, []);
 
   return (
-   <div ref={dollarBagRef} className="overflow-hidden absolute top-[600px] left-[-20px] w-[70px] h-[70px]lg:absolute lg:top-[1050px] lg:left-[-50px] lg:w-[175.7941px] lg:h-[175.7941px] z-1   a">
+   <div ref={dollarBagRef} className="overflow-hidden absolute top-[650px] left-[-20px] w-[100px] h-[100px]lg:absolute lg:top-[1080px] lg:left-[-50px] lg:w-[200.7941px] lg:h-[200.7941px] z-1   ">
           <Image
             width={96}
             height={96}
