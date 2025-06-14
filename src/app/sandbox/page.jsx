@@ -1,5 +1,11 @@
-import Herosection from "@/components/herosection/ main";
+import Herosection from "@/components/herosection/main";
+import Teams from "@/components/teams/teams";
 
-export default function RootLayout({ children }) {
-  return <Herosection />;
+export default function Page() {
+    return (
+        <main>
+            <Herosection />;
+            <Teams />
+        </main>
+    );
 }
