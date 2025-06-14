@@ -1,5 +1,12 @@
-function Page() {
-    return <div>Write your code here</div>;
+
+
+import Teams from '../../components/teams/teams';
+
+export default function Page() {
+  return (
+    <div>
+      <Teams />
+    </div>
+  );
 }
 
-export default Page;
