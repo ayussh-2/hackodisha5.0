@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #efe7f7;
+    --foreground: #d3aeff;
 }
 
 @theme inline {
@@ -17,13 +17,6 @@
     --font-helvetica: var(--font-helvetica);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-}
-
 body {
     background: var(--background);
     color: var(--foreground);
@@ -31,6 +24,5 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
-
