@@ -37,7 +37,7 @@ const RotatingDollarIcon = () => {
   }, []);
 
   return (
-   <div ref={dollarRef} className=" overflow-hidden absolute top-[220px] right-[-20px] w-[90px] h-[90px] rotate-0     lg:-rotate-0 lg:absolute lg:top-[450px] lg:right-[-40px] lg:h-[212.79412793542804px] lg:w-[212.79412793542804px] lg:z-2 lg:fit ">
+   <div ref={dollarRef} className=" overflow-hidden absolute top-[360px] right-[-20px] w-[90px] h-[90px] rotate-0     lg:-rotate-0 lg:absolute lg:top-[450px] lg:right-[-40px] lg:h-[212.79412793542804px] lg:w-[212.79412793542804px] lg:z-2 lg:fit ">
           <Image
             width={212.79412793542804}
             height={212.79412793542804}

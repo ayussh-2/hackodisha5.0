@@ -17,29 +17,32 @@ const Page= () => {
 
 
   const SponsorGroup = ({ title, sponsors }) => (
-    <div className="overflow-hidden flex flex-col justify-centre p-[10px]  lg:ml-[100px] lg:mr-[100px]">
-      <div className=" w-full   flex  justify-center  ">
+   
+
+    <div className="flex flex-col justify-center items-center  bg-[#EFE7F7] mb-[70px] lg:mb-[120px]">
+      <div className=" w-full   flex  justify-center mb-[70px] lg:mb-[120px] ">
           <span className="font-archivo font-[600]   text-[17px] px-4 py-2 lg:px-8 lg:py-4 bg-[#FFEA89] rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1.00)]   outline-1 outline-offset-[-1px] outline-black inline-flex justify-center items-center gap-2   lg:font-[700] lg:text-[36px] lg:shadow-[6px_6px_0px_0px_rgba(0,0,0,1.00)]  ">
             {title.toUpperCase()} SPONSORS
           </span>
       </div>
-      <div className="px-[20px] mb-[70px] py-[20px] gap-2 lg:gap-4 font-bold  --font-archivo bg-white lg:px-[30px] lg:py-[31px] rounded-[60px] border-[2px] border-gray-400 flex flex-row space justify-between  shadow-md mt-[64px] lg:mb-[120px]">
-       
-                {sponsors.map((src, idx) => (
-                  <div className="w-[70px] h-[70px] fit rounded-[50%]  bg-white border border-black lg:w-[100px] lg:h-[100px] lg:p-1">
-                      <Image
-                        width={109.94}
-                        height={109.94}
-                        key={idx}
-                        src={src}
-                        alt="Sponsor logo"
-                        className="  p-0.5 border-[1px]  lg:border-2 border-dashed border-gray-400 rounded-full lg:p-2 hover:scale-105 transition"
-                      />
-                  </div>
-                ))}
-         
+      <div className="flex flex-wrap justify-center items-center gap-4 px-6 py-8 rounded-3xl border-2 border-gray-400 bg-white shadow-md w-[90%] max-w-[700px]">
+        {sponsors.map((src, idx) => (
+          <div
+            key={idx}
+            className="w-[60px] h-[60px] lg:w-[100px] lg:h-[100px] rounded-full border border-black bg-white flex items-center justify-center"
+          >
+            <Image
+              src={src}
+              alt="Solana logo"
+              width={80}
+              height={80}
+              className="p-1 border border-dashed border-purple-500 rounded-full lg:p-2"
+            />
+          </div>
+        ))}
       </div>
     </div>
+    
   );
 
   return (
