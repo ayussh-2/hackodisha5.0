@@ -1,10 +1,11 @@
 import Image from "next/image";
+import prizeImages from "@/config/prizes";
 function Bronze() {
   return (
     <div className="bg-[#D3AEFF] border-1 border-black md:rounded-2xl rounded-[100px] p-3 sm:p-5 flex relative flex-col items-center justify-center overflow-visible">
       <div className="absolute xl:top-73 xl:-right-9 top-70 -right-10 w-55 rotate-[1deg] hidden md:block z-10">
         <Image
-          src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749892444/Asset_1_3_e67qrs.svg"
+          src={prizeImages.bronzeTag}
           alt="Cash Prize Tag"
           width={112}
           height={100}
@@ -34,7 +35,7 @@ function Bronze() {
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749717470/Rectangle_3475310_kabmlc.svg"
+                src={prizeImages.capsuleOutlineDesktop}
                 alt="Bronze Outline"
                 fill
                 className="rounded-full object-contain"
@@ -47,7 +48,7 @@ function Bronze() {
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749931291/Rectangle_3475310_1_e676el.svg"
+                src={prizeImages.capsuleOutlineMobile}
                 alt="Mobile Bronze Outline"
                 fill
                 className="rounded-full object-contain"

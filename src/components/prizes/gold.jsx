@@ -1,11 +1,12 @@
 import Image from "next/image";
+import prizeImages from "@/config/prizes";
 
 function Gold() {
   return (
     <div className="bg-[#D3AEFF] border-1 border-black relative md:rounded-2xl rounded-[100px]  p-3 sm:p-5 md:row-span-2 flex flex-col items-center justify-center overflow-visible">
       <div className="absolute hidden md:block xl:-top-31 -left-11 -top-31 xl:-left-10 w-55 xl:rotate-[0deg] z-10">
         <Image
-          src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749798805/Asset_1_1_2_gkhzjv.svg"
+          src={prizeImages.goldTag}
           alt="Cash Prize Tag"
           width={112}
           height={100}
@@ -36,7 +37,7 @@ function Gold() {
               style={{ padding: "10px", boxSizing: "border-box" }}
             >
               <Image
-                src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749717470/Rectangle_3475310_kabmlc.svg"
+                src={prizeImages.capsuleOutlineDesktop}
                 alt="Capsule Outline"
                 fill
                 className="rounded-full object-contain"
@@ -49,7 +50,7 @@ function Gold() {
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749931291/Rectangle_3475310_1_e676el.svg"
+                 src={prizeImages.capsuleOutlineMobile}
                 alt="Mobile Capsule Outline"
                 fill
                 className="rounded-full object-contain"
