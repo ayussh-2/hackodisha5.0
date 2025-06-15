@@ -36,7 +36,7 @@ const Handsvg = () => {
             className="w-30 h-12  md:w-36 md:h-20  absolute top-23 sm:top-25 -right-12 md:left-80 lg:left-93 sm:left-60 md:top-28 lg:top-16 "
           />
 
-          {/* <div className=" absolute top-28 -right-3">test</div> */}
+           
         </div>
        
       </div>

@@ -1,5 +1,5 @@
-import Herosection from "@/components/herosection/ main";
+import Herosection from "@/components/hero/ hero";
 
-export default function RootLayout({ children }) {
+export default function page() {
   return <Herosection />;
 }

@@ -9,7 +9,7 @@ const Hackodisha = () => {
           <h1 className="text-black font-bricolage-grotesque font-extrabold text-4xl sm:text-6xl md:text-[80px] lg:text-[110px] xl:text-[140px] leading-none ">
             HACK ODISHA
           </h1>
-          <p className="text-black font-archivo text-center font-[Archivo] text-base sm:text-2xl lg:text-3xl  xl:text-[36px] font-medium leading-none tracking-[1.26px]">
+          <p className="text-black  text-center font-[Archivo] text-base sm:text-2xl lg:text-3xl  xl:text-[36px] font-medium leading-none tracking-[1.26px]">
             06-07th ,September 2025
           </p>
         </div>
