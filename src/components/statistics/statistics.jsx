@@ -17,17 +17,8 @@ import { defaultStatsConfig } from "@/config/statistics";
 
 export default function Statistics({ statsData }) {
   
-  // Use provided stats data or fall back to defaults
+  
   const stats = statsData || defaultStatsConfig;
-
-  // Loading state for future API integration
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [labelPositions, setLabelPositions] = useState(
-    stats.map(() => ({ x: 15, y: 15, angle: 0 }))
-  );  const cardsRef = useRef(stats.map(() => useRef(null)));
-  const labelsRef = useRef(stats.map(() => useRef(null)));
-
   
   useEffect(() => {
     if (!cardsRef.current || !labelsRef.current) return;
