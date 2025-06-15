@@ -148,7 +148,7 @@ export default function Statistics({ statsData }) {
         const wallThickness = 20;
         const ground = Bodies.rectangle(
           width / 2,
-          height - 80, // Floor above stat number area
+          height - 110, // Floor above stat number area
           width - 10,
           wallThickness,
           { isStatic: true }
