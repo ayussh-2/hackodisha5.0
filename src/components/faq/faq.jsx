@@ -4,7 +4,6 @@ import Image from "next/image";
 import SectionTitle from "../shared/section-title";
 import { arrow, plusIcon, quesMark, faqItems, XIcons } from "@/config/faq";
 
-// Custom Plus Icon Component
 const PlusIcon = ({ className }) => (
   <Image
   src={plusIcon}
@@ -15,7 +14,6 @@ const PlusIcon = ({ className }) => (
 />
 );
 
-// Custom X Icon Component
 const XIcon = ({ className }) => (
   <Image
   src={XIcons}
@@ -26,7 +24,6 @@ const XIcon = ({ className }) => (
 />
 );
 
-// Simple Accordion implementation
 const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
   if (isOpen) {
     return (
@@ -77,16 +74,11 @@ function FaqSection() {
       ...prev,
       [index]: !prev[index],
     }));
-  };
-
-  // FAQ data for the accordion
-  
+  };  
 
   return (
     <div className="w-full">
-      {/* FAQ Section */}
       <section className="relative w-full py-8 sm:py-12 lg:py-16 bg-purple-400 overflow-hidden min-h-fit sm:min-h-screen lg:min-h-[calc(100vh-4rem)]">
-        {/* Question Mark Symbol */}
         <div className="absolute bottom-1/3 left-4 sm:bottom-1/3 sm:left-8">
           <Image
             src={quesMark}
@@ -97,7 +89,6 @@ function FaqSection() {
           />
         </div>
 
-        {/* Arrow Symbol */}
         <div className="absolute top-16 right-4 sm:top-20 sm:right-26">
           <Image
             src={arrow}
@@ -116,14 +107,10 @@ function FaqSection() {
           />
         </div>
 
-
-        {/* FAQ Header */}
           <SectionTitle title="FAQS" />
-        {/* FAQ Section */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xs sm:max-w-md lg:max-w-2xl xl:max-w-4xl">
           
 
-          {/* FAQ Accordion with Overlap Effect */}
           <div className="faq-container">
             <style jsx>{`
               @media (max-width: 400px) {
