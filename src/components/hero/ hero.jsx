@@ -1,7 +1,7 @@
-import { Navbar} from "../navbar/navbar";
+ import { Navbar } from "../navbar/Navbar";
 import Handsvg from "./hand-svg";
 import Hackodisha from "./ hackodisha";
-const Herosection = () => {
+const Hero = () => {
   return (
     <div className=" h-screen w-full rounded-b-[300px] bg-[#D3AEFF]">
       <div className=" h-[95vh] w-full rounded-b-[300px] bg-[#EFE7F7] ">
@@ -13,4 +13,4 @@ const Herosection = () => {
   );
 };
 
-export default Herosection;
+export default Hero;

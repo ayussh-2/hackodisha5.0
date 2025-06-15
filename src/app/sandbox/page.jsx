@@ -1,5 +1,11 @@
-import Herosection from "@/components/hero/ hero";
+ import Hero from "@/components/hero/ hero";
+import Teams from "@/components/teams/teams";
 
-export default function page() {
-  return <Herosection />;
+export default function Page() {
+    return (
+        <main>
+            <Hero />;
+            <Teams />
+        </main>
+    );
 }
