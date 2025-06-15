@@ -1,6 +1,13 @@
+import Hero from "@/components/hero/hero";
 import Prize from "@/components/prizes/prize";
-function Page() {
-    return <div><Prize /></div>;
-}
+import Teams from "@/components/teams/teams";
 
-export default Page;
+export default function Page() {
+    return (
+        <main>
+            <Hero />
+            <Prize />
+            <Teams />
+        </main>
+    );
+}
