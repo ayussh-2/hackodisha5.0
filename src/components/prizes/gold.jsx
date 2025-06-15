@@ -17,9 +17,7 @@ function Gold() {
             CASH PRIZE
           </span>
 
-          <span
-            className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight"
-          >
+          <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight">
             ₹25k
           </span>
         </div>
@@ -46,7 +44,7 @@ function Gold() {
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                 src={prizeImages.capsuleOutlineDesktop}
+                src={prizeImages.capsuleOutlineDesktop}
                 alt="Mobile Capsule Outline"
                 fill
                 className="rounded-full object-contain"
@@ -54,7 +52,6 @@ function Gold() {
               />
             </div>
 
-  
             <span className="relative z-10 text-2xl sm:text-3xl md:text-6xl xl:text-7xl text-black tracking-wider font-clash-display font-extrabold">
               GOLD
             </span>

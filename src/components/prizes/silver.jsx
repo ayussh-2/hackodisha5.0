@@ -6,7 +6,7 @@ function Silver() {
     <div className="bg-[#D3AEFF] border-1 border-black rounded-2xl  p-3 sm:p-5 flex flex-col items-center relative justify-center overflow-visible">
       <div className="absolute block -right-17 -top-27 sm:-right-14 sm:-top-29 md:-right-12 md:-top-31 xl:-top-32 xl:-right-10 w-55 rotate-[1deg] z-10">
         <Image
-         src={prizeImages.silverTag}
+          src={prizeImages.silverTag}
           alt="Cash Prize Tag"
           width={112}
           height={100}
@@ -17,9 +17,7 @@ function Silver() {
             CASH PRIZE
           </span>
 
-          <span
-            className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight"
-          >
+          <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight">
             ₹25k
           </span>
         </div>
@@ -32,7 +30,7 @@ function Silver() {
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                 src={prizeImages.capsuleOutlineDesktop}
+                src={prizeImages.capsuleOutlineDesktop}
                 alt="Silver Outline"
                 fill
                 className="rounded-full object-contain"
