@@ -1,4 +1,4 @@
-import { Archivo, Bricolage_Grotesque, Bebas_Neue } from "next/font/google";
+import { Archivo, Archivo_Black, Bricolage_Grotesque, Bebas_Neue, Oxanium } from "next/font/google";
 
 import localFont from "next/font/local";
 
@@ -6,6 +6,12 @@ export const archivo = Archivo({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
     variable: "--font-archivo",
+});
+
+export const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-archivo-black",
 });
 
 export const bricolageGrotesque = Bricolage_Grotesque({
@@ -30,6 +36,12 @@ export const bebasNeue = Bebas_Neue({
     subsets: ["latin"],
     weight: "400",
     variable: "--font-bebas-neue",
+});
+
+export const oxanium = Oxanium({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-oxanium',
 });
 
 export const clashDisplay = localFont({
