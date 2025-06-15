@@ -14,7 +14,7 @@ export default function Statistics({ statsData }) {
             hoverBg: "hover:bg-[#A266FF]"
         },
         { 
-            id: "registrations",
+            id: "projects",
             bg: "bg-[#FFEA89]", 
             label: "Projects", 
             value: "50+", 
@@ -22,7 +22,7 @@ export default function Statistics({ statsData }) {
             hoverBg: "hover:bg-[#FFD74C]"
         },
         { 
-            id: "registrations",
+            id: "participants",
             bg: "bg-[#EFE7F7]", 
             label: "Participants", 
             value: "50+", 
@@ -30,7 +30,7 @@ export default function Statistics({ statsData }) {
             hoverBg: "hover:bg-[#D8C6E9]"
         },
         { 
-            id: "registrations",
+            id: "prizes",
             bg: "bg-[#E6CEFF]", 
             label: "Prizes", 
             value: "50+", 
@@ -80,8 +80,8 @@ export default function Statistics({ statsData }) {
     }, []);
 
     // Pre-create all the draggable states for all cards
-    const labelDrags = stats.map(() => useDraggableHook({ x: 10, y: 10 }));
-    const numberDrags = stats.map(() => useDraggableHook({ x: 50, y: 150 }));
+    const labelDrags = stats.map(() => useDraggableHook({ x: 15, y: 15 }));
+    const numberDrags = stats.map(() => useDraggableHook({ x: 50, y: 120 }));
 
     // Combined hook for mouse and touch events
     function useDraggableHook(initialPosition = { x: 0, y: 0 }) {
@@ -132,17 +132,29 @@ export default function Statistics({ statsData }) {
         };
 
         const moveElement = (clientX, clientY) => {
-            const parentRect = ref.current.parentElement.getBoundingClientRect();
-            const newX = clientX - parentRect.left - dragOffset.current.x;
-            const newY = clientY - parentRect.top - dragOffset.current.y;
+            if (!ref.current) return;
             
+            const parentRect = ref.current.parentElement.getBoundingClientRect();
             const elementRect = ref.current.getBoundingClientRect();
-            const maxX = parentRect.width - elementRect.width;
-            const maxY = parentRect.height - elementRect.height;
+            
+            // Calculate new position accounting for element's rotation
+            let newX = clientX - parentRect.left - dragOffset.current.x;
+            let newY = clientY - parentRect.top - dragOffset.current.y;
+            
+            // Calculate effective width/height accounting for possible rotation
+            // This is a simplification - for precise calculation with rotation,
+            // we would need to use matrix transformations
+            const padding = 5; // Add a small padding to ensure elements stay fully inside
+            const maxX = parentRect.width - elementRect.width - padding;
+            const maxY = parentRect.height - elementRect.height - padding;
+            
+            // Apply constraints with a safety margin to keep elements fully inside
+            newX = Math.max(padding, Math.min(newX, maxX));
+            newY = Math.max(padding, Math.min(newY, maxY));
             
             setPosition({
-                x: Math.max(0, Math.min(newX, maxX)),
-                y: Math.max(0, Math.min(newY, maxY))
+                x: newX,
+                y: newY
             });
         };
 
@@ -222,18 +234,19 @@ export default function Statistics({ statsData }) {
                             return (
                                 <div 
                                     key={stat.id || index}
-                                    className={`w-[280px] h-[280px] sm:w-[250px] sm:h-[250px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-8 sm:mb-0 group`}
+                                    className={`w-[280px] h-[280px] sm:w-[250px] sm:h-[250px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-8 sm:mb-0 group overflow-hidden`}
                                 >
                                     {/* Draggable label with custom rotation */}
                                     <div 
                                         ref={labelDrag.ref}
                                         onMouseDown={labelDrag.handleMouseDown}
                                         onTouchStart={labelDrag.handleTouchStart}
-                                        className="absolute cursor-move inline-flex py-2 px-4 justify-center items-center gap-2.5 rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md touch-none select-none transition-all duration-300 ease-in-out"
+                                        className="absolute cursor-move inline-flex py-2 px-4 justify-center items-center gap-2.5 rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md touch-none select-none transition-all duration-300 ease-in-out z-10"
                                         style={{
                                             left: `${labelDrag.position.x}px`,
                                             top: `${labelDrag.position.y}px`,
                                             transform: `rotate(${stat.rotation}deg)`,
+                                            transformOrigin: 'center center',
                                             WebkitUserSelect: 'none',
                                             MozUserSelect: 'none',
                                             msUserSelect: 'none',
@@ -250,7 +263,7 @@ export default function Statistics({ statsData }) {
                                         ref={numberDrag.ref}
                                         onMouseDown={numberDrag.handleMouseDown}
                                         onTouchStart={numberDrag.handleTouchStart}
-                                        className="absolute cursor-move touch-none select-none transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                        className="absolute cursor-move touch-none select-none transition-transform duration-300 ease-in-out group-hover:scale-105 z-10"
                                         style={{
                                             left: `${numberDrag.position.x}px`,
                                             top: `${numberDrag.position.y}px`,
