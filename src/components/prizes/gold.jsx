@@ -57,20 +57,18 @@ function Gold() {
               />
             </div>
 
-            {/* GOLD Text */}
+  
             <span className="relative z-10 text-2xl sm:text-3xl md:text-6xl xl:text-7xl text-black tracking-wider font-clash-display font-extrabold">
               GOLD
             </span>
           </div>
         </div>
 
-        {/* Prize Description */}
         <p className="text-center hidden md:block text-purple-800 font-clash-display font-extrabold text-3xl xl:text-4xl leading-relaxed mb-10">
           Goodies & T-shirts <br />
           Vouchers worth
         </p>
 
-        {/* Prize Amount */}
         <div className="transform hidden md:block rotate-[-5deg] bg-white px-8 py-2 shadow-md border border-black">
           <span className="text-yellow-500 font-clash-display font-extrabold text-4xl">
             $50k
