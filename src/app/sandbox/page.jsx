@@ -9,7 +9,7 @@ export default function Page() {
     return (
         <main>
             <Hero />
-            <Statistics/>
+            <Statistics />
             <Prize />
             <Teams />
             <Sponsors />
