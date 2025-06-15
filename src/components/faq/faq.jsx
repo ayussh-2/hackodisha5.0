@@ -33,7 +33,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
           style={{ boxShadow: "3px 3px 0px rgba(0, 0, 0, 0.9)" }}
         >
           <div className="flex justify-between items-start mb-2 sm:mb-3 lg:mb-4">
-            <h3 className="font-semibold text-gray-800 text-sm sm:text-base lg:text-xl pr-2 sm:pr-3 lg:pr-4 leading-tight">
+            <h3 className="font-semibold font-archivo text-gray-800 text-sm sm:text-base lg:text-xl pr-2 sm:pr-3 lg:pr-4 leading-tight">
               {question}
             </h3>
             <button onClick={onToggle} className="flex-shrink-0 mt-0.5 sm:mt-1">
@@ -41,7 +41,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
             </button>
           </div>
           <div className="">
-            <p className="text-gray-700 leading-[1.5em] text-xs sm:text-sm lg:text-base bg-[linear-gradient(to_bottom,transparent_95%,black_95%)] bg-[length:100%_1.5em] bg-repeat-y">
+            <p className="text-gray-700 font-archivo leading-[1.5em] text-xs sm:text-sm lg:text-base bg-[linear-gradient(to_bottom,transparent_95%,black_95%)] bg-[length:100%_1.5em] bg-repeat-y">
               {answer}
             </p>
           </div>
