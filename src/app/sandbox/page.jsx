@@ -1,10 +1,15 @@
+import Hero from "@/components/hero/hero";
+import Prize from "@/components/prizes/prize";
+import Teams from "@/components/teams/teams";
 import Statistics from "@/components/statistics/statistics";
 
-
-function Page() {
+export default function Page() {
     return (
-        <Statistics/>
+        <main>
+            <Hero />
+            <Statistics/>
+            <Prize />
+            <Teams />
+        </main>
     );
 }
-
-export default Page;

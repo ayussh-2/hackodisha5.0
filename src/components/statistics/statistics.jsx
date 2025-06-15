@@ -13,45 +13,12 @@ import {
   Body,
   Common,
 } from "matter-js";
+import { defaultStatsConfig } from "@/config/statistics";
 
 export default function Statistics({ statsData }) {
-  // Default fallback data if no stats are provided
-  const defaultStats = [
-    {
-      id: "registrations",
-      bg: "bg-[#D3AEFF]",
-      label: "Registrations",
-      value: "50+",
-      rotation: -14.444,
-      hoverBg: "hover:bg-[#A266FF]",
-    },
-    {
-      id: "projects",
-      bg: "bg-[#FFEA89]",
-      label: "Projects",
-      value: "50+",
-      rotation: 12.088,
-      hoverBg: "hover:bg-[#FFD74C]",
-    },
-    {
-      id: "participants",
-      bg: "bg-[#EFE7F7]",
-      label: "Participants",
-      value: "50+",
-      rotation: -2.726,
-      hoverBg: "hover:bg-[#D8C6E9]",
-    },
-    {
-      id: "prizes",
-      bg: "bg-[#E6CEFF]",
-      label: "Prizes",
-      value: "50+",
-      rotation: 29.177,
-      hoverBg: "hover:bg-[#C59EFF]",
-    },
-  ];
+  
   // Use provided stats data or fall back to defaults
-  const stats = statsData || defaultStats;
+  const stats = statsData || defaultStatsConfig;
 
   // Loading state for future API integration
   const [isLoading, setIsLoading] = useState(false);
@@ -84,14 +51,12 @@ export default function Statistics({ statsData }) {
     let animationId = null;
 
     const initPhysics = () => {
-      // Wait for cards to be ready
       const cardsReady = cardsRef.current.every((ref) => ref?.current);
       if (!cardsReady) {
         setTimeout(initPhysics, 100);
         return;
       }
 
-      // Cleanup existing physics
       cleanup();
 
       stats.forEach((stat, index) => {
