@@ -40,7 +40,7 @@ export default function Statistics({ statsData }) {
   useEffect(() => {
   }, []);
 
-  // Setup Matter.js physics for labels
+  
   useEffect(() => {
     if (!cardsRef.current || !labelsRef.current) return;
 
@@ -63,22 +63,22 @@ export default function Statistics({ statsData }) {
         const card = cardsRef.current[index]?.current;
         if (!card) return;
 
-        // Get card dimensions
+        
         const rect = card.getBoundingClientRect();
         const width = rect.width;
-        const height = rect.height;        // Create engine
+        const height = rect.height;        
         const engine = Engine.create();
         engine.world.gravity.y = 0.8;
         engines.push(engine);
 
-        // Label dimensions (including padding and border)
-        const labelW = 165; // 145 + padding + border
-        const labelH = 45;  // 29 + padding + border
+        
+        const labelW = 165; 
+        const labelH = 45;  
 
-        // Create label body - start at random position in upper area
+        
         const labelBody = Bodies.rectangle(
-          width * 0.3 + Math.random() * width * 0.4, // Random X in middle area
-          30 + Math.random() * 50, // Random Y in upper area
+          width * 0.3 + Math.random() * width * 0.4, 
+          30 + Math.random() * 50, 
           labelW,
           labelH,
           {
@@ -90,11 +90,11 @@ export default function Statistics({ statsData }) {
         );
         labelBodies.push(labelBody);
 
-        // Create boundaries - simple walls
+        
         const wallThickness = 20;
         const ground = Bodies.rectangle(
           width / 2,
-          height - 110, // Floor above stat number area
+          height - 110, 
           width - 10,
           wallThickness,
           { isStatic: true }
@@ -120,7 +120,7 @@ export default function Statistics({ statsData }) {
           isStatic: true,
         });
 
-        // Add all to world
+        
         World.add(engine.world, [
           labelBody,
           ground,
@@ -129,7 +129,7 @@ export default function Statistics({ statsData }) {
           ceiling,
         ]);
 
-        // Mouse constraint for dragging
+        
         const mouse = Mouse.create(card);
         const mouseConstraint = MouseConstraint.create(engine, {
           mouse: mouse,
@@ -141,20 +141,20 @@ export default function Statistics({ statsData }) {
         World.add(engine.world, mouseConstraint);
         mouseConstraints.push(mouseConstraint);
 
-        // Run engine
+        
         const runner = Runner.create();
         Runner.run(runner, engine);
         runners.push(runner);
       });
 
-      // Animation loop
+      
       const animate = () => {
         if (labelBodies.length > 0) {
           labelBodies.forEach((body, index) => {            const labelEl = labelsRef.current[index]?.current;
             if (labelEl) {
-              // Simple positioning - center the element on the body
-              const x = body.position.x - 82.5; // Half of label width (165/2)
-              const y = body.position.y - 22.5; // Half of label height (45/2)
+              
+              const x = body.position.x - 82.5; 
+              const y = body.position.y - 22.5; 
 
               labelEl.style.left = `${x}px`;
               labelEl.style.top = `${y}px`;
@@ -183,10 +183,10 @@ export default function Statistics({ statsData }) {
       mouseConstraints = [];
     };
 
-    // Initialize physics
+   
     setTimeout(initPhysics, 100);
 
-    // Cleanup on unmount
+    
     return cleanup;
   }, [stats]);
 
