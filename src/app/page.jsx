@@ -1,8 +1,10 @@
+import Prize from "@/components/prizes/prize";
 import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex flex-col items-center justify-center p-8 relative overflow-hidden">
+       <div>
+         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex flex-col items-center justify-center p-8 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
             <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -translate-x-48 -translate-y-48"></div>
@@ -79,6 +81,9 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
+             
         </div>
+        
+       </div>
     );
 }
