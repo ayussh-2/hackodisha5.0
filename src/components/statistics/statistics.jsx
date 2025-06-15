@@ -28,18 +28,6 @@ export default function Statistics({ statsData }) {
   );  const cardsRef = useRef(stats.map(() => useRef(null)));
   const labelsRef = useRef(stats.map(() => useRef(null)));
 
-  const fetchRealTimeStats = async () => {
-    try {
-      setIsLoading(true);
-      setIsLoading(false);
-    } catch (err) {
-      setError("Failed to load statistics");
-      setIsLoading(false);
-    }  };
-
-  useEffect(() => {
-  }, []);
-
   
   useEffect(() => {
     if (!cardsRef.current || !labelsRef.current) return;
@@ -192,7 +180,6 @@ export default function Statistics({ statsData }) {
 
   return (
     <div className="flex flex-col justify-center items-center w-full max-w-full overflow-hidden h-auto min-h-screen py-24 px-0 md:px-4 mx-auto bg-[#BC82FE] relative">
-      {/* STATISTICS heading label - positioned on the line */}
       <SectionTitle title={"STATISTICS"} />
 
       <div className="w-full overflow-hidden mt-16 pt-8">
@@ -220,7 +207,6 @@ export default function Statistics({ statsData }) {
                   ref={cardsRef.current[index]}
                 >
                   {" "}
-                  {/* Physics-based label with original rotation - now draggable with Matter.js */}
                   <div
                     ref={labelsRef.current[index]}
                     className="absolute cursor-grab active:cursor-grabbing inline-flex py-3 px-6 justify-center items-center gap-2.5 rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md select-none will-change-transform z-10"
@@ -243,7 +229,6 @@ export default function Statistics({ statsData }) {
                       {stat.label}
                     </p>
                   </div>{" "}
-                  {/* Stat number with no top margin to allow labels to touch */}
                   <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
                     <p className="text-black font-sans text-[70px] sm:text-[80px] md:text-[90px] lg:text-[100px] xl:text-[120px] font-extrabold leading-none select-none">
                       {stat.value}
