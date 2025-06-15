@@ -27,7 +27,7 @@ export default function SectionTitleSponsor({ title, stickerImage }) {
 
                 <div className="px-2 py-1.5 bg-white rounded-xl lg:px-4 lg:py-3 border-2 border-black z-10  ">
                     <div className="px-3 py-1.5 bg-white rounded-lg lg:px-8 lg:py-3 border-2 border-dashed border-black">
-                        <h1 className="text-xl md:text-5xl font-semibold font-clash-display text-black tracking-wider">
+                        <h1 className="text-xl md:text-5xl font-semibold font-clash-display !text-black tracking-wider">
                             {title}
                         </h1>
                     </div>

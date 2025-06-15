@@ -9,7 +9,7 @@ import {
     oxanium,
 } from "@/fonts";
 import HOC from "@/components/shared/hoc";
-import Footer from "@/components/footer/footer"
+import Footer from "@/components/footer/footer";
 
 export const metadata = {
     title: "Hackodisha 5.0",
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
                 className={`${archivo.variable} ${archivoBlack.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} ${oxanium.variable} antialiased`}
             >
                 <HOC>{children}</HOC>
-                <Footer/>
+                <Footer />
             </body>
         </html>
     );
