@@ -1,5 +1,11 @@
-function Page() {
-    return <div>Write your code here</div>;
-}
+import Hero from "@/components/hero/hero";
+import Teams from "@/components/teams/teams";
 
-export default Page;
+export default function Page() {
+    return (
+        <main>
+            <Hero />;
+            <Teams />
+        </main>
+    );
+}
