@@ -11,10 +11,12 @@
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
     --font-archivo: var(--font-archivo);
+    --font-archivo-black: var(--font-archivo-black);
     --font-bebas-neue: var(--font-bebas-neue);
     --font-bricolage-grotesque: var(--font-bricolage-grotesque);
     --font-clash-display: var(--font-clash-display);
     --font-helvetica: var(--font-helvetica);
+    --font-oxanium: var(--font-oxanium);
 }
 
 body {
