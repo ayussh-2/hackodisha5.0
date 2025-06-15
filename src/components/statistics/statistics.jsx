@@ -50,49 +50,30 @@ export default function Statistics({ statsData }) {
       hoverBg: "hover:bg-[#C59EFF]",
     },
   ];
-
   // Use provided stats data or fall back to defaults
   const stats = statsData || defaultStats;
 
   // Loading state for future API integration
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null); // Physics state for labels
+  const [error, setError] = useState(null);
   const [labelPositions, setLabelPositions] = useState(
     stats.map(() => ({ x: 15, y: 15, angle: 0 }))
-  );
-  const cardsRef = useRef(stats.map(() => useRef(null)));
+  );  const cardsRef = useRef(stats.map(() => useRef(null)));
   const labelsRef = useRef(stats.map(() => useRef(null)));
 
-  // Mock function to demonstrate how real-time updates would work
   const fetchRealTimeStats = async () => {
-    // This would be replaced with actual API call in the future
     try {
       setIsLoading(true);
-      // Simulated API call
-      // const response = await fetch('/api/stats');
-      // const data = await response.json();
-      // updateStats(data);
       setIsLoading(false);
     } catch (err) {
       setError("Failed to load statistics");
       setIsLoading(false);
-    }
-  };
+    }  };
 
-  // Example of how you might set up real-time updates
   useEffect(() => {
-    // Initial fetch
-    // fetchRealTimeStats();
-    // Set up real-time listeners
-    // const socket = new WebSocket('wss://your-api.com/stats');
-    // socket.onmessage = (event) => {
-    //   const data = JSON.parse(event.data);
-    //   updateStats(data);
-    // };
-    // return () => {
-    //   socket.close();
-    // };
-  }, []); // Setup Matter.js physics for labels
+  }, []);
+
+  // Setup Matter.js physics for labels
   useEffect(() => {
     if (!cardsRef.current || !labelsRef.current) return;
 
@@ -120,12 +101,12 @@ export default function Statistics({ statsData }) {
         // Get card dimensions
         const rect = card.getBoundingClientRect();
         const width = rect.width;
-        const height = rect.height;
-
-        // Create engine
+        const height = rect.height;        // Create engine
         const engine = Engine.create();
         engine.world.gravity.y = 0.8;
-        engines.push(engine);        // Label dimensions (including padding and border)
+        engines.push(engine);
+
+        // Label dimensions (including padding and border)
         const labelW = 165; // 145 + padding + border
         const labelH = 45;  // 29 + padding + border
 
@@ -204,9 +185,9 @@ export default function Statistics({ statsData }) {
       // Animation loop
       const animate = () => {
         if (labelBodies.length > 0) {
-          labelBodies.forEach((body, index) => {
-            const labelEl = labelsRef.current[index]?.current;
-            if (labelEl) {              // Simple positioning - center the element on the body
+          labelBodies.forEach((body, index) => {            const labelEl = labelsRef.current[index]?.current;
+            if (labelEl) {
+              // Simple positioning - center the element on the body
               const x = body.position.x - 82.5; // Half of label width (165/2)
               const y = body.position.y - 22.5; // Half of label height (45/2)
 
@@ -288,9 +269,10 @@ export default function Statistics({ statsData }) {
                       transformOrigin: "center center",
                       WebkitUserSelect: "none",
                       MozUserSelect: "none",
-                      msUserSelect: "none",
-                      userSelect: "none",                      width: "165px",
-                      height: "45px",                    }}
+                      msUserSelect: "none",                      userSelect: "none",
+                      width: "165px",
+                      height: "45px",
+                    }}
                   >
                     <p className="text-black font-[Bricolage_Grotesque] text-2xl font-normal leading-normal tracking-[-0.48px] select-none">
                       {stat.label}

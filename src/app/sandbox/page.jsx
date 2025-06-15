@@ -1,4 +1,4 @@
-import Statistics from "@/config/statistics";
+import Statistics from "@/components/statistics/statistics";
 
 
 function Page() {
