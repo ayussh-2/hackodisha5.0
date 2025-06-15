@@ -1,7 +1,7 @@
 import Image from "next/image"
 function Bronze() {
   return (
-    <div className="bg-[#D3AEFF] border-1 border-black md:rounded-2xl rounded-[100px] p-5 flex relative flex-col items-center justify-center overflow-visible">
+    <div className="bg-[#D3AEFF] border-1 border-black md:rounded-2xl rounded-[100px] p-3 sm:p-5 flex relative flex-col items-center justify-center overflow-visible">
               <div className="absolute xl:top-73 xl:-right-9 top-70 -right-10 w-55 rotate-[1deg] hidden md:block z-10">
       <Image
         src="https://res.cloudinary.com/dbdkg7fik/image/upload/v1749892444/Asset_1_3_e67qrs.svg"
@@ -16,10 +16,10 @@ function Bronze() {
       </span>
 
       <span 
-      style={{
-    WebkitTextStroke: '1px black',
-    color: '#FFEA89',
-  }}
+  //     style={{
+  //   WebkitTextStroke: '1px black',
+  //   color: '#FFEA89',
+  // }}
       className="text-[#FFEA89] font-extrabold font-clash-display text-3xl text-center leading-tight">
         ₹25k
       </span>
@@ -29,7 +29,7 @@ function Bronze() {
     
                 {/* Capsule with BRONZE Text */}
                 <div className="relative mb-6 flex items-center justify-center w-full">
-  <div className="relative bg-[#CD7F32] rounded-full border border-black flex items-center justify-center sm:px-8 sm:py-3 xl:py-5 min-w-[150px] sm:min-w-[200px] xl:min-w-[240px] sm:min-h-[70px] min-h-[50px] overflow-visible">
+  <div className="relative bg-[#FFD32B] rounded-full border border-black flex items-center justify-center sm:px-8 sm:py-3 xl:py-5 min-w-[150px] sm:min-w-[220px] xl:min-w-[240px] sm:min-h-[70px] min-h-[50px] overflow-visible">
     
     {/* Outline for Desktop (≥768px) */}
     <div

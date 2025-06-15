@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function Silver() {
   return (
-    <div className="bg-[#D3AEFF] border-1 border-black md:rounded-2xl rounded-[100px] p-5 flex flex-col items-center relative justify-center overflow-visible">
+    <div className="bg-[#D3AEFF] border-1 border-black md:rounded-2xl rounded-[100px]  p-3 sm:p-5 flex flex-col items-center relative justify-center overflow-visible">
     
                 <div className="absolute hidden md:block -right-12 -top-31 xl:-top-32 xl:-right-10 w-55 rotate-[1deg] z-10">
       <Image
@@ -18,10 +18,9 @@ function Silver() {
       </span>
 
       <span
-      style={{
-    WebkitTextStroke: '1px black',
-    color: '#FFEA89',
-  }}
+  //     style={{
+  //   WebkitTextStroke: '1px black',
+  // }}
       className="text-[#FFEA89] font-extrabold font-clash-display text-3xl text-center leading-tight">
         ₹25k
       </span>
@@ -32,7 +31,7 @@ function Silver() {
                 {/* Capsule with SILVER Text */}
                 {/* SILVER Capsule */}
     <div className="relative mb-6 flex items-center justify-center w-full">
-  <div className="relative bg-[#C0C0C0] rounded-full border border-black flex items-center justify-center sm:px-8 sm:py-3 xl:py-5 min-w-[150px] sm:min-w-[200px] xl:min-w-[240px] sm:min-h-[70px] min-h-[50px] overflow-visible">
+  <div className="relative bg-[#FFD32B] rounded-full border border-black flex items-center justify-center sm:px-8 sm:py-1 xl:py-5 min-w-[150px] sm:min-w-[220px] xl:min-w-[240px] sm:min-h-[70px] min-h-[50px] overflow-visible">
     
     {/* Outline for Desktop (≥768px) */}
     <div
@@ -75,7 +74,9 @@ function Silver() {
                   <div className="inline-flex items-center justify-center gap-2 mt-2">
                     <span>Vouchers worth</span>
                     <div className="transform rotate-[5deg] bg-white px-2 py-1 shadow-md border border-black">
-                      <span className="text-yellow-500 font-extrabold font-clash-display text-xl">$50k</span>
+                      <span
+                       
+                       className="text-yellow-500 font-extrabold font-clash-display text-xl">$50k</span>
                     </div>
                   </div>
                 </div>

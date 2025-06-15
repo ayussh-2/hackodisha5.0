@@ -1,5 +1,6 @@
+import Prize from "@/components/prizes/prize";
 function Page() {
-    return <div>Write your code here</div>;
+    return <div><Prize /></div>;
 }
 
 export default Page;
