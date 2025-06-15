@@ -1,11 +1,9 @@
-import Statistics from "@/components/statistics/statistics";
+import Statistics from "@/config/statistics";
 
 
 function Page() {
     return (
-        <div className="min-h-screen bg-black">
-            <Statistics />
-        </div>
+        <Statistics/>
     );
 }
 
