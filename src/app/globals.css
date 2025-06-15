@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #efe7f7;
+    --foreground: #d3aeff;
 }
 
 @theme inline {
@@ -11,18 +11,12 @@
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
     --font-archivo: var(--font-archivo);
+    --font-archivo-black: var(--font-archivo-black);
     --font-bebas-neue: var(--font-bebas-neue);
     --font-bricolage-grotesque: var(--font-bricolage-grotesque);
     --font-clash-display: var(--font-clash-display);
     --font-helvetica: var(--font-helvetica);
-    
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+    --font-oxanium: var(--font-oxanium);
 }
 
 /* body {
@@ -34,6 +28,10 @@
 .fit {
         width: fit-content;
         height: fit-content;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 
