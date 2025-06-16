@@ -1,18 +1,19 @@
 "use client";
 import {
-  Navbar,
+  NavbarUi,
   NavBody,
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
+  
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
+  DiscordButton,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 
-export function NavbarDemo() {
+export function Navbar() {
   const navItems = [
     {
       name: "Home",
@@ -36,14 +37,14 @@ export function NavbarDemo() {
 
   return (
     <div className="relative w-full">
-      <Navbar>
+      <NavbarUi>
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-            <NavbarButton/>
+            <DiscordButton/>
           </div>
         </NavBody>
 
@@ -82,7 +83,7 @@ export function NavbarDemo() {
             </div> */}
           </MobileNavMenu>
         </MobileNav>
-      </Navbar>
+      </NavbarUi>
       
       {/* Navbar */}
     </div>
