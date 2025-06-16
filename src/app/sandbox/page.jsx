@@ -6,10 +6,7 @@ import Statistics from "@/components/statistics/statistics";
 export default function Page() {
     return (
         <main>
-            <Hero />
             <Statistics/>
-            <Prize />
-            <Teams />
         </main>
     );
 }
