@@ -6,7 +6,7 @@ import SectionTitle from "../shared/section-title";
 
 function Prize() {
   return (
-    <div className="min-h-dvh bg-[#BC82FE] flex flex-col items-center justify-center pt-16 pb-40 overflow-x-hidden overflow-y-hidden">
+    <div className="min-h-dvh bg-[#BC82FE] flex flex-col items-center justify-center  pb-40 overflow-x-hidden overflow-y-hidden">
       <div className="relative w-full overflow-visible">
         <SectionTitle title="PRIZES" lineGradient="white-purple" />
       </div>
