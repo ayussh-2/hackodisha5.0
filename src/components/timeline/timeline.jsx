@@ -1,10 +1,7 @@
-
-
 'use client';
-import { sponsorsData, sponsorStickerImage } from "@/config/sponsors"
 import { useState } from 'react';
 import Image from 'next/image';
-import { schedule, dateMap, topArrow, bottomArrow, clockIcon, reloadIcon, timelineDot, dottedLine, webwizLogo } from '@/components/timeline/index';
+import { schedule, dateMap, topArrow, bottomArrow, clockIcon, reloadIcon, timelineDot, dottedLine, webwizLogo } from '@/config/timeline/index';
 import SectionTitle from "../shared/section-title";
 
 const Timeline = () => {
@@ -13,27 +10,17 @@ const Timeline = () => {
   return (
     <div>
       <div className="absolute w-full overflow-visible mt-[-7rem]">
-        <div className="flex items-center justify-center relative">
-          {/* <div className="absolute left-0 ml-8">
-            <Image
-              src={webwizLogo}
-              alt="WebWiz Logo"
-              width={183}
-              height={259}
-              className="w-[60px] h-[60px]"
-            />
-          </div> */}
-          
+        <div className="flex items-center justify-center relative">          
           <SectionTitle title="TIME LINE" />
           <div className="lg:absolute lg:h-[150px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0  h-[100px]">
-                          <Image
-                              width={280.036}
-                              height={80.2}
-                              src={webwizLogo}
-                              alt="Dev Mode on"
-                              className="w-auto h-auto object-cover"
-                          />
-                      </div>
+            <Image
+              width={280.036}
+              height={80.2}
+              src={webwizLogo}
+              alt="Dev Mode on"
+              className="w-auto h-auto object-cover"
+              />
+          </div>
         </div>
       </div>
     <div className="min-h-screen w-full flex items-center justify-center bg-[#EFE7F7] px-4 py-8 relative">
