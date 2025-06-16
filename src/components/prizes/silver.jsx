@@ -3,39 +3,34 @@ import prizeImages from "@/config/prizes";
 
 function Silver() {
   return (
-    <div className="bg-[#D3AEFF] border-1 border-black md:rounded-2xl rounded-[100px]  p-3 sm:p-5 flex flex-col items-center relative justify-center overflow-visible">
-      <div className="absolute hidden md:block -right-12 -top-31 xl:-top-32 xl:-right-10 w-55 rotate-[1deg] z-10">
+    <div className="bg-[#D3AEFF] border-1 border-black rounded-2xl  p-3 sm:p-5 flex flex-col items-center relative justify-center overflow-visible">
+      <div className="absolute block -right-17 -top-27 sm:-right-14 sm:-top-29 md:-right-12 md:-top-31 xl:-top-32 xl:-right-10 w-55 rotate-[1deg] z-10">
         <Image
-         src={prizeImages.silverTag}
+          src={prizeImages.silverTag}
           alt="Cash Prize Tag"
           width={112}
           height={100}
-          className="w-[300px] scale-[1.3] xl:scale-[1.45] h-auto"
+          className="w-[300px] scale-[0.8] sm:scale-[1] md:scale-[1.3] xl:scale-[1.45] h-auto"
         />
-        <div className="absolute inset-0 flex flex-col items-center -left-20 -top-1 justify-center rotate-[15deg] px-2">
-          <span className="text-black font-extrabold font-clash-display text-xl text-center leading-tight">
+        <div className="absolute inset-0 flex flex-col items-center -left-11 -top-0 sm:-left-14 sm:-top-0 md:-left-20 md:-top-1 justify-center rotate-[16deg] md:rotate-[15deg] px-2">
+          <span className="text-black font-extrabold font-clash-display text-[13px] sm:text-[16px] md:text-xl text-center leading-tight">
             CASH PRIZE
           </span>
 
-          <span
-            //     style={{
-            //   WebkitTextStroke: '1px black',
-            // }}
-            className="text-[#FFEA89] font-extrabold font-clash-display text-3xl text-center leading-tight"
-          >
+          <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight">
             ₹25k
           </span>
         </div>
       </div>
-      <div className="bg-white w-full h-full rounded-[110px] md:rounded-2xl px-4 pt-3 sm:pt-10 pb-12 flex flex-col items-center justify-center relative overflow-visible">
+      <div className="bg-white w-full h-full rounded-2xl px-4 pt-3 sm:pt-10 pb-12 flex flex-col items-center justify-center relative overflow-visible">
         <div className="relative mb-6 flex items-center justify-center w-full">
-          <div className="relative bg-[#FFD32B] rounded-full border border-black flex items-center justify-center sm:px-8 sm:py-1 xl:py-5 min-w-[150px] sm:min-w-[220px] xl:min-w-[240px] sm:min-h-[70px] min-h-[50px] overflow-visible">
+          <div className="relative bg-[#FFD32B] rounded-full border border-black flex items-center justify-center sm:px-8 sm:py-1 xl:py-5 min-w-[140px] sm:min-w-[216px] xl:min-w-[240px] sm:min-h-[70px] min-h-[50px] overflow-visible">
             <div
               className="absolute inset-1.5 hidden md:flex items-center justify-center pointer-events-none"
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                 src={prizeImages.capsuleOutlineDesktop}
+                src={prizeImages.capsuleOutlineDesktop}
                 alt="Silver Outline"
                 fill
                 className="rounded-full object-contain"
@@ -48,7 +43,7 @@ function Silver() {
               style={{ padding: "6px", boxSizing: "border-box" }}
             >
               <Image
-                src={prizeImages.capsuleOutlineMobile}
+                src={prizeImages.capsuleOutlineDesktop}
                 alt="Mobile Silver Outline"
                 fill
                 className="rounded-full object-contain"
