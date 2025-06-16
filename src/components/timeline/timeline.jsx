@@ -12,7 +12,7 @@ const Timeline = () => {
       <div className="absolute w-full overflow-visible mt-[-7rem]">
         <div className="flex items-center justify-center relative">          
           <SectionTitle title="TIME LINE" />
-          <div className="lg:absolute lg:h-[150px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0  h-[100px]">
+          <div className="lg:absolute lg:h-[150px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0 h-[100px]">
             <Image
               width={280.036}
               height={80.2}
