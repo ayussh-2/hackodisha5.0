@@ -25,6 +25,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.fit {
+    width: fit-content;
+    height: fit-content;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
