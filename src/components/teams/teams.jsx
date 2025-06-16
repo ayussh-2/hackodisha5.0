@@ -4,7 +4,7 @@ import { TEAMS_STICKER_IMAGE } from "@/config/teams";
 
 export default function Teams() {
     return (
-        <div style={{ backgroundColor: "#BC82FE" }}>
+        <div style={{ backgroundColor: "#BC82FE", overflow: 'visible', height: 'auto'}}>
             <SectionTitle
                 title={"Our Team"}
                 stickerImage={TEAMS_STICKER_IMAGE}
