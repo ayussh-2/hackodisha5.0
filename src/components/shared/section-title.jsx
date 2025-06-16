@@ -44,7 +44,7 @@ export default function SectionTitle({
     };
 
     return (
-        <div className="relative text-center w-full overflow-hidden">
+        <div className="relative text-center w-full overflow-visible">
             <div className="absolute inset-0 z-0">
                 {/* Top half background */}
                 <div
