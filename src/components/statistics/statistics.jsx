@@ -9,6 +9,7 @@ import {
   Runner,
   Mouse,
   MouseConstraint,
+  Body,
 } from "matter-js";
 import { defaultStatsConfig } from "@/config/statistics";
 
@@ -104,9 +105,8 @@ export default function Statistics() {
 
         const rect = card.getBoundingClientRect();
         const width = rect.width;
-        const height = rect.height;
-        const engine = Engine.create();
-        engine.world.gravity.y = 0.8;
+        const height = rect.height;        const engine = Engine.create();
+        engine.world.gravity.y = 0.6; // Reduced gravity for lighter physics
         engines.push(engine);
         const { width: labelW, height: labelH } = getResponsiveLabelSize();
 
@@ -116,37 +116,35 @@ export default function Statistics() {
           labelW,
           labelH,
           {
-            restitution: 0.4,
-            friction: 0.1,
-            frictionAir: 0.01,
+            restitution: 0.3, // Reduced bounce
+            friction: 0.05, // Reduced friction
+            frictionAir: 0.005, // Reduced air resistance
             angle: (stat.rotation * Math.PI) / 180,
           }
         );
         labelBodies.push(labelBody);
 
-        const wallThickness = 20;
-        const getGroundOffset = () => {
-          const screenWidth = window.innerWidth;
-          const screenHeight = window.innerHeight;
+        const wallThickness = 20;        const getGroundOffset = () => {
+          const screenWidth = window.innerWidth;          const screenHeight = window.innerHeight;
 
-          // Special case for 640-767 width at 614px height
+          // Special case for 639-767 width at 614px height
           if (
-            screenWidth >= 640 &&
+            screenWidth >= 639 &&
             screenWidth < 768 &&
             screenHeight >= 600 &&
             screenHeight <= 630
           ) {
             return 120;
           }
-
+          
           if (screenWidth < 400) return 80;
           if (screenWidth < 500) return 85;
           if (screenWidth < 640) return 90;
-          if (screenWidth < 768) return 110;
+          if (screenWidth < 768) {
+            return 110;
+          }
           return 110;
-        };
-
-        const ground = Bodies.rectangle(
+        };        const ground = Bodies.rectangle(
           width / 2,
           height - getGroundOffset(),
           width - 10,
@@ -155,7 +153,7 @@ export default function Statistics() {
         );
 
         const leftWall = Bodies.rectangle(
-          0,
+          wallThickness / 2,
           height / 2,
           wallThickness,
           height,
@@ -163,16 +161,20 @@ export default function Statistics() {
         );
 
         const rightWall = Bodies.rectangle(
-          width,
+          width - wallThickness / 2,
           height / 2,
           wallThickness,
           height,
           { isStatic: true }
         );
 
-        const ceiling = Bodies.rectangle(width / 2, 0, width, wallThickness, {
-          isStatic: true,
-        });
+        const ceiling = Bodies.rectangle(
+          width / 2, 
+          wallThickness / 2, 
+          width, 
+          wallThickness, 
+          { isStatic: true }
+        );
 
         World.add(engine.world, [
           labelBody,
@@ -184,32 +186,31 @@ export default function Statistics() {
         const mouse = Mouse.create(card);
 
         mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
-        mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
-
-        const mouseConstraint = MouseConstraint.create(engine, {
+        mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);        const mouseConstraint = MouseConstraint.create(engine, {
           mouse: mouse,
           constraint: {
-            stiffness: 0.2,
+            stiffness: 0.1, // Reduced stiffness for smoother dragging
             render: { visible: false },
-          },
-        });
+          }
+        });// Add constraint to keep bodies within bounds (relaxed)
+        mouseConstraint.constraint.bodyA = null;
+        mouseConstraint.constraint.bodyB = null;
 
         World.add(engine.world, mouseConstraint);
         mouseConstraints.push(mouseConstraint);
 
         mouse.mousewheel = function () {
           return false;
-        };
-
-        let isDragging = false;
+        };        let isDragging = false;
         let dragStartTime = 0;
         let lastClickedBody = null;
         let mouseStartPos = { x: 0, y: 0 };
-        let dragMoveThreshold = 50;
+        let dragMoveThreshold = 30; // Reduced threshold for more responsive dragging
+        let lastMousePos = { x: 0, y: 0 };
+        let mouseVelocity = { x: 0, y: 0 };
         const label = labelsRef.current[index]?.current;
 
-        if (label && labelBodies[index]) {
-          label.addEventListener(
+        if (label && labelBodies[index]) {          label.addEventListener(
             "mousedown",
             (event) => {
               if (event.pointerType === "touch") return;
@@ -218,6 +219,8 @@ export default function Statistics() {
               dragStartTime = Date.now();
               lastClickedBody = labelBodies[index];
               mouseStartPos = { x: event.clientX, y: event.clientY };
+              lastMousePos = { x: event.clientX, y: event.clientY };
+              mouseVelocity = { x: 0, y: 0 };
 
               mouseConstraint.body = labelBodies[index];
 
@@ -226,24 +229,64 @@ export default function Statistics() {
               event.preventDefault();
             },
             { passive: false }
-          );
-
-          const handleMouseMove = (event) => {
+          );const handleMouseMove = (event) => {
             if (!isDragging || !lastClickedBody) return;
 
-            const dx = Math.abs(event.clientX - mouseStartPos.x);
-            const dy = Math.abs(event.clientY - mouseStartPos.y);
+            const currentPos = { x: event.clientX, y: event.clientY };
+            const dx = Math.abs(currentPos.x - mouseStartPos.x);
+            const dy = Math.abs(currentPos.y - mouseStartPos.y);
+
+            // Calculate mouse velocity for smoother interaction
+            mouseVelocity.x = currentPos.x - lastMousePos.x;
+            mouseVelocity.y = currentPos.y - lastMousePos.y;
+            
+            // Limit mouse velocity to prevent aggressive throwing glitches
+            const maxMouseVelocity = 20;
+            if (Math.abs(mouseVelocity.x) > maxMouseVelocity) {
+              mouseVelocity.x = Math.sign(mouseVelocity.x) * maxMouseVelocity;
+            }
+            if (Math.abs(mouseVelocity.y) > maxMouseVelocity) {
+              mouseVelocity.y = Math.sign(mouseVelocity.y) * maxMouseVelocity;
+            }
 
             if (dx > dragMoveThreshold || dy > dragMoveThreshold) {
-              mouse.position.x = event.clientX;
-              mouse.position.y = event.clientY;
+              // Use smoothed mouse position to prevent glitches
+              const cardRect = card.getBoundingClientRect();
+              const relativeX = currentPos.x - cardRect.left;
+              const relativeY = currentPos.y - cardRect.top;
+              
+              // Constrain mouse position within card bounds during dragging
+              const constrainedX = Math.max(0, Math.min(cardRect.width, relativeX));
+              const constrainedY = Math.max(0, Math.min(cardRect.height, relativeY));
+              
+              mouse.position.x = constrainedX;
+              mouse.position.y = constrainedY;
 
               event.preventDefault();
             }
-          };
-
-          const handleMouseUp = () => {
+            
+            lastMousePos = currentPos;
+          };          const handleMouseUp = () => {
             if (isDragging && lastClickedBody) {
+              // Apply controlled velocity based on mouse movement
+              const velocityScale = 0.3; // Scale down the velocity to prevent glitches
+              const releaseVelocity = {
+                x: mouseVelocity.x * velocityScale,
+                y: mouseVelocity.y * velocityScale
+              };
+              
+              // Apply velocity limits to prevent extreme throws
+              const maxReleaseVelocity = 8;
+              if (Math.abs(releaseVelocity.x) > maxReleaseVelocity) {
+                releaseVelocity.x = Math.sign(releaseVelocity.x) * maxReleaseVelocity;
+              }
+              if (Math.abs(releaseVelocity.y) > maxReleaseVelocity) {
+                releaseVelocity.y = Math.sign(releaseVelocity.y) * maxReleaseVelocity;
+              }
+              
+              // Apply the controlled velocity to the body
+              Body.setVelocity(lastClickedBody, releaseVelocity);
+              
               isDragging = false;
               lastClickedBody = null;
               mouseConstraint.body = null;
@@ -251,6 +294,10 @@ export default function Statistics() {
               if (label) {
                 label.style.cursor = "grab";
               }
+              
+              // Reset tracking variables
+              mouseVelocity = { x: 0, y: 0 };
+              lastMousePos = { x: 0, y: 0 };
             }
           };
 
@@ -314,15 +361,80 @@ export default function Statistics() {
 
         const runner = Runner.create();
         Runner.run(runner, engine);
-        runners.push(runner);
-      });
+        runners.push(runner);      });
 
+      let frameCount = 0;
       const animate = () => {
+        frameCount++;
         if (labelBodies.length > 0) {
-          labelBodies.forEach((body, index) => {
-            const labelEl = labelsRef.current[index]?.current;
+          labelBodies.forEach((body, index) => {            const labelEl = labelsRef.current[index]?.current;
             if (labelEl) {
               const { width, height } = getResponsiveLabelSize();
+                // Minimal constraints for performance (very relaxed to prevent dancing)
+              const card = cardsRef.current[index]?.current;
+              if (card && frameCount % 20 === 0) { // Only check constraints every 20 frames
+                const cardRect = card.getBoundingClientRect();
+                const cardWidth = cardRect.width;
+                const cardHeight = cardRect.height;
+                const tolerance = 50; // Large tolerance zone to prevent dancing
+                  // Velocity damping to prevent glitching on aggressive throws
+                const maxVelocity = 15; // Maximum allowed velocity
+                const maxAngularVelocity = 0.3; // Maximum allowed rotation speed
+                
+                if (Math.abs(body.velocity.x) > maxVelocity) {
+                  Body.setVelocity(body, { 
+                    x: Math.sign(body.velocity.x) * maxVelocity, 
+                    y: body.velocity.y 
+                  });
+                }
+                if (Math.abs(body.velocity.y) > maxVelocity) {
+                  Body.setVelocity(body, { 
+                    x: body.velocity.x, 
+                    y: Math.sign(body.velocity.y) * maxVelocity 
+                  });
+                }
+                
+                // Angular velocity damping to prevent excessive spinning
+                if (Math.abs(body.angularVelocity) > maxAngularVelocity) {
+                  Body.setAngularVelocity(body, Math.sign(body.angularVelocity) * maxAngularVelocity);
+                }
+                
+                // Only constrain if severely out of bounds
+                if (body.position.x - width/2 < -tolerance) {
+                  Body.setPosition(body, { x: tolerance + width/2, y: body.position.y });
+                  Body.setVelocity(body, { x: Math.abs(body.velocity.x) * 0.3, y: body.velocity.y }); // Reduce bounce
+                }
+                if (body.position.x + width/2 > cardWidth + tolerance) {
+                  Body.setPosition(body, { x: cardWidth - tolerance - width/2, y: body.position.y });
+                  Body.setVelocity(body, { x: -Math.abs(body.velocity.x) * 0.3, y: body.velocity.y }); // Reduce bounce
+                }
+                
+                // Very lenient vertical constraints
+                if (body.position.y - height/2 < -tolerance) {
+                  Body.setPosition(body, { x: body.position.x, y: tolerance + height/2 });
+                  Body.setVelocity(body, { x: body.velocity.x, y: Math.abs(body.velocity.y) * 0.3 }); // Reduce bounce
+                }                const maxY = cardHeight - (cardHeight < 250 ? 60 : 80); // More lenient ground
+                if (body.position.y + height/2 > maxY + tolerance) {
+                  Body.setPosition(body, { x: body.position.x, y: maxY - height/2 });
+                  Body.setVelocity(body, { x: body.velocity.x, y: -Math.abs(body.velocity.y) * 0.3 }); // Reduce bounce
+                }
+                
+                // Emergency reset if label gets completely out of bounds (glitch recovery)
+                const emergencyTolerance = 200;
+                if (body.position.x < -emergencyTolerance || 
+                    body.position.x > cardWidth + emergencyTolerance ||
+                    body.position.y < -emergencyTolerance || 
+                    body.position.y > cardHeight + emergencyTolerance) {
+                  // Reset to center of card with minimal velocity
+                  Body.setPosition(body, { 
+                    x: cardWidth * 0.5, 
+                    y: cardHeight * 0.3 
+                  });
+                  Body.setVelocity(body, { x: 0, y: 0 });
+                  Body.setAngularVelocity(body, 0);
+                }
+              }
+              
               const x = body.position.x - width / 2;
               const y = body.position.y - height / 2;
 
@@ -376,20 +488,22 @@ export default function Statistics() {
       cleanup();
       document.removeEventListener("wheel", handleWheel, { capture: true });
     };
-  }, [stats]);  const getResponsiveLabelSize = () => {
+  }, [stats]);
+  const getResponsiveLabelSize = () => {
     if (!isMounted) {
       // Default size for SSR and initial render
       return { width: 145, height: 40 };
     }
-    
+
     const width = window.innerWidth;
     if (width < 640) return { width: 145, height: 40 };
     if (width < 768) return { width: 145, height: 40 };
     return { width: 165, height: 45 };
-  };  useEffect(() => {
+  };
+  useEffect(() => {
     // Only run on client side after mounting
     if (!isMounted) return;
-    
+
     const handleResize = () => {
       const { width, height } = getResponsiveLabelSize();
       const labelElements = labelsRef.current.map((ref) => ref.current);
@@ -427,17 +541,18 @@ export default function Statistics() {
   return (
     <>
       <SectionTitle title={"STATISTICS"} lineGradient="purple" />
-      <div className="stats-container flex flex-col justify-center items-center w-full max-w-full overflow-hidden h-auto min-h-screen px-2 sm:px-4 md:px-6 mx-auto bg-[#BC82FE] relative py-12 sm:py-16 md:py-20 lg:-mt-25 ">
+      <div className="stats-container flex flex-col justify-center items-center w-full max-w-full overflow-hidden h-auto min-h-screen px-2 sm:px-4 md:px-6 mx-auto bg-[#BC82FE] relative py-12 sm:py-16 md:py-20 lg:-mt-15 ">
         <div className="w-full overflow-hidden">
           <div className="flex flex-col sm:flex-row w-full max-w-[1541px] justify-center items-center gap-6 sm:gap-4 md:gap-5 lg:gap-20 mx-auto px-2 sm:px-4 flex-wrap">
             {stats.map((stat, index) => {
               return (
                 <div
                   key={stat.id || index}
-                  className={`w-full max-w-[280px] h-[260px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[20px] sm:rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-6 sm:mb-3 md:mb-0 group overflow-hidden`}                  style={{
+                  className={`w-full max-w-[280px] h-[260px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[20px] sm:rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-6 sm:mb-3 md:mb-0 group overflow-hidden`}
+                  style={{
                     height:
                       isMounted &&
-                      window.innerWidth >= 640 && 
+                      window.innerWidth >= 640 &&
                       window.innerWidth < 768
                         ? "240px"
                         : undefined,
@@ -476,7 +591,7 @@ export default function Statistics() {
                     </p>
                   </div>{" "}
                   <div className="absolute bottom-0 left-0 right-0 text-center pb-2 sm:pb-3 md:pb-4">
-                    <p className="text-black font-sans text-[50px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px] font-extrabold leading-none select-none">
+                    <p className="text-black font-sans text-[80px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px] font-extrabold leading-none select-none">
                       {stat.value}
                     </p>
                   </div>
