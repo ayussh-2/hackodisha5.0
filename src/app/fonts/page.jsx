@@ -22,6 +22,10 @@ export default function FontsPage() {
                                 class: "font-archivo",
                             },
                             {
+                                name: "Archivo Black",
+                                class: "font-archivo-black",
+                            },
+                            {
                                 name: "Bebas Neue",
                                 class: "font-bebas-neue",
                             },
@@ -36,6 +40,10 @@ export default function FontsPage() {
                             {
                                 name: "Helvetica",
                                 class: "font-helvetica",
+                            },
+                            {
+                                name: "Oxanium",
+                                class: "font-oxanium",
                             },
                         ].map((font, index) => (
                             <div
