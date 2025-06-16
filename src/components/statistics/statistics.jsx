@@ -66,14 +66,19 @@ export default function Statistics() {
       document.removeEventListener("touchmove", preventScrollFreeze);
     };
   }, []);
-
   const stats = defaultStatsConfig;
 
+  const [isMounted, setIsMounted] = useState(false);
   const [labelPositions, setLabelPositions] = useState(
     stats.map(() => ({ x: 15, y: 15, angle: 0 }))
   );
   const cardsRef = useRef(stats.map(() => useRef(null)));
   const labelsRef = useRef(stats.map(() => useRef(null)));
+
+  // Handle mounting to prevent hydration mismatch
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!cardsRef.current || !labelsRef.current) return;
@@ -371,14 +376,20 @@ export default function Statistics() {
       cleanup();
       document.removeEventListener("wheel", handleWheel, { capture: true });
     };
-  }, [stats]);
-  const getResponsiveLabelSize = () => {
+  }, [stats]);  const getResponsiveLabelSize = () => {
+    if (!isMounted) {
+      // Default size for SSR and initial render
+      return { width: 145, height: 40 };
+    }
+    
     const width = window.innerWidth;
     if (width < 640) return { width: 145, height: 40 };
     if (width < 768) return { width: 145, height: 40 };
     return { width: 165, height: 45 };
-  };
-  useEffect(() => {
+  };  useEffect(() => {
+    // Only run on client side after mounting
+    if (!isMounted) return;
+    
     const handleResize = () => {
       const { width, height } = getResponsiveLabelSize();
       const labelElements = labelsRef.current.map((ref) => ref.current);
@@ -412,7 +423,7 @@ export default function Statistics() {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isMounted]);
   return (
     <>
       <SectionTitle title={"STATISTICS"} lineGradient="purple" />
@@ -423,10 +434,11 @@ export default function Statistics() {
               return (
                 <div
                   key={stat.id || index}
-                  className={`w-full max-w-[280px] h-[260px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[20px] sm:rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-6 sm:mb-3 md:mb-0 group overflow-hidden`}
-                  style={{
+                  className={`w-full max-w-[280px] h-[260px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[20px] sm:rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-6 sm:mb-3 md:mb-0 group overflow-hidden`}                  style={{
                     height:
-                      window.innerWidth >= 640 && window.innerWidth < 768
+                      isMounted &&
+                      window.innerWidth >= 640 && 
+                      window.innerWidth < 768
                         ? "240px"
                         : undefined,
                     touchAction: "pan-y",
