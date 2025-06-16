@@ -8,6 +8,7 @@ export default function Teams() {
             <SectionTitle
                 title={"Our Team"}
                 stickerImage={TEAMS_STICKER_IMAGE}
+                lineGradient="purple"
             />
             <Stickers />
         </div>
