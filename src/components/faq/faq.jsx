@@ -80,7 +80,7 @@ function FaqSection() {
     };
 
     return (
-        <div className="w-full">
+        <div className="w-full" id="faqs">
             <SectionTitle title="FAQS" lineGradient="white-purple" />
             <section className="relative w-full py-8 sm:py-12 lg:py-16 bg-purple-400 overflow-hidden min-h-fit sm:min-h-screen lg:min-h-[calc(100vh-4rem)]">
                 <div className="absolute bottom-1/3 left-4 sm:bottom-1/3 sm:left-8">
