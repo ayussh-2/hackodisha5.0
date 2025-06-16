@@ -60,7 +60,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
                 onClick={onToggle}
                 style={{ boxShadow: "3px 3px 0px rgba(0, 0, 0, 0.8)" }}
             >
-                <span className="font-semibold text-gray-800 text-sm sm:text-base lg:text-lg pr-2 sm:pr-3 leading-tight">
+                <span className="font-semibold font-archivo text-gray-800 text-sm sm:text-base lg:text-lg pr-2 sm:pr-3 leading-tight">
                     {question}
                 </span>
                 <PlusIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600 flex-shrink-0" />
@@ -82,7 +82,7 @@ function FaqSection() {
     return (
         <div className="w-full">
             <SectionTitle title="FAQS" lineGradient="white-purple" />
-            <section className="relative w-full py-8 sm:py-12 lg:py-16 bg-purple-400 overflow-hidden min-h-fit sm:min-h-screen lg:min-h-[calc(100vh-4rem)]">
+            <section className="relative w-full py-8 sm:py-12 lg:py-16 bg-[#BC82FE] overflow-hidden min-h-fit sm:min-h-screen lg:min-h-[calc(100vh-4rem)]">
                 <div className="absolute bottom-1/3 left-4 sm:bottom-1/3 sm:left-8">
                     <Image
                         src={quesMark}
