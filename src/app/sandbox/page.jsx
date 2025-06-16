@@ -1,5 +1,11 @@
+import WhatIsHackOdisha from "@/components/home/what-is-hackodisha";
+
 function Page() {
-    return <div>Write your code here</div>;
+  return (
+    <>
+      <WhatIsHackOdisha />
+    </>
+  );
 }
 
 export default Page;
