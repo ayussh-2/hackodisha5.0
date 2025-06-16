@@ -34,7 +34,6 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
                     ${isOpen ? 'shadow-[3px_3px_0px_rgba(0,0,0,0.9)]' : 'shadow-[3px_3px_0px_rgba(0,0,0,0.8)]'}
                 `}
             >
-                {/* Question Header */}
                 <button
                     className={`
                         w-full p-3 sm:p-4 lg:p-6 text-left flex justify-between items-center
@@ -59,7 +58,6 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
                     </div>
                 </button>
 
-                {/* Answer Content */}
                 <div
                     className={`
                         overflow-hidden transition-all duration-300 ease-in-out
@@ -90,7 +88,6 @@ function FaqSection() {
 
     const toggleItem = (index) => {
         setOpenItems((prev) => {
-            // Close all items first, then open the clicked one if it wasn't already open
             const newState = {};
             if (!prev[index]) {
                 newState[index] = true;
