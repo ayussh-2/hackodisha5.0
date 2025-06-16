@@ -49,7 +49,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
                     </span>
                     <div className={`
                         flex-shrink-0 transition-transform duration-300 ease-in-out
-                        ${isOpen ? 'rotate-45 scale-110' : 'rotate-0 scale-100'}
+                        ${isOpen ? 'rotate-90 scale-150' : 'rotate-0 scale-100'}
                     `}>
                         {isOpen ? (
                             <XIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600" />
