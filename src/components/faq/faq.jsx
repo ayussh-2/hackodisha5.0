@@ -97,7 +97,7 @@ function FaqSection() {
     };
 
     return (
-        <div className="w-full">
+        <div className="w-full" id="faqs">
             <SectionTitle title="FAQS" lineGradient="white-purple" />
             <section className="relative w-full py-8 sm:py-10 bg-[#BC82FE] overflow-hidden">
                 <div className="absolute bottom-1/3 left-4 sm:bottom-1/3 sm:left-8">
