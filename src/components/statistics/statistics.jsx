@@ -541,14 +541,14 @@ export default function Statistics() {
   return (
     <>
       <SectionTitle title={"STATISTICS"} lineGradient="purple" />
-      <div className="stats-container flex flex-col justify-center items-center w-full max-w-full overflow-hidden h-auto min-h-screen px-2 sm:px-4 md:px-6 mx-auto bg-[#BC82FE] relative py-12 sm:py-16 md:py-20 lg:-mt-15 ">
+      <div className="stats-container flex flex-col justify-center items-center w-full max-w-full overflow-hidden h-[1348px] sm:h-auto min-h-screen pt-0 sm:pt-12 px-2 sm:px-4 md:px-6 mx-auto bg-[#BC82FE] relative pb-12 sm:py-16 md:py-20 lg:-mt-15 ">
         <div className="w-full overflow-hidden">
           <div className="flex flex-col sm:flex-row w-full max-w-[1541px] justify-center items-center gap-6 sm:gap-4 md:gap-5 lg:gap-20 mx-auto px-2 sm:px-4 flex-wrap">
             {stats.map((stat, index) => {
               return (
                 <div
                   key={stat.id || index}
-                  className={`w-full max-w-[280px] h-[260px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] flex-shrink-0 rounded-[20px] sm:rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-6 sm:mb-3 md:mb-0 group overflow-hidden`}
+                  className={`w-full max-w-[220px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[300px] h-[220px] sm:h-[220px] md:h-[290px] lg:h-[300px] flex-shrink-0 rounded-[20px] sm:rounded-[24px] border-2 border-black ${stat.bg} ${stat.hoverBg} transition-colors duration-300 ease-in-out relative mb-6 sm:mb-3 md:mb-0 group overflow-hidden`}
                   style={{
                     height:
                       isMounted &&
@@ -563,7 +563,7 @@ export default function Statistics() {
                   {" "}
                   <div
                     ref={labelsRef.current[index]}
-                    className="physics-label absolute cursor-grab active:cursor-grabbing inline-flex py-2 sm:py-3 px-4 sm:px-6 justify-center items-center gap-2 sm:gap-2.5 rounded-[40px] sm:rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md select-none will-change-transform z-10"
+                    className="physics-label absolute cursor-grab active:cursor-grabbing inline-flex px-4 sm:px-6 py-2 sm:py-3 justify-center items-center gap-2 sm:gap-2.5 rounded-[40px] sm:rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md select-none will-change-transform z-10"
                     style={{
                       position: "absolute",
                       left: `${labelPositions[index]?.x || 15}px`,
@@ -591,7 +591,7 @@ export default function Statistics() {
                     </p>
                   </div>{" "}
                   <div className="absolute bottom-0 left-0 right-0 text-center pb-2 sm:pb-3 md:pb-4">
-                    <p className="text-black font-sans text-[80px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px] font-extrabold leading-none select-none">
+                    <p className="text-black font-sans text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px] font-extrabold leading-none select-none">
                       {stat.value}
                     </p>
                   </div>
