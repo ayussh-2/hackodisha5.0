@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
     schedule,
@@ -16,7 +16,7 @@ import SectionTitle from "../shared/section-title";
 
 const Timeline = () => {
     const [activeDay, setActiveDay] = useState("Day 1");
-
+ 
     return (
         <div>
             <div className="absolute w-full overflow-visible mt-[-7rem]">
@@ -27,6 +27,7 @@ const Timeline = () => {
                         id="timeline"
                     >
                         <Image
+                            
                             width={280.036}
                             height={80.2}
                             src={webwizLogo}
@@ -39,6 +40,7 @@ const Timeline = () => {
             <div className="min-h-screen w-full flex items-center justify-center bg-[#EFE7F7] px-4 py-8 relative">
                 <div className="absolute top-6 right-4 z-10 max-[414px]:top-10 max-[414px]:right-6">
                     <Image
+                      
                         src={topArrow}
                         alt="Top Right Arrow"
                         width={122}
@@ -48,6 +50,7 @@ const Timeline = () => {
                 </div>
                 <div className="absolute bottom-1 -left-4 z-10">
                     <Image
+                 
                         src={bottomArrow}
                         alt="Bottom Left Arrow"
                         width={130}

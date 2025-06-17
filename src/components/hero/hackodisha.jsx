@@ -4,12 +4,12 @@ import Image from "next/image";
 const Hackodisha = () => {
     return (
         <div>
-            <div className=" relative mx-auto w-full max-w-10/12 xl:max-w-[1150px]  h-36 sm:h-56 md:h-60  lg:h-68 text-center p-3 sm:p-4  top-28 rounded-3xl border border-black bg-[#D3AEFF] shadow-[8px_8px_0px_0px_#000] text-4xl">
+            <div className=" relative z-[10] mx-auto w-full max-w-10/12 xl:max-w-[1150px]  h-36 sm:h-56 md:h-60  lg:h-68 text-center p-3 sm:p-4  top-28 rounded-3xl border border-black bg-[#D3AEFF] shadow-[8px_8px_0px_0px_#000] text-4xl">
                 <div className="rounded-2xl flex flex-col items-center justify-center gap-4 sm:gap-5  h-full outline outline-black outline-dashed ">
                     <h1 className="text-black font-bricolage-grotesque font-extrabold text-4xl sm:text-6xl md:text-[80px] lg:text-[110px] xl:text-[140px] leading-none ">
                         HACK ODISHA
                     </h1>
-                    <p className="text-black font-archivo text-center font-[Archivo] text-base sm:text-2xl lg:text-3xl  xl:text-[36px] font-medium leading-none tracking-[1.26px]">
+                    <p className="text-black font-archivo text-center  text-base sm:text-2xl lg:text-3xl  xl:text-[36px] font-medium leading-none tracking-[1.26px]">
                         06-07th ,September 2025
                     </p>
                 </div>

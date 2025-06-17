@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import SectionTitle from "../shared/section-title";
 import { arrow, plusIcon, quesMark, faqItems, XIcons } from "@/config/faq";
+import { motion } from "motion/react"
 
 const PlusIcon = ({ className }) => (
     <Image
@@ -25,6 +26,22 @@ const XIcon = ({ className }) => (
 );
 
 const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
+        const faqContainerRef = useRef(null)
+    if (isOpen) {
+        return (
+            <div className="faq-item mb-2 sm:mb-3 lg:mb-4 relative z-50">
+                <div
+                    className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border-2 border-black"
+                    style={{ boxShadow: "3px 3px 0px rgba(0, 0, 0, 0.9)" }}
+                >
+                    <div className="flex justify-between items-start mb-2 sm:mb-3 lg:mb-4">
+                        <h3 className="font-semibold font-archivo text-gray-800 text-sm sm:text-base lg:text-xl pr-2 sm:pr-3 lg:pr-4 leading-tight">
+                            {question}
+                        </h3>
+                        <button
+                            onClick={onToggle}
+                            className="flex-shrink-0 mt-0.5 sm:mt-1"
+                        >
     return (
         <div className="faq-item mb-2 sm:mb-3 lg:mb-4 relative">
             <div
@@ -79,6 +96,21 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
                     </div>
                 </div>
             </div>
+        );
+    }
+
+    return (
+        <div className="faq-item mb-2 sm:mb-3 lg:mb-4 relative">
+            <button
+                className="w-full bg-white rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 text-left flex justify-between items-center hover:shadow-md transition-all duration-200 border-2 border-black relative"
+                onClick={onToggle}
+                style={{ boxShadow: "3px 3px 0px rgba(0, 0, 0, 0.8)" }}
+            >
+                <span className="font-semibold text-gray-800 text-sm sm:text-base lg:text-lg pr-2 sm:pr-3 leading-tight">
+                    {question}
+                </span>
+                <PlusIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600 flex-shrink-0" />
+            </button>
         </div>
     );
 };
