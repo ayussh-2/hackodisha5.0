@@ -125,25 +125,30 @@ export default function Statistics() {
         labelBodies.push(labelBody);
 
         const wallThickness = 20;        const getGroundOffset = () => {
-          const screenWidth = window.innerWidth;          const screenHeight = window.innerHeight;
-
-          // Special case for 639-767 width at 614px height
-          if (
-            screenWidth >= 639 &&
-            screenWidth < 768 &&
-            screenHeight >= 600 &&
-            screenHeight <= 630
-          ) {
-            return 120;
+          const screenWidth = window.innerWidth;
+          const screenHeight = window.innerHeight;
+          const cardHeight = card.getBoundingClientRect().height;
+          
+          // For small cards, increase the ground offset to keep labels from overlapping text
+          if (cardHeight <= 200) return 110; // Significantly higher ground for smallest cards
+          if (cardHeight <= 220) return 100; // Higher ground for small cards
+          
+          // Special cases for specific screen sizes
+          if (screenWidth >= 639 && screenWidth < 768) {
+            if (screenHeight >= 600 && screenHeight <= 630) {
+              return 140; // Increased from 120 to 140 for better separation
+            }
+            // For all other tablet sizes
+            return 130; // Increased from 110 to 130
           }
           
-          if (screenWidth < 400) return 80;
-          if (screenWidth < 500) return 85;
-          if (screenWidth < 640) return 90;
-          if (screenWidth < 768) {
-            return 110;
-          }
-          return 110;
+          // Mobile breakpoints with better ground offsets
+          if (screenWidth < 400) return 100; // Increased from 80 to 100
+          if (screenWidth < 500) return 105; // Increased from 85 to 105
+          if (screenWidth < 640) return 110; // Increased from 90 to 110
+          
+          // Default for larger screens
+          return 130; // Increased from 110 to 130
         };        const ground = Bodies.rectangle(
           width / 2,
           height - getGroundOffset(),
@@ -161,7 +166,10 @@ export default function Statistics() {
         );
 
         const rightWall = Bodies.rectangle(
-          width - wallThickness / 2,
+          // Reduce the right wall boundary only for smartphones (width < 640px)
+          window.innerWidth < 640 
+            ? width - wallThickness / 2 - 20  // Move wall 20px inward on smartphones
+            : width - wallThickness / 2,      // Keep original position on larger screens
           height / 2,
           wallThickness,
           height,
