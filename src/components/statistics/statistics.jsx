@@ -131,7 +131,7 @@ export default function Statistics() {
           
           // For small cards, increase the ground offset to keep labels from overlapping text
           if (cardHeight <= 200) return 110; // Significantly higher ground for smallest cards
-          if (cardHeight <= 220) return 100; // Higher ground for small cards
+          if (cardHeight <= 220) return 65; // Higher ground for small cards
           
           // Special cases for specific screen sizes
           if (screenWidth >= 639 && screenWidth < 768) {
