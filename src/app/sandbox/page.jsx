@@ -8,16 +8,16 @@ import Teams from "@/components/teams/teams";
 import Statistics from "@/components/statistics/statistics";
 import Timeline from "@/components/timeline/timeline";
 export default function Page() {
-  return (
-    <main>
-      <Hero />
-      <WhatIsHackOdisha />
-      <Statistics />
-      <Timeline />
-      <Prize />
-      <Teams />
-      <Sponsors />
-      <FaqSection />
-    </main>
-  );
+    return (
+        <main>
+            <Hero />
+            <WhatIsHackOdisha />
+            <Statistics />
+            <Timeline />
+            <Prize />
+            <Teams />
+            <Sponsors />
+            <FaqSection />
+        </main>
+    );
 }

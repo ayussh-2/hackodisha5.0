@@ -21,9 +21,9 @@ export default function Footer() {
                                 <Image
                                     src={footerAssets.logo}
                                     alt="logo"
-                                    width={180}
-                                    height={76}
-                                    className="mx-auto md:mx-0 md:w-[180px] md:h-[76px] w-[90px] h-[38px]"
+                                    width={500}
+                                    height={500}
+                                    className="mx-auto md:mx-0 md:w-[180px] md:h-[76px] w-[180px] h-[80px]"
                                 />
                                 <p className="font-bricolage-grotesque font-[700] text-[16px] md:text-[24px] lg:text-[32px] leading-[1.2]">
                                     {sponsorCTA.heading}
