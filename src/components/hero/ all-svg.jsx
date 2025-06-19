@@ -1,3 +1,4 @@
+'use client'
 import {
   HERO_ARROW_IMAGE,
   HERO_HAND_IMAGE,
@@ -5,35 +6,108 @@ import {
 } from "@/config/hero";
 import { DiscordButton } from "../ui/resizable-navbar";
 import Image from "next/image";
-
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 const Svg = () => {
+  const btnRef = useRef(null);
+  const handRef = useRef(null);
+  const switchRef = useRef(null);
+  const heroArrowImageRef = useRef(null);
+  const [isRotated, setIsRotated] = useState(false);
+  const sectionRef = useRef(null); 
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const arrow = heroArrowImageRef.current;
+
+    if (!section || !arrow) return;
+
+    const followCursor = (e) => {
+
+      if (window.innerWidth >= 1024) {
+      const arrowRect = arrow.getBoundingClientRect();
+      
+      const x = e.clientX - arrowRect.width * 4;
+      const y = e.clientY - arrowRect.height * 8;
+
+      gsap.to(arrow, {
+        left: x + window.scrollX,
+        top: y + window.scrollY,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+
+    }
+    };
+
+    document.addEventListener('mousemove', followCursor);
+
+    return () => {
+      document.removeEventListener('mousemove', followCursor);
+    };
+  }, []);
+
+  const handleClick = () => {
+    const rotationAngle = isRotated ? 4 : 0;
+    setIsRotated(!isRotated);
+
+    const isMobile = window.innerWidth < 640;
+    const HAND_MOVEMENT_DISTANCE = isMobile ? 10 : 20;
+    
+    gsap.to(btnRef.current, {
+      rotate: rotationAngle,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+    gsap.to(handRef.current, {
+      y: HAND_MOVEMENT_DISTANCE,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+
+    gsap.to(switchRef.current, {
+      scaleY: isRotated ? 1 : 0.7,
+      transformOrigin: "bottom center",
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  };
+
   return (
-    <div>
-      <div className=" flex flex-col justify-center items-center">
+    <section ref={sectionRef} className="relative "> 
+      <div className="flex flex-col justify-center items-center">
         <Image
+          ref={handRef}
           src={HERO_HAND_IMAGE}
           width={0}
           height={0}
           alt="hand"
-          className="  absolute    w-[105px] sm:w-[130px] lg:w-[145px]  top-0   "
+          className="absolute w-[105px] sm:w-[130px] lg:w-[145px] top-0 z-[5]"
         />
-        <div className="  py-2 px-4 absolute top-[445px]  sm:top-[550px] lg:top-[610px] border border-black w-[260px] sm:w-[300px] md:w-full  md:max-w-sm  h-[100px]  sm:h-[110px] md:h-[130px] bg-[#FEDE64]  rounded-3xl ">
+        <div className="pointer-events-auto py-2 px-4 absolute top-[445px] sm:top-[550px] lg:top-[610px] border border-black w-[260px] sm:w-[300px] md:w-full md:max-w-sm h-[100px] sm:h-[110px] md:h-[130px] bg-[#FEDE64] rounded-3xl">
           <Image
+            ref={switchRef}
             src={HERO_SWITCH_IMAGE}
             width={0}
             height={0}
             alt="ellipse"
-            className=" w-12 sm:w-16 md:w-20  absolute left-35 -top-2   sm:left-40 md:left-50 "
+            className="w-12 sm:w-16 md:w-20 absolute left-35 -top-2 sm:left-40 md:left-50"
           />
-          <div className="text-black border border-black  text-center text-[17px] sm:text-[22px] md:text-3xl not-italic font-semibold leading-none uppercase bg-white px-4 py-4 relative top-4 sm:top-6 md:top-8   rotate-4 rounded-2xl shadow-[8px_7px_6.6px_0px_#F1C20E]">
+          <div 
+            ref={btnRef} 
+            onClick={handleClick} 
+            className="text-black border border-black text-center text-[17px] sm:text-[22px] md:text-3xl not-italic font-semibold leading-none uppercase bg-white px-4 py-4 relative top-4 sm:top-6 md:top-8 rotate-4 rounded-2xl shadow-[8px_7px_6.6px_0px_#F1C20E] cursor-pointer"
+          >
             APPLY ON DEVFOLIO
           </div>
           <Image
+            ref={heroArrowImageRef}
             src={HERO_ARROW_IMAGE}
             width={0}
             height={0}
             alt="arrow"
-            className="w-28 h-12  lg:w-36 md:h-20  absolute top-23 sm:top-25 -right-11 md:left-80 lg:left-93 sm:left-60 md:top-24 lg:top-16 "
+            className="w-28 h-12 lg:w-36 md:h-20 absolute z-[70]"
+            style={{ pointerEvents: 'none' }} 
           />
         </div>
         <div className=" absolute top-[580px] sm:top-[685px]  md:top-[695px] lg:hidden">
@@ -83,7 +157,7 @@ const Svg = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
