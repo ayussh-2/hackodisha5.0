@@ -9,7 +9,7 @@ export const defaultStatsConfig = [
     hoverBg: "hover:bg-[#A266FF]",
   },
   {
-    id: "projects",
+    id: "projects", 
     bg: "bg-[#FFEA89]",
     label: "Projects",
     value: "30+",
