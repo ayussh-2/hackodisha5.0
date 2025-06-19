@@ -11,7 +11,7 @@ import {
     MouseConstraint,
     Body,
 } from "matter-js";
-import { defaultStatsConfig } from "@/config/statistics";
+import { defaultStatsConfig, STICKER } from "@/config/statistics";
 
 export default function Statistics() {
     useEffect(() => {
@@ -652,7 +652,11 @@ export default function Statistics() {
     }, [isMounted]);
     return (
         <div className="mb-20">
-            <SectionTitle title={"STATISTICS"} lineGradient="purple" />
+            <SectionTitle
+                title={"STATISTICS"}
+                lineGradient="purple"
+                stickerImage={STICKER}
+            />
             <div className="flex flex-col justify-center items-center w-full mx-auto bg-[#BC82FE] py-20">
                 <div className="w-full">
                     <div className="flex flex-col sm:flex-row w-full max-w-[1541px] justify-center items-center gap-6 sm:gap-4 md:gap-5 lg:gap-20 mx-auto px-2 sm:px-4 flex-wrap">

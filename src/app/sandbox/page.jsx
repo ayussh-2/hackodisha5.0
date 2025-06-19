@@ -1,5 +1,4 @@
 import WhatIsHackOdisha from "@/components/hacksection/what-is-hackodisha";
-
 import FaqSection from "@/components/faq/faq";
 import Hero from "@/components/hero/hero";
 import Prize from "@/components/prizes/prize";
