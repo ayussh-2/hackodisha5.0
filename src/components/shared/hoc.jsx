@@ -1,7 +1,8 @@
 "use client";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 function HOC({ children }) {
-    return <main>{children}</main>;
+    return <ReactLenis root>{children}</ReactLenis>;
 }
 
 export default HOC;
