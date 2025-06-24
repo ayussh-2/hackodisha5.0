@@ -6,7 +6,7 @@ export const defaultStatsConfig = [
     label: "Registrations",
     value: "50+",
     rotation: -14.444,
-    hoverBg: "hover:bg-[#A266FF]",
+    hoverBg: "hover:bg-[#D3AEFF]",
   },
   {
     id: "projects",
@@ -14,7 +14,7 @@ export const defaultStatsConfig = [
     label: "Projects",
     value: "30+",
     rotation: 12.088,
-    hoverBg: "hover:bg-[#FFD74C]",
+    hoverBg: "hover:bg-[#FFEA89]",
   },
   {
     id: "participants",
@@ -22,7 +22,7 @@ export const defaultStatsConfig = [
     label: "Participants",
     value: "50+",
     rotation: -2.726,
-    hoverBg: "hover:bg-[#D8C6E9]",
+    hoverBg: "hover:bg-[#EFE7F7]",
   },
   {
     id: "prizes",
@@ -30,6 +30,6 @@ export const defaultStatsConfig = [
     label: "Prize Pool",
     value: "50+",
     rotation: 29.177,
-    hoverBg: "hover:bg-[#C59EFF]",
+    hoverBg: "hover:bg-[#E6CEFF]",
   },
 ];

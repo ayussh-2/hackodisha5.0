@@ -18,10 +18,10 @@ const Hackodisha = () => {
                     width={0}
                     height={0}
                     alt="svg"
-                    className=" w-28 sm:w-[160px] md:w-[168px]  absolute top-[42%] sm:top-2/4  md:top-32 lg:top-40 -left-7 sm:-left-[72px] "
+                    className=" w-28 sm:w-[160px] md:w-[240px]  absolute top-[42%] sm:top-2/4  md:top-32  -left-7 sm:-left-[72px]"
                 />
                 <div className=" absolute top-28 sm:top-44 md:top-48 lg:top-52 -right-6 rounded-2xl h-max px-2 border-2 border-black bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-                    <h1 className="text-black font-extrabold text-5xl sm:text-6xl md:text-6xl lg:text-[80px] leading-none  font-[Bricolage Grotesque]">
+                    <h1 className="text-black font-extrabold text-5xl sm:text-6xl md:text-6xl lg:text-[120px] leading-none font-bricolage-grotesque">
                         5.0
                     </h1>
                 </div>

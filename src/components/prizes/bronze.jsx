@@ -16,7 +16,7 @@ function Bronze() {
           <span className="text-black font-extrabold font-clash-display text-[16px] md:text-xl text-center leading-tight">
             CASH PRIZE
           </span>
-          <span className="text-[#FFD32B] font-extrabold font-clash-display text-2xl md:text-3xl text-center leading-tight">
+          <span className="text-[#FFD32B] font-extrabold font-clash-display text-2xl md:text-3xl text-center leading-tight [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
             ₹25k
           </span>
         </div>
@@ -77,13 +77,13 @@ function Bronze() {
           </div>
         </div>
 
-        <div className="text-center text-purple-800 font-extrabold font-clash-display text-[20px] sm:text-2xl leading-relaxed">
+        <div className="text-center text-[#8D31EC] font-extrabold font-clash-display text-[20px] sm:text-2xl md:text-4xl leading-relaxed">
           Goodies & T-shirts <br />
-          <div className="inline-flex items-center justify-center gap-2 mt-2">
+          <div className="inline-flex items-center justify-center gap-2 ">
             <span>Vouchers worth</span>
-            <div className="transform rotate-[5deg] bg-white px-2 py-1 shadow-md border border-black">
-              <span className="text-yellow-500 font-extrabold font-clash-display text-xl">
-                $50k
+            <div className="transform rotate-[5deg] bg-white px-3 py-2 shadow-md border border-black flex items-center justify-center ">
+              <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl md:text-2xl lg:text-3xl [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000] tracking-wider">
+                $50
               </span>
             </div>
           </div>

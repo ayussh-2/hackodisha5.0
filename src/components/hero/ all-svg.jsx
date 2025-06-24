@@ -3,11 +3,13 @@ import {
   HERO_ARROW_IMAGE,
   HERO_HAND_IMAGE,
   HERO_SWITCH_IMAGE,
+  registerBtn,
 } from "@/config/hero";
 import { DiscordButton } from "../ui/resizable-navbar";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 const Svg = () => {
   const btnRef = useRef(null);
   const handRef = useRef(null);
@@ -93,13 +95,16 @@ const Svg = () => {
             alt="ellipse"
             className="w-12 sm:w-16 md:w-20 absolute left-35 -top-2 sm:left-40 md:left-50"
           />
+           <Link href={registerBtn.link}>
           <div 
             ref={btnRef} 
             onClick={handleClick} 
-            className="text-black border border-black text-center text-[17px] sm:text-[22px] md:text-3xl not-italic font-semibold leading-none uppercase bg-white px-4 py-4 relative top-4 sm:top-6 md:top-8 rotate-4 rounded-2xl shadow-[8px_7px_6.6px_0px_#F1C20E] cursor-pointer"
+            className="text-black border border-black text-center text-[17px] sm:text-[22px] md:text-3xl not-italic font-semibold leading-none uppercase bg-white px-4 py-4 relative top-4 sm:top-6 md:top-8 rotate-4 hover:-rotate-0 transition-all duration-300 rounded-2xl shadow-[8px_7px_6.6px_0px_#F1C20E] cursor-pointer"
           >
-            APPLY ON DEVFOLIO
+           
+            {registerBtn.text}
           </div>
+           </Link>
           <Image
             ref={heroArrowImageRef}
             src={HERO_ARROW_IMAGE}
@@ -110,7 +115,7 @@ const Svg = () => {
             style={{ pointerEvents: 'none' }} 
           />
         </div>
-        <div className=" absolute top-[580px] sm:top-[685px]  md:top-[695px] lg:hidden">
+        <div className=" absolute top-[540px] sm:top-[685px]  md:top-[695px] lg:hidden">
           <DiscordButton /> {/* disord button */}
         </div>
         <Image
@@ -120,7 +125,7 @@ const Svg = () => {
           width={0}
           height={0}
           alt="image"
-          className=" absolute  hidden lg:inline-block   lg:top-[520px]  lg:w-48  md:left-7/9 "
+          className=" absolute  hidden lg:inline-block  lg:top-[520px]  lg:w-48  md:left-7/9 "
         />
         <Image
           src={
@@ -129,7 +134,7 @@ const Svg = () => {
           width={0}
           height={0}
           alt="image"
-          className=" absolute w-48  lg:hidden top-[660px] sm:top-[772px] "
+          className=" absolute w-48 lg:hidden top-[660px] sm:top-[772px] "
         />
         <div className="bg-[#A353F9] w-full lg:w-[15%]  lg:rotate-10 h-max rounded-2xl flex justify-center items-center absolute top-[830px] sm:top-[945px] p-1 lg:top-[700px] lg:left-[12%]">
           <div className="relative w-full">

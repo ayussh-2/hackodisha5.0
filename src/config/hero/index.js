@@ -29,3 +29,8 @@ export const navItems = [
         link: "#timeline",
     },
 ];
+
+export const registerBtn = {
+    link:"#",
+    text: "Register now"
+}

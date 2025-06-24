@@ -31,12 +31,13 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
       className="faq-item mb-2 sm:mb-3 lg:mb-4 relative"
       initial={{y: 40, x: -40}}
       animate={{ zIndex: isOpen ? 20 : 1 }}
+      viewport={{once: true}}
       whileInView={{y: 0, x: 0}}
       transition={{ duration: 0.3 }}
     >
       <div
         className={`
-          bg-white rounded-lg sm:rounded-xl lg:rounded-2xl border-2 border-black
+          bg-[#FAF5FF] rounded-lg sm:rounded-xl lg:rounded-3xl border-2 border-black
           transition-all duration-300 ease-in-out
           ${isOpen ? 'shadow-[3px_3px_0px_rgba(0,0,0,0.9)]' : 'shadow-[3px_3px_0px_rgba(0,0,0,0.8)]'}
         `}
@@ -49,7 +50,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
           `}
           onClick={onToggle}
         >
-          <span className="font-semibold font-archivo text-gray-800 text-sm sm:text-base lg:text-lg pr-2 sm:pr-3 leading-tight">
+          <span className="font-semibold font-archivo text-gray-800 text-sm sm:text-xl lg:text-3xl  pr-2 sm:pr-3 leading-tight">
             {question}
           </span>
           <motion.div
@@ -78,7 +79,7 @@ const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
                   initial={{ y: -10 }}
                   animate={{ y: 0 }}
                   transition={{ delay: 0.1, duration: 0.2 }}
-                  className="text-gray-700 font-archivo leading-[1.5em] text-xs sm:text-sm lg:text-base bg-[linear-gradient(to_bottom,transparent_95%,black_95%)] bg-[length:100%_1.5em] bg-repeat-y"
+                  className="text-neutral-700 font-archivo leading-[180%] text-xs sm:text-xl font-semibold"
                 >
                   {answer}
                 </motion.p>
@@ -111,7 +112,7 @@ function FaqSection() {
   return (
     <div className="w-full" id="faqs">
       <SectionTitle title="FAQS" lineGradient="white-purple" />
-      <section className="relative w-full py-8 sm:py-10 bg-[#BC82FE] overflow-hidden">
+      <section className="relative w-full py-8 sm:py-10 lg:py-20 bg-[#BC82FE] overflow-hidden">
         <div className="absolute bottom-1/3 left-4 sm:bottom-1/3 sm:left-8">
           <Image
             src={quesMark}
@@ -132,8 +133,8 @@ function FaqSection() {
           />
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xs sm:max-w-md lg:max-w-2xl xl:max-w-4xl mt-5 pb-4 sm:pb-6 lg:pb-8">
-          <div className="faq-container">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xs sm:max-w-md lg:max-w-6xl mt-5 pb-4 sm:pb-6 lg:pb-8">
+          <div className="faq-container ">
             {faqItems.map((item, index) => (
               <AccordionItem
                 key={index}
