@@ -23,7 +23,7 @@ const Timeline = () => {
         <div className="flex items-center justify-center relative">
           <SectionTitle title="TIME LINE" />
           <div
-            className="lg:absolute lg:h-[150px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0 h-[100px]"
+            className="hidden lg:absolute lg:h-[150px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0 h-[100px]"
             id="timeline"
           >
             <Image
@@ -77,13 +77,13 @@ const Timeline = () => {
               />
             </div>
 
-            <div className="flex justify-center mb-20">
+            <div className="flex justify-center mb-5 md:mb-10 lg:mb-20">
               <div className="flex bg-[#FFD32B] p-2.5 rounded-3xl border border-black">
                 {["Day 1", "Day 2"].map((day) => (
                   <button
                     key={day}
                     onClick={() => setActiveDay(day)}
-                    className={`px-8 sm:px-12 py-2 rounded-2xl font-archivo font-bold text-lg sm:text-2xl md:text-5xl transition-all duration-300 text-black ${
+                    className={`px-2 md:px-12 py-2 rounded-2xl font-archivo font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl transition-all duration-300 text-black ${
                       activeDay === day
                         ? "bg-white border border-black shadow-[inset_2px_2px_4px_rgba(0,0,0,0.25)]"
                         : "bg-[#FFD32B] border-none"
@@ -95,7 +95,7 @@ const Timeline = () => {
               </div>
             </div>
 
-            <div className="flex justify-center mb-16">
+            <div className="flex justify-center mb-5 lg:mb-16">
               <div className="w-[70%] flex justify-start max-[640px]:justify-center">
                 <div className="ml-[32px] max-[640px]:ml-0">
                   <p className="text-[40px] max-sm:text-[20px] text-black font-archivo font-semibold whitespace-nowrap">
@@ -115,7 +115,7 @@ const Timeline = () => {
               {schedule[activeDay].map((event, idx) => (
                 <div
                   key={idx}
-                  className="relative z-10 mb-7 flex w-[70%] items-center min-h-[60px] max-[640px]:w-[90%] max-[520px]:w-[95%] max-[480px]:w-[98%]"
+                  className="relative z-10 sm:mb-7 flex w-[70%] items-center min-h-[60px] max-[640px]:w-[90%] max-[520px]:w-[95%] max-[480px]:w-[98%]"
                 >
                   <div className="flex items-center px-3 py-2 rounded-full border border-black bg-white w-[calc(100%-2rem)] justify-start space-x-4 ml-2 flex-shrink-0 max-[640px]:px-2 max-[520px]:px-1.5 max-[480px]:px-1 max-[640px]:space-x-2 max-[480px]:space-x-1 max-[520px]:ml-1 max-[480px]:ml-0.5">
                     <div className="bg-[#FFD32B] text-[28px] max-sm:text-[14px] sm:text-md font-archivo font-semibold px-6 sm:px-8 py-1 rounded-full border border-black text-black max-[640px]:px-4 max-[520px]:px-3 max-[480px]:px-2 max-[640px]:text-xs max-[480px]:py-0.5">
