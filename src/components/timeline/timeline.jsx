@@ -115,9 +115,9 @@ const Timeline = () => {
               {schedule[activeDay].map((event, idx) => (
                 <div
                   key={idx}
-                  className="relative z-10 sm:mb-7 flex w-[70%] items-center min-h-[60px] max-[640px]:w-[90%] max-[520px]:w-[95%] max-[480px]:w-[98%]"
+                  className="relative z-10 mb-3 sm:mb-7 flex  items-center w-[100%] lg:w-[80%]"
                 >
-                  <div className="flex items-center px-3 py-2 rounded-full border border-black bg-white w-[calc(100%-2rem)] justify-start space-x-4 ml-2 flex-shrink-0 max-[640px]:px-2 max-[520px]:px-1.5 max-[480px]:px-1 max-[640px]:space-x-2 max-[480px]:space-x-1 max-[520px]:ml-1 max-[480px]:ml-0.5">
+                  <div className="flex items-center px-3 py-2 rounded-full border border-black bg-white w-full justify-start space-x-4 ml-2 flex-shrink-0 max-[640px]:px-2 max-[520px]:px-1.5 max-[480px]:px-1 max-[640px]:space-x-2 max-[480px]:space-x-1 max-[520px]:ml-1 max-[480px]:ml-0.5 ">
                     <div className="bg-[#FFD32B] text-[28px] max-sm:text-[14px] sm:text-md font-archivo font-semibold px-6 sm:px-8 py-1 rounded-full border border-black text-black max-[640px]:px-4 max-[520px]:px-3 max-[480px]:px-2 max-[640px]:text-xs max-[480px]:py-0.5">
                       {event.time}
                     </div>

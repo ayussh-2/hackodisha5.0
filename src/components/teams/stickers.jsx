@@ -14,7 +14,7 @@ export default function Stickers() {
   return (
     <div className="relative bg-[#BC82FE] min-h-screen overflow-hidden py-16 px-4 sm:px-6 md:px-8 flex justify-center">
       <div className="w-full max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10">
           {teamMembers.map((member, index) => {
             const isActive = activeIndex === index;
 
@@ -24,7 +24,7 @@ export default function Stickers() {
                 className="text-center group cursor-pointer"
                 onClick={() => handleClick(index)}
               >
-                <div className="relative  w-full aspect-square  overflow-hidden  mb-4 mx-auto max-w-sm ">
+                <div className="relative  w-full aspect-square  overflow-hidden  mb-4 mx-auto max-w-sm">
                   <Image
                     src={member.defaultImage}
                     alt={member.name}
@@ -49,10 +49,10 @@ export default function Stickers() {
                       ${isActive ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100`}
                   />
                 </div>
-                <h3 className="text-white font-bold font-clash-display text-3xl sm:text-3xl md:text-3xl xl:4xl mb-1 drop-shadow hover:scale-110 transition-all duration-300">
+                <h3 className="text-white font-bold font-clash-display text-xl sm:text-2xl md:text-3xl xl:text-4xl mb-1 drop-shadow hover:scale-110 transition-all duration-300">
                   {member.name}
                 </h3>
-                <p className="text-black font-archivo text-xl sm:text-base md:text-2xl xl:3xl">
+                <p className="text-black font-archivo text-sm sm:text-base md:text-2xl xl:3xl">
                   {member.role}
                 </p>
               </div>
