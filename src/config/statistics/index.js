@@ -1,4 +1,3 @@
-// Default statistics data configuration
 export const defaultStatsConfig = [
   {
     id: "registrations",

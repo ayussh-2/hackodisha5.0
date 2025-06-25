@@ -1,5 +1,5 @@
 "use client";
-import { ReactLenis } from "@/provider/lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 function HOC({ children }) {
     return <ReactLenis root>{children}</ReactLenis>;
