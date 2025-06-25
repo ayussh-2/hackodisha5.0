@@ -48,7 +48,7 @@ export const sponsorCTA = {
 };
 
 export const footerAssets = {
-    logo: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749839074/Logo_rahw7d.jpg",
+    logo: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750832596/Frame_lyzhrl.svg",
     presents:
         "https://res.cloudinary.com/dtztahzfk/image/upload/v1749847509/presents_jwdg0x.svg",
     circle: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749850891/wmain_d21xmo.png",

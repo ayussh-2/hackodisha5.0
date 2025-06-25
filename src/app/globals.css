@@ -5,6 +5,10 @@
     --foreground: #d3aeff;
 }
 
+@theme {
+    --breakpoint-ssm: 480px;
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -21,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {

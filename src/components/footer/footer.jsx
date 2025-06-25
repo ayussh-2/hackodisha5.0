@@ -43,7 +43,10 @@ export default function Footer() {
                                 <ul className="space-y-2 md:space-y-5 text-[16px] md:text-[20px] lg:text-[24px] font-archivo font-[600]">
                                     {footerLinks.map(({ label, href }) => (
                                         <li key={href}>
-                                            <Link href={href}>
+                                            <Link
+                                                href={href}
+                                                className="hover:text-[#BC82FE]"
+                                            >
                                                 {label}{" "}
                                                 <span className="ml-2 font-bold">
                                                     &#8250;
@@ -69,7 +72,7 @@ export default function Footer() {
                                         alt={alt}
                                         width={48}
                                         height={48}
-                                        className="md:w-[48px] md:h-[48px] w-[24px] h-[24px]"
+                                        className="md:w-[48px] md:h-[48px] w-[24px] h-[24px] hover:scale-115 transition-all"
                                     />
                                 </Link>
                             ))}
@@ -98,7 +101,8 @@ export default function Footer() {
 
             {/* Footer Bottom Bar */}
             <div className="text-center flex justify-center items-center text-[12px] md:text-[20px] lg:text-[24px] text-[#f6f0de] bg-black py-0 md:py-[14px] tracking-wide font-oxanium font-[600] h-10 md:h-[58px] w-full z-10 relative inset-y-0 bottom-0">
-                Hackodisha 5.0 2025. Powered by Webwiz, NIT Rourkela.
+                Hackodisha 5.0 2025. Powered by&nbsp;
+                <span className="text-[#BC82FE]">Webwiz</span>, NIT Rourkela.
             </div>
         </footer>
     );

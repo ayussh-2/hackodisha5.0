@@ -2,7 +2,7 @@
 import { ReactLenis } from "@studio-freight/react-lenis";
 
 function HOC({ children }) {
-    return <ReactLenis root>{children}</ReactLenis>;
+    return <>{children}</>;
 }
 
 export default HOC;

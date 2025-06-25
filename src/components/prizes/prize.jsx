@@ -14,7 +14,7 @@ function Prize() {
                 <SectionTitle title="PRIZES" lineGradient="white-purple" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-[500px] px-10 sm:px-25 md:px-4 pt-15 md:pt-40 sm:max-w-[900px] xl:max-w-7xl w-full mx-5">
+            <div className="grid md:grid-cols-2 gap-8 max-w-[500px] px-10 sm:px-25 md:px-4 pt-30 md:pt-40 sm:max-w-[900px] xl:max-w-7xl w-full mx-5">
                 <Gold />
                 <Silver />
                 <Bronze />
