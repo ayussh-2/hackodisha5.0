@@ -17,13 +17,13 @@ function Gold() {
             CASH PRIZE
           </span>
 
-          <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight">
+          <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
             ₹25k
           </span>
         </div>
       </div>
 
-      <div className="bg-white w-full h-full rounded-2xl px-4 pt-3 sm:pt-10 md:pt-12 pb-12 md:pb-20 flex flex-col items-center justify-between relative overflow-visible">
+      <div className="bg-[#FAF5FF] w-full h-full rounded-2xl px-4 pt-3 sm:pt-10 md:pt-12 pb-12 md:pb-20 flex flex-col items-center justify-between relative overflow-visible">
         <div className="relative mb-6 md:mb-10  flex items-center justify-center w-full">
           <div className="relative bg-[#FFD32B] rounded-full flex items-center justify-center sm:px-10 md:py-4 xl:py-5 min-w-[140px] sm:min-w-[216px] md:min-w-[300px] xl:min-w-[370px] sm:min-h-[70px] min-h-[50px] border border-black overflow-visible">
             <div
@@ -58,17 +58,17 @@ function Gold() {
           </div>
         </div>
 
-        <p className="text-center hidden md:block text-purple-800 font-clash-display font-extrabold text-3xl xl:text-4xl leading-relaxed mb-10">
-          Goodies & T-shirts <br />
+        <p className="text-center hidden md:block text-[#8D31EC] font-clash-display font-extrabold text-4xl xl:text-5xl leading-[130%] mb-10">
+          Goodies & T-shirts
           Vouchers worth
         </p>
 
         <div className="transform hidden md:block rotate-[-5deg] bg-white px-8 py-2 shadow-md border border-black">
-          <span className="text-yellow-500 font-clash-display font-extrabold text-4xl">
+          <span className="text-[#FFD32B] font-clash-display font-extrabold text-4xl lg:text-7xl [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
             $50k
           </span>
         </div>
-        <div className="text-center md:hidden text-purple-800 font-clash-display font-bold text-[20px] sm:text-2xl leading-relaxed">
+        <div className="text-center md:hidden text-[#8D31EC] font-clash-display font-bold text-[20px] sm:text-2xl leading-relaxed">
           Goodies & T-shirts <br />
           <div className="inline-flex items-center justify-center font-clash-display gap-2 mt-2">
             <span>Vouchers worth</span>
