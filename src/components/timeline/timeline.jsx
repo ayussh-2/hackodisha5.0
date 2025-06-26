@@ -21,7 +21,7 @@ const Timeline = () => {
         <div>
             <div className="absolute w-full -translate-y-[2rem] z-50 overflow-visible">
                 <div className="flex items-center justify-center relative">
-                    <SectionTitle title="TIME LINE" />
+                    <SectionTitle title="TIMELINE" />
                     <div
                         className="hidden lg:absolute lg:h-[150px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0 h-[100px]"
                         id="timeline"
