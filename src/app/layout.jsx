@@ -11,6 +11,7 @@ import {
 import HOC from "@/components/shared/hoc";
 import Footer from "@/components/footer/footer";
 import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
     title: "HackOdisha 5.0",
@@ -95,6 +96,7 @@ export default function RootLayout({ children }) {
             <body
                 className={`${archivo.variable} ${archivoBlack.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} ${oxanium.variable} antialiased`}
             >
+                <Toaster position="top-right" />
                 <HOC>{children}</HOC>
                 <Footer />
             </body>

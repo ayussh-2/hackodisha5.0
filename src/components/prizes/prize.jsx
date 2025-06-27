@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Gold from "./gold";
 import Silver from "./silver";
 import Bronze from "./bronze";

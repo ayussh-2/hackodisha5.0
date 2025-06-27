@@ -60,7 +60,7 @@ export default function SectionTitle({
 
             <div className="relative z-10">
                 {stickerImage && (
-                    <div className="relative w-full h-0 m-0 p-0">
+                    <div className="relative w-full h-0 m-0 p-0 hidden ssm:block">
                         <div
                             className={`${getStickerPositionClass()} w-20 sm:w-28 md:w-32 lg:w-36 h-auto`}
                         >

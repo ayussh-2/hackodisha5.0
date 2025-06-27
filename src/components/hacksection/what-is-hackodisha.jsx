@@ -34,7 +34,7 @@ function WhatIsHackOdisha() {
                             ></li>
                         ))}
                     </ul>
-                    <div className="max-w-full  rounded-3xl p-2 h-[90px] sm:h-[141px] bg-#FFF w-[88%] sm:w-[65%] lg:w-[83%] hack-shadow">
+                    <div className="max-w-full  rounded-3xl p-2 h-[90px] sm:h-[141px] bg-#FFF w-full ssm:w-[88%] sm:w-[65%] lg:w-[83%] hack-shadow">
                         <div className="border-dashed rounded-2xl border-4 flex flex-col justify-center items-center border-black h-full">
                             <h1 className="max-w-full text-center text-[1rem] sm:text-[1.37rem] md:text-3xl lg:text-[3rem] tracking-wide font-semibold text-black font-clash-display">
                                 What is{" "}
@@ -61,7 +61,7 @@ function WhatIsHackOdisha() {
                         className="absolute z-30 bottom-[0%] right-[8%] sm:right-[5%] w-[6%] h-[25%] sm:h-[10%] md:h-[17%] "
                     />
                     <div className="leading-[1.2rem] sm:leading-normal">
-                        <div className="text-black text-center text-[0.6rem] sm:text-base md:text-xl  xl:text-[1.75rem] pt-2 font-semibold font-archivo leading-relaxed sm:leading-relaxed lg:leading-[55px]">
+                        <div className="text-black text-center text-[0.8rem] sm:text-base md:text-xl  xl:text-[1.75rem] pt-2 font-semibold font-archivo leading-relaxed sm:leading-relaxed lg:leading-[55px]">
                             HackOdisha- a thrilling{" "}
                             <span className="text-[#7920D0]">
                                 36-hour online hackathon
@@ -78,7 +78,7 @@ function WhatIsHackOdisha() {
                             bounds
                         </div>
                         <br />
-                        <div className="text-black text-center text-[0.6rem] sm:text-base md:text-xl   xl:text-[1.75rem] font-archivo  leading-normal lg:pt-8 font-semibold sm:leading-relaxed lg:leading-[55px]">
+                        <div className="text-black text-center text-[0.8rem] sm:text-base md:text-xl   xl:text-[1.75rem] font-archivo  leading-normal lg:pt-8 font-semibold sm:leading-relaxed lg:leading-[55px]">
                             We celebrate the power of technology and the
                             indomitable spirit of our participants. Together,
                             we're shaping a brighter future through

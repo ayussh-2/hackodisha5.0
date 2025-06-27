@@ -20,14 +20,16 @@ export const footerLinks = [
 
 export const socialLinks = [
     {
-        src: "icon_t4isnb.svg",
+        src: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/icon_t4isnb.svg",
         alt: "Discord",
         href: "https://discord.com/invite/ewun7cxkJh",
+        className: "hover:scale-115",
     },
     {
-        src: "insta_cqxnrd.svg",
+        src: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/insta_cqxnrd.svg",
         alt: "Instagram",
         href: "https://www.instagram.com/webwiz.nitr/",
+        className: "hover:scale-115",
     },
     // {
     //     src: "facebook_sbhm8s.svg",
@@ -35,9 +37,16 @@ export const socialLinks = [
     //     href: "#",
     // },
     {
-        src: "twitter_rdcoxx.svg",
+        src: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/twitter_rdcoxx.svg",
         alt: "Twitter",
         href: "https://x.com/hackodisha",
+        className: "hover:scale-115",
+    },
+    {
+        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751045831/icons8-whatsapp_axltbb.svg",
+        alt: "Whatsapp Channel Invite",
+        href: "https://whatsapp.com/channel/0029Vb66nT830LKKS2CXla0B",
+        className: "scale-75 hover:scale-90",
     },
 ];
 

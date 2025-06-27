@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import {
     schedule,
@@ -8,17 +8,14 @@ import {
     bottomArrow,
     clockIcon,
     reloadIcon,
-    timelineDot,
-    dottedLine,
     webwizLogo,
 } from "@/config/timeline/index";
 import SectionTitle from "../shared/section-title";
-import DottedLine from "../../../public/Group 1430102895.svg";
 const Timeline = () => {
     const [activeDay, setActiveDay] = useState("Day 1");
 
     return (
-        <div>
+        <div id="timeline">
             <div className="absolute w-full -translate-y-[2rem] z-50 overflow-visible">
                 <div className="flex items-center justify-center relative">
                     <SectionTitle title="TIMELINE" />
@@ -36,7 +33,7 @@ const Timeline = () => {
                     </div>
                 </div>
             </div>
-            <div className="min-h-screen w-full flex items-center justify-center bg-[#EFE7F7] px-4 py-[120px] relative">
+            <div className="min-h-screen w-full flex items-center justify-center bg-[#EFE7F7]  py-[120px] relative">
                 <div className="absolute top-6 right-4 z-10 max-[414px]:top-10 max-[414px]:right-6">
                     <Image
                         src={topArrow}
@@ -55,7 +52,7 @@ const Timeline = () => {
                     />
                 </div>
 
-                <div className="rounded-[6rem] mt-24 border-[2px] border-black bg-[#D3AEFF] w-[calc(100vw-4rem)] max-w-7xl px-[clamp(1rem,4vw,2.44rem)] pt-[clamp(2rem,3.51rem,5vw)] pb-[clamp(2rem,3.51rem,5vw)]">
+                <div className="rounded-[6rem] mt-24 border-[2px] border-black bg-[#D3AEFF] w-full ssm:w-[calc(100vw-4rem)]   ssm:max-w-7xl px-[clamp(1rem,4vw,2.44rem)] pt-[clamp(2rem,3.51rem,5vw)] pb-[clamp(2rem,3.51rem,5vw)]">
                     <div className="rounded-[6rem] border border-black bg-[#FAF5FF] w-full pt-8 px-6 pb-6 relative overflow-hidden">
                         <div className="absolute top-4 left-8 z-10 hidden min-[619px]:block max-[580px]:left-4 max-[520px]:left-2 max-[500px]:left-1 max-[460px]:left-0">
                             <Image

@@ -45,7 +45,7 @@ export default function Footer() {
                                         <li key={href}>
                                             <Link
                                                 href={href}
-                                                className="hover:text-[#BC82FE]"
+                                                className="hover:text-[#BC82FE] transition-colors duration-300"
                                             >
                                                 {label}{" "}
                                                 <span className="ml-2 font-bold">
@@ -60,22 +60,24 @@ export default function Footer() {
 
                         {/* Social Icons */}
                         <div className="flex justify-center gap-4 md:gap-[26.57px] mt-4 z-0 relative">
-                            {socialLinks.map(({ src, alt, href }) => (
-                                <Link
-                                    key={alt}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <Image
-                                        src={`${footerAssets.baseCloudinaryPath}${src}`}
-                                        alt={alt}
-                                        width={48}
-                                        height={48}
-                                        className="md:w-[48px] md:h-[48px] w-[24px] h-[24px] hover:scale-115 transition-all"
-                                    />
-                                </Link>
-                            ))}
+                            {socialLinks.map(
+                                ({ src, alt, href, className }) => (
+                                    <Link
+                                        key={alt}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Image
+                                            src={src}
+                                            alt={alt}
+                                            width={48}
+                                            height={48}
+                                            className={`md:w-[48px] md:h-[48px] w-[24px] h-[24px] transition-all ${className}`}
+                                        />
+                                    </Link>
+                                )
+                            )}
                         </div>
                     </div>
 

@@ -10,6 +10,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
+import toast from "react-hot-toast";
 const Svg = () => {
     const btnRef = useRef(null);
     const handRef = useRef(null);
@@ -118,6 +119,18 @@ const Svg = () => {
             transformOrigin: "bottom center",
             duration: 0.2,
             ease: "power2.out",
+        });
+
+        toast("Starting Soon!", {
+            duration: 2000,
+            style: {
+                background: "#D3AEFF",
+                color: "#000",
+                fontSize: "16px",
+                fontWeight: "bold",
+                textAlign: "center",
+                fontFamily: "Archivo, sans-serif",
+            },
         });
     };
 
