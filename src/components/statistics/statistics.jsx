@@ -4,7 +4,6 @@ import { defaultStatsConfig } from "@/config/statistics";
 
 export default function Statistics() {
   const stats = defaultStatsConfig;
- 
 
   return (
     <>
@@ -20,13 +19,13 @@ export default function Statistics() {
                 >
                   <div className="flex w-full h-full justify-center items-center">
                     <div className="flex flex-col">
-                        <div className="flex w-full justify-center items-center">
-                      <div className="w-fit py-2 px-4 md:py-3 md:px-6 justify-center items-center rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md select-none z-10">
-                        <p className="text-black font-bricolage-grotesque md:text-2xl font-normal leading-normal tracking-[-0.48px] select-none">
-                          {stat.label}
-                        </p>
-                      </div>
+                      <div className="flex w-full justify-center items-center">
+                        <div className="w-fit py-2 px-4 md:py-3 md:px-6 justify-center items-center rounded-[48px] border-2 border-black bg-white hover:bg-[#F3F3F3] hover:shadow-md select-none z-10">
+                          <p className="text-black font-bricolage-grotesque md:text-2xl font-normal leading-normal tracking-[-0.48px] select-none">
+                            {stat.label}
+                          </p>
                         </div>
+                      </div>
                       <div className="">
                         <p className="text-black font-bricolage-grotesque text-[64px] sm:text-[80px] md:text-[90px] lg:text-[100px] xl:text-[120px] font-extrabold leading-none select-none">
                           {stat.value}
