@@ -33,34 +33,10 @@ const goldSponsorsData = [
 
 const silverSponsorsData = [
     {
-        id: "VBNMQ",
-        alt: "solana",
-        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1749813307/solana_njcbvj.svg",
-        name: "solana",
-    },
-    {
-        id: "WERTZ",
-        alt: "solana",
-        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1749813307/solana_njcbvj.svg",
-        name: "solana",
-    },
-    {
-        id: "SDFGH",
-        alt: "solana",
-        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1749813307/solana_njcbvj.svg",
-        name: "solana",
-    },
-    {
-        id: "XCVBN",
-        alt: "solana",
-        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1749813307/solana_njcbvj.svg",
-        name: "solana",
-    },
-    {
-        id: "QAZWS",
-        alt: "solana",
-        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1749813307/solana_njcbvj.svg",
-        name: "solana",
+        id: "UIOPA",
+        alt: "gofr",
+        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1751033237/complete-gorg-logo.bc9195c4_v6pdbp.png",
+        name: "gofr",
     },
 ];
 
@@ -158,12 +134,7 @@ const trackSponsorsData = [
         image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1751033237/g29_pzvw0d.png",
         name: "interview buddy",
     },
-    {
-        id: "UIOPA",
-        alt: "gofr",
-        image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1751033237/complete-gorg-logo.bc9195c4_v6pdbp.png",
-        name: "gofr",
-    },
+
     {
         id: "YTRWD",
         alt: "wolfram",
