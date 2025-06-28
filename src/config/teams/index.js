@@ -1,7 +1,7 @@
 export const teamMembers = [
     {
         name: "Sujal Agarwal",
-        role: "Sponsorship Head",
+        role: "Sponsorship Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875106/Aet_5_4x_1_gvhxjm.png",
         hoverImage:
@@ -9,7 +9,7 @@ export const teamMembers = [
     },
     {
         name: "Soumadeep Sengupta",
-        role: "Design Head & Management Head",
+        role: "Design & Management Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/Aet_4_4x_1_pikkqh.png",
         hoverImage:
@@ -17,7 +17,7 @@ export const teamMembers = [
     },
     {
         name: "Ritesh Routray",
-        role: "Publicity Head",
+        role: "Publicity Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/At_5_4x_1_bb6rpu.png",
         hoverImage:
@@ -25,7 +25,7 @@ export const teamMembers = [
     },
     {
         name: "Payal Das",
-        role: "Management Head",
+        role: "Management Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875108/Asset_14_4x_1_hda0mn.png",
         hoverImage:
@@ -33,7 +33,7 @@ export const teamMembers = [
     },
     {
         name: "Debajyoti Chatterjee ",
-        role: "Publicity Head & management  Head",
+        role: "Publicity Lead & Management  Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/Asset_13_4x_1_nuf6rc.png",
         hoverImage:
@@ -41,7 +41,7 @@ export const teamMembers = [
     },
     {
         name: "Chinnari Narashimha Prasad ",
-        role: "Community Head",
+        role: "Community Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875111/Asset_12_4x_1_vj5qlj.png",
         hoverImage:
@@ -49,7 +49,7 @@ export const teamMembers = [
     },
     {
         name: "Bibhu",
-        role: "Sponsorship Head",
+        role: "Sponsorship Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875105/et_8_4x_1_usthdc.png",
         hoverImage:
@@ -57,7 +57,7 @@ export const teamMembers = [
     },
     {
         name: "Ashwani Senapati",
-        role: "Community Head",
+        role: "Community Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750867986/Ast_6_4x_1_1_eay0yf.png",
         hoverImage:
@@ -65,7 +65,7 @@ export const teamMembers = [
     },
     {
         name: "Ayush",
-        role: "Technical  Head",
+        role: "Technical  Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/Ast_7_4x_1_jamjb4.png",
         hoverImage:
@@ -73,7 +73,7 @@ export const teamMembers = [
     },
     {
         name: "Ankita Behera",
-        role: "Design Head",
+        role: "Design Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/Asset_9_4x_1_eozbms.png",
         hoverImage:
@@ -81,7 +81,7 @@ export const teamMembers = [
     },
     {
         name: "Tushank Raut",
-        role: "Sponsership Head",
+        role: "Sponsership Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875106/Asset_10_4x_1_mrpsfl.png",
         hoverImage:

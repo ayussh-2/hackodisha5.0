@@ -57,10 +57,10 @@ export default function Stickers() {
                       } group-hover:opacity-100`}
                                     />
                                 </div>
-                                <h3 className="text-white font-bold font-clash-display text-xl sm:text-2xl md:text-3xl xl:text-4xl mb-1 drop-shadow hover:scale-110 transition-all duration-300">
+                                <h3 className="text-white font-bold font-clash-display text-xl sm:text-2xl md:text-3xl xl:text-4xl mb-1 drop-shadow hover:scale-110 transition-all duration-300 capitalize">
                                     {member.name}
                                 </h3>
-                                <p className="text-black font-archivo text-sm sm:text-base md:text-2xl xl:3xl">
+                                <p className="capitalize text-black font-archivo text-sm sm:text-base md:text-2xl xl:3xl">
                                     {member.role}
                                 </p>
                             </div>
