@@ -15,14 +15,14 @@ export const teamMembers = [
         hoverImage:
             "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750833332/soumyadee_s2w9t0.png",
     },
-    {
-        name: "Ritesh Routray",
-        role: "Publicity Lead",
-        defaultImage:
-            "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/At_5_4x_1_bb6rpu.png",
-        hoverImage:
-            "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750833292/ritesh_twvc1j.png",
-    },
+    // {
+    //     name: "Ritesh Routray",
+    //     role: "Publicity Lead",
+    //     defaultImage:
+    //         "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/At_5_4x_1_bb6rpu.png",
+    //     hoverImage:
+    //         "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750833292/ritesh_twvc1j.png",
+    // },
     {
         name: "Payal Das",
         role: "Management Lead",
@@ -33,15 +33,15 @@ export const teamMembers = [
     },
     {
         name: "Debajyoti Chatterjee ",
-        role: "Publicity Lead & Management  Lead",
+        role: "Publicity & Management Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750861274/Asset_13_4x_1_nuf6rc.png",
         hoverImage:
             "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750833149/deb_cxnlua.png",
     },
     {
-        name: "Chinnari Narashimha Prasad ",
-        role: "Community Lead",
+        name: "Chinnari Narashimha",
+        role: "Outreach Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875111/Asset_12_4x_1_vj5qlj.png",
         hoverImage:
@@ -57,7 +57,7 @@ export const teamMembers = [
     },
     {
         name: "Ashwani Senapati",
-        role: "Community Lead",
+        role: "Outreach Lead",
         defaultImage:
             "https://res.cloudinary.com/du9d0iiok/image/upload/v1750867986/Ast_6_4x_1_1_eay0yf.png",
         hoverImage:

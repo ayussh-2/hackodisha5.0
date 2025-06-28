@@ -28,7 +28,11 @@ export default function Footer() {
                                 <p className="font-bricolage-grotesque font-[700] text-[16px] md:text-[24px] lg:text-[32px] leading-[1.2]">
                                     {sponsorCTA.heading}
                                 </p>{" "}
-                                <Link href={sponsorCTA.buttonLink}>
+                                <Link
+                                    href={sponsorCTA.buttonLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <button className="bg-[#ffd952] text-black px-2 py-1 md:px-10 md:py-5 mx-auto font-bricolage-grotesque font-[700] md:rounded-lg rounded-2xl shadow-[4px_6px_0px_#444] text-[16px] md:text-[29px] border-3 border-black hover:bg-[#ffe36e] hover:translate-y-[-2px] hover:shadow-[6px_8px_0px_#444] active:translate-y-[2px] active:shadow-[2px_3px_0px_#444] active:scale-[0.98] transition-all duration-150 ease-in-out md:max-w-[364px] md:h-[78px] max-w-[180px] h-[50px] flex flex-row justify-center items-center md:mx-0 transform-gpu hover:cursor-pointer">
                                         {sponsorCTA.buttonText}
                                     </button>
@@ -82,10 +86,10 @@ export default function Footer() {
                     </div>
 
                     {/* Decorative Images */}
-                    <div className="absolute bottom-80 md:bottom-7 left-0 z-0 md:w-[185px] md:h-[175px] w-[108px] h-[88px]">
+                    <div className="absolute bottom-80 md:bottom-7 left-0 z-0 md:w-[160px] md:h-[175px] w-[108px] h-[88px]">
                         <Image
                             src={footerAssets.presents}
-                            alt="Webwiz Presents"
+                            alt="Namespace Community"
                             width={185}
                             height={175}
                         />
@@ -94,17 +98,19 @@ export default function Footer() {
                         <Image
                             src={footerAssets.circle}
                             alt="Webwiz Circle"
-                            width={191.36}
-                            height={191.36}
+                            width={500}
+                            height={500}
                         />
                     </div>
                 </div>
             </div>
 
             {/* Footer Bottom Bar */}
-            <div className="text-center flex justify-center items-center text-[12px] md:text-[20px] lg:text-[24px] text-[#f6f0de] bg-black py-0 md:py-[14px] tracking-wide font-oxanium font-[600] h-10 md:h-[58px] w-full z-10 relative inset-y-0 bottom-0">
+            <div className="text-center flex justify-center items-center text-[8px] ssm:text-[10px] ssmd:text-[12px] smd:text-[15px] mmd:text-[20px] lg:text-[24px] text-[#f6f0de] bg-black py-0 md:py-[14px] tracking-wide font-oxanium font-[600] h-10 md:h-[58px] w-full z-10 relative inset-y-0 bottom-0">
                 Hackodisha 5.0 2025. Powered by&nbsp;
-                <span className="text-[#BC82FE]">Webwiz</span>, NIT Rourkela.
+                <span className="text-[#BC82FE]">Webwiz</span>, NIT Rourkela &
+                <span className="text-[#BC82FE]">&nbsp;Namespace&nbsp;</span>
+                Community.
             </div>
         </footer>
     );

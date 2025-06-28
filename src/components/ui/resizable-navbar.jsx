@@ -184,7 +184,7 @@ export const MobileNavToggle = ({ isOpen, onClick }) => {
 
 export const NavbarLogo = () => {
     return (
-        <Link href="/" className="relative z-20  px-2 ">
+        <Link href="/#home" className="relative z-20  px-2 ">
             <Image
                 src="https://res.cloudinary.com/du5qoczcn/image/upload/v1749655318/Frame_dc6fad.svg"
                 alt="logo"

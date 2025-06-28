@@ -7,6 +7,9 @@
 
 @theme {
     --breakpoint-ssm: 480px;
+    --breakpoint-mmd: 860px;
+    --breakpoint-smd: 640px;
+    --breakpoint-ssmd: 520px;
 }
 
 @theme inline {

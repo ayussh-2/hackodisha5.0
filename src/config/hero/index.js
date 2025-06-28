@@ -14,7 +14,7 @@ export const DISCORD_LINK = "https://discord.com/invite/ewun7cxkJh";
 export const navItems = [
     {
         name: "Home",
-        link: "/#",
+        link: "/#home",
     },
     {
         name: "About us",

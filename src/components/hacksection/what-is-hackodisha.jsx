@@ -64,16 +64,16 @@ function WhatIsHackOdisha() {
                         <div className="text-black text-center text-[0.8rem] sm:text-base md:text-xl  xl:text-[1.75rem] pt-2 font-semibold font-archivo leading-relaxed sm:leading-relaxed lg:leading-[55px]">
                             HackOdisha- a thrilling{" "}
                             <span className="text-[#7920D0]">
-                                36-hour online hackathon
+                                36-hour hybrid hackathon
                             </span>{" "}
                             organized by
                             <span className="text-[#7920D0]">
                                 {" "}
-                                Webwiz, Nit Rourkela
+                                Webwiz, Nit Rourkela & Namespace Community
                             </span>
                             — an event dedicated to fostering community
                             collaboration. With an impressive turnout of over
-                            1600 participants across India, this hackathon
+                            5000 participants across India, this hackathon
                             promises to be a platform where innovation knows no
                             bounds
                         </div>

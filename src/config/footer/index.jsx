@@ -53,13 +53,13 @@ export const socialLinks = [
 export const sponsorCTA = {
     heading: "Want to become a sponsor of Hackodisha 5.0?",
     buttonText: "Become a sponsor",
-    buttonLink: "mailto:webwiz.nitrkl@gmail.com",
+    buttonLink: "https://calendly.com/hackodisha",
 };
 
 export const footerAssets = {
     logo: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750832596/Frame_lyzhrl.svg",
     presents:
-        "https://res.cloudinary.com/dtztahzfk/image/upload/v1749847509/presents_jwdg0x.svg",
+        "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751094661/Frame_61_ha3iwx.png",
     circle: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749850891/wmain_d21xmo.png",
     baseCloudinaryPath:
         "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/",
