@@ -13,8 +13,8 @@ function Silver() {
                     className="w-[300px] scale-[0.8] sm:scale-[1] md:scale-[1.3] xl:scale-[1.45] h-auto"
                 />
                 <div className="absolute inset-0 flex flex-col items-center -left-11 -top-0 sm:-left-14 sm:-top-0 md:-left-20 md:-top-1 justify-center rotate-[16deg] md:rotate-[15deg] px-2">
-                    <span className="text-black font-extrabold font-clash-display text-[13px] sm:text-[16px] md:text-xl text-center leading-tight">
-                        CASH PRIZE
+                    <span className="text-black font-extrabold font-clash-display text-[8px] sm:text-[10px] md:text-base text-center leading-tight">
+                        CASH PRIZE <br /> WORTH
                     </span>
 
                     <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
@@ -58,9 +58,9 @@ function Silver() {
                 </div>
 
                 <div className="text-center text-[#8D31EC] font-extrabold font-clash-display text-[20px] sm:text-2xl md:text-4xl leading-relaxed">
-                    Goodies & T-shirts <br />
+                    Goodies , T-shirts , 3 PPIs and 5 Domains
                     <div className="inline-flex items-center justify-center gap-2 ">
-                        <span>Vouchers worth</span>
+                        <span>&nbsp;</span>
                         <div className="transform rotate-[5deg] bg-white px-3 py-2 shadow-md border border-black flex items-center justify-center ">
                             <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl md:text-2xl lg:text-3xl [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000] tracking-wider">
                                 ₹{prizeAmounts.silver.goodies}

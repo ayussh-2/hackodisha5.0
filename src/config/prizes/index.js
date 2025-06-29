@@ -17,15 +17,15 @@ export const prizeImages = {
 
 export const prizeAmounts = {
     gold: {
-        amount: "XX",
-        goodies: "XX",
+        amount: "80K",
+        goodies: "80K",
     },
     silver: {
-        amount: "XX",
-        goodies: "XX",
+        amount: "45K",
+        goodies: "45K",
     },
     bronze: {
-        amount: "XX",
-        goodies: "XX",
+        amount: "25K",
+        goodies: "25K",
     },
 };
