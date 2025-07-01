@@ -17,8 +17,8 @@ const Discord = () => {
                     alt="discord"
                 />
 
-                <h1 className="text-[#000] text-base not-italic font-semibold leading-normal font-archivo">
-                    Join discord
+                <h1 className="text-[#000] text-base not-italic font-semibold leading-normal font-bricolage-grotesque">
+                    Join Discord
                 </h1>
             </div>
         </Link>

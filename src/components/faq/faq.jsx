@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import SectionTitle from "../shared/section-title";
 import { arrow, plusIcon, quesMark, faqItems, XIcons } from "@/config/faq";
+import { motion, AnimatePresence } from "framer-motion";
 
 const PlusIcon = ({ className }) => (
     <Image
@@ -25,47 +26,103 @@ const XIcon = ({ className }) => (
 );
 
 const AccordionItem = ({ question, answer, isOpen, onToggle }) => {
-    if (isOpen) {
-        return (
-            <div className="faq-item mb-2 sm:mb-3 lg:mb-4 relative z-50">
-                <div
-                    className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border-2 border-black"
-                    style={{ boxShadow: "3px 3px 0px rgba(0, 0, 0, 0.9)" }}
-                >
-                    <div className="flex justify-between items-start mb-2 sm:mb-3 lg:mb-4">
-                        <h3 className="font-semibold font-archivo text-gray-800 text-sm sm:text-base lg:text-xl pr-2 sm:pr-3 lg:pr-4 leading-tight">
-                            {question}
-                        </h3>
-                        <button
-                            onClick={onToggle}
-                            className="flex-shrink-0 mt-0.5 sm:mt-1"
-                        >
-                            <XIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600" />
-                        </button>
-                    </div>
-                    <div className="">
-                        <p className="text-gray-700 font-archivo leading-[1.5em] text-xs sm:text-sm lg:text-base bg-[linear-gradient(to_bottom,transparent_95%,black_95%)] bg-[length:100%_1.5em] bg-repeat-y">
-                            {answer}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    const containerRef = useRef(null);
+
+    const handleToggle = (e) => {
+        e.preventDefault();
+
+        const currentScrollY = window.scrollY;
+        const elementTop =
+            containerRef.current?.getBoundingClientRect().top + currentScrollY;
+
+        onToggle();
+
+        requestAnimationFrame(() => {
+            const newElementTop =
+                containerRef.current?.getBoundingClientRect().top +
+                window.scrollY;
+            const scrollDiff = newElementTop - elementTop;
+
+            if (Math.abs(scrollDiff) > 5) {
+                window.scrollTo({
+                    top: currentScrollY + scrollDiff,
+                    behavior: "instant",
+                });
+            }
+        });
+    };
 
     return (
-        <div className="faq-item mb-2 sm:mb-3 lg:mb-4 relative">
-            <button
-                className="w-full bg-white rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 text-left flex justify-between items-center hover:shadow-md transition-all duration-200 border-2 border-black relative"
-                onClick={onToggle}
-                style={{ boxShadow: "3px 3px 0px rgba(0, 0, 0, 0.8)" }}
+        <motion.div
+            ref={containerRef}
+            className="faq-item mb-2 sm:mb-3 lg:mb-4 relative"
+            initial={{ y: 40, x: -40 }}
+            animate={{ zIndex: isOpen ? 20 : 1 }}
+            viewport={{ once: true }}
+            whileInView={{ y: 0, x: 0 }}
+            transition={{ duration: 0.3 }}
+        >
+            <div
+                className={`
+          bg-[#FAF5FF] rounded-lg sm:rounded-xl lg:rounded-3xl border-2 border-black
+          transition-all duration-300 ease-in-out
+          ${
+              isOpen
+                  ? "shadow-[3px_3px_0px_rgba(0,0,0,0.9)]"
+                  : "shadow-[3px_3px_0px_rgba(0,0,0,0.8)]"
+          }
+        `}
             >
-                <span className="font-semibold text-gray-800 text-sm sm:text-base lg:text-lg pr-2 sm:pr-3 leading-tight">
-                    {question}
-                </span>
-                <PlusIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600 flex-shrink-0" />
-            </button>
-        </div>
+                <button
+                    className={`
+            w-full p-3 sm:p-4 lg:p-6 text-left flex justify-between items-center
+            transition-all duration-300 ease-in-out
+            ${isOpen ? "" : "hover:shadow-md"}
+          `}
+                    onClick={handleToggle}
+                >
+                    <span className="font-semibold font-archivo text-gray-800 text-sm sm:text-xl lg:text-3xl  pr-2 sm:pr-3 leading-tight">
+                        {question}
+                    </span>
+                    <motion.div
+                        animate={{
+                            rotate: isOpen ? 90 : 0,
+                            scale: isOpen ? 1.5 : 1,
+                        }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        {isOpen ? (
+                            <XIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600" />
+                        ) : (
+                            <PlusIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600" />
+                        )}
+                    </motion.div>
+                </button>{" "}
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="overflow-hidden"
+                            style={{ willChange: "height" }}
+                        >
+                            <div className="px-3 sm:px-4 lg:px-6 pb-3 sm:pb-4 lg:pb-6">
+                                <motion.p
+                                    initial={{ y: -10 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ delay: 0.1, duration: 0.2 }}
+                                    className="text-neutral-700 font-archivo leading-[180%] text-xs sm:text-xl font-semibold"
+                                >
+                                    {answer}
+                                </motion.p>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
+        </motion.div>
     );
 };
 
@@ -73,16 +130,22 @@ function FaqSection() {
     const [openItems, setOpenItems] = useState({});
 
     const toggleItem = (index) => {
-        setOpenItems((prev) => ({
-            ...prev,
-            [index]: !prev[index],
-        }));
+        setOpenItems((prev) => {
+            const newState = { ...prev };
+            if (newState[index]) {
+                delete newState[index];
+            } else {
+                Object.keys(newState).forEach((key) => delete newState[key]);
+                newState[index] = true;
+            }
+            return newState;
+        });
     };
 
     return (
         <div className="w-full" id="faqs">
             <SectionTitle title="FAQS" lineGradient="white-purple" />
-            <section className="relative w-full py-8 sm:py-12 lg:py-16 bg-purple-400 overflow-hidden min-h-fit sm:min-h-screen lg:min-h-[calc(100vh-4rem)]">
+            <section className="relative w-full py-8 sm:py-10 lg:py-20 bg-[#BC82FE] overflow-hidden">
                 <div className="absolute bottom-1/3 left-4 sm:bottom-1/3 sm:left-8">
                     <Image
                         src={quesMark}
@@ -93,75 +156,18 @@ function FaqSection() {
                     />
                 </div>
 
-                <div className="absolute top-16 right-4 sm:top-20 sm:right-26">
+                <div className="absolute -top-1 right-4 sm:-top-1 sm:right-26">
                     <Image
                         src={arrow}
                         alt="Arrow pointing to FAQ"
                         width={80}
                         height={80}
-                        className="
-              w-[60px] h-[48px]
-              xs:w-[72px] xs:h-[54px]
-              sm:w-[64px] sm:h-[48px]
-              md:w-[56px] md:h-[42px]
-              lg:w-[80px] lg:h-[60px]
-              xl:w-[80px] xl:h-[60px]
-              transition-all duration-300 ease-in-out
-            "
+                        className="w-[60px] h-[48px] xs:w-[72px] xs:h-[54px] sm:w-[64px] sm:h-[48px] md:w-[64px] md:h-[48px] lg:w-[80px] lg:h-[60px] xl:w-[80px] xl:h-[60px] transition-all duration-300 ease-in-out"
                     />
                 </div>
 
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xs sm:max-w-md lg:max-w-2xl xl:max-w-4xl mt-5">
-                    <div className="faq-container">
-                        <style jsx>{`
-                            @media (max-width: 400px) {
-                                .faq-container .faq-item:not(:first-child) {
-                                    margin-top: -12px;
-                                }
-                                .faq-container .faq-item:nth-child(1) {
-                                    z-index: 20;
-                                }
-                                .faq-container .faq-item:nth-child(2) {
-                                    z-index: 19;
-                                }
-                                .faq-container .faq-item:nth-child(3) {
-                                    z-index: 18;
-                                }
-                                .faq-container .faq-item:nth-child(4) {
-                                    z-index: 17;
-                                }
-                                .faq-container .faq-item:nth-child(5) {
-                                    z-index: 16;
-                                }
-                                .faq-container .faq-item:nth-child(6) {
-                                    z-index: 15;
-                                }
-                                .faq-container .faq-item:nth-child(7) {
-                                    z-index: 14;
-                                }
-                                .faq-container .faq-item:nth-child(8) {
-                                    z-index: 13;
-                                }
-                                .faq-container .faq-item:nth-child(9) {
-                                    z-index: 12;
-                                }
-                            }
-                            @media (min-width: 401px) {
-                                .faq-container .faq-item {
-                                    margin-bottom: 0.5rem;
-                                }
-                            }
-                            @media (min-width: 640px) {
-                                .faq-container .faq-item {
-                                    margin-bottom: 0.75rem;
-                                }
-                            }
-                            @media (min-width: 1024px) {
-                                .faq-container .faq-item {
-                                    margin-bottom: 1rem;
-                                }
-                            }
-                        `}</style>
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-xs sm:max-w-md lg:max-w-6xl mt-5 pb-4 sm:pb-6 lg:pb-8">
+                    <div className="faq-container ">
                         {faqItems.map((item, index) => (
                             <AccordionItem
                                 key={index}
