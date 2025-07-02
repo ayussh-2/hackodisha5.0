@@ -93,9 +93,8 @@ export default function RootLayout({ children }) {
                     content="https://hackodisha.com/Images/logo.png"
                 />
             </head>
-            <body
-                className={`${archivo.variable} ${archivoBlack.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} ${oxanium.variable} antialiased`}
-            >
+
+            <body  className={`${archivo.variable} ${archivoBlack.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} ${oxanium.variable} antialiased`} >
                 <Toaster position="top-right" />
                 <HOC>{children}</HOC>
                 <Footer />

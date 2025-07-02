@@ -6,6 +6,7 @@ import Sponsors from "@/components/sponsorship/sponsors";
 import Teams from "@/components/teams/teams";
 import Statistics from "@/components/statistics/statistics";
 import Timeline from "@/components/timeline/timeline";
+import Judges from "@/components/judges/Judges";
 export default function Page() {
     return (
         <main>
@@ -17,6 +18,7 @@ export default function Page() {
             <Teams />
             <Sponsors />
             <FaqSection />
+            <Judges/>
         </main>
     );
 }
