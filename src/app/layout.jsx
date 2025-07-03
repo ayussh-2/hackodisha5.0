@@ -18,8 +18,8 @@ import { Navbar } from "@/components/navbar/Navbar";
 export const metadata = {
     title: "HackOdisha 5.0",
     description:
-        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour hybrid hackathon organized by Webwiz, Nit Rourkela— an event dedicated to fostering community collaboration.",
-    image: "https://hackodisha.com/Images/logo.png",
+        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour hybrid hackathon organized by Webwiz, Nit Rourkela — an event dedicated to fostering community collaboration.",
+    image: "https://hackodisha.com/Images/cover.png",
     url: "https://hackodisha.com/",
     keywords: [
         "HackOdisha",
@@ -39,9 +39,9 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Website",
     name: "HackOdisha 5.0",
-    image: "https://hackodisha.com/Images/logo.png",
+    image: "https://hackodisha.com/Images/cover.png",
     description:
-        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour hybrid hackathon organized by Webwiz, Nit Rourkela— an event dedicated to fostering community collaboration.",
+        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour hybrid hackathon organized by Webwiz, Nit Rourkela — an event dedicated to fostering community collaboration.",
 };
 export default function RootLayout({ children }) {
     return (
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
                 />
                 <link
                     rel="icon"
-                    href="/Images/logo.png"
+                    href="/Images/cover.png"
                     type="image/x-icon"
                     sizes="any"
                 ></link>
@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
                 <meta property="og:url" content="https://hackodisha.com/" />
                 <meta
                     property="og:image"
-                    content="https://hackodisha.com/Images/logo.png"
+                    content="https://hackodisha.com/Images/cover.png"
                 />
                 <meta name="twitter:title" content="HackOdisha 5.0" />
                 <meta
@@ -88,11 +88,11 @@ export default function RootLayout({ children }) {
                 />
                 <meta
                     name="twitter:image"
-                    content="https://hackodisha.com/Images/logo.png"
+                    content="https://hackodisha.com/Images/cover.png"
                 />
                 <meta
                     name="twitter:card"
-                    content="https://hackodisha.com/Images/logo.png"
+                    content="https://hackodisha.com/Images/cover.png"
                 />
             </head>
             <body
