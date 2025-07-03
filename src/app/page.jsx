@@ -6,6 +6,7 @@ import Sponsors from "@/components/sponsorship/sponsors";
 import Teams from "@/components/teams/teams";
 import Statistics from "@/components/statistics/statistics";
 import Timeline from "@/components/timeline/timeline";
+import Community from "@/components/communityPartners/community";
 export default function Page() {
     return (
         <main>
@@ -15,6 +16,7 @@ export default function Page() {
             <Timeline />
             <Prize />
             <Teams />
+            <Community />
             <Sponsors />
             <FaqSection />
         </main>
