@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
                 <meta name="twitter:title" content="HackOdisha 5.0" />
                 <meta
                     name="twitter:description"
-                    content="HackOdisha 5.0 | Largest Student Run Hackathon of HackOdisha | Participate and Win Prizes, Goodies and subscriptions."
+                    content="HackOdisha 5.0 | Largest Student Run Hackathon of Odisha | Participate and Win Prizes, Goodies and subscriptions."
                 />
                 <meta
                     name="twitter:image"
