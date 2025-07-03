@@ -43,9 +43,9 @@ export const teamMembers = [
         name: "Chinnari Narashimha",
         role: "Outreach Lead",
         defaultImage:
-            "https://res.cloudinary.com/du9d0iiok/image/upload/v1750875111/Asset_12_4x_1_vj5qlj.png",
+            "https://res.cloudinary.com/dmvdbpyqk/image/upload/c_pad,w_400,h_400,ar_1:1/v1751527858/Asset_7_4x_1_z2tmbp.png",
         hoverImage:
-            "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750833194/chinnari_mfq8en.png",
+            "https://res.cloudinary.com/dmvdbpyqk/image/upload/c_pad,w_400,h_400,ar_1:1/v1751527859/Asset_8_4x_1_i5aeqi.png",
     },
     {
         name: "Bibhu",
