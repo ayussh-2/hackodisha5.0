@@ -19,6 +19,8 @@ export default function SectionTitle({
                 return "bg-[#efe7f7]";
             case "purple":
                 return "bg-[#bc82fe]";
+            case "white":
+                return "bg-[#efe7f7]";
             default:
                 return "bg-[#bc82fe]";
         }
@@ -32,6 +34,8 @@ export default function SectionTitle({
                 return "bg-[#bc82fe]";
             case "purple":
                 return "bg-[#bc82fe]";
+            case "white":
+                return "bg-[#efe7f7]";
             default:
                 return "bg-[#efe7f7]";
         }
