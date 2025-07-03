@@ -13,8 +13,8 @@ const Judges = () => {
       title: 'Brooklyn , United States\nHead of StableCoins at CrossMint',
       imageUrl: "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531154/j1_qrdwt2.jpg",
       socialLinks: {
-        x: "https://twitter.com/Utkarsh_Web3/",
-        instagram: "https://www.instagram.com/alejandro_acuna/",
+        x: "https://x.com/hackodisha",
+        instagram: "https://www.instagram.com/webwiz.nitr/",
         linkedin: "https://www.linkedin.com/in/alexacu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BuyBDWM9pSNW3Vi1nO7IBfQ%3D%3D"
       }
     }, 
@@ -24,8 +24,8 @@ const Judges = () => {
       title: " San Francisco\n United States\n Senior Software Engineer (Google)\n -   Software Engineer Ex-Uber",
       imageUrl: "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531780/j2_k3pdp2.jpg",
       socialLinks: {
-        x: "https://twitter.com/Utkarsh_Web3/",
-        instagram: "https://www.instagram.com/siddhart_raja/",
+        x: "https://x.com/hackodisha",
+        instagram: "https://www.instagram.com/webwiz.nitr/",
         linkedin: "https://www.linkedin.com/in/sidharthraja?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bs2TkPBbnRI6sHyVliKUXsQ%3D%3D"
       }
     },
@@ -35,7 +35,7 @@ const Judges = () => {
       imageUrl: "https://res.cloudinary.com/dpidvvdgr/image/upload/c_crop,w_255,h_180,g_auto,e_improve/v1751531780/j4_x5baf2.jpg",
       socialLinks: {
         x: "https://twitter.com/Utkarsh_Web3/",
-        instagram: "https://www.instagram.com/utkarsh_shrivastava/",
+        instagram: "https://www.instagram.com/webwiz.nitr/",
         linkedin: "https://www.linkedin.com/in/utkarsh-shrivastava7"
       }
     }
