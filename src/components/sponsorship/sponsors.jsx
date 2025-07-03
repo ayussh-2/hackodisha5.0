@@ -38,7 +38,7 @@ const Sponsors = () => {
     return (
         <div className="relative bg-[#EFE7F7] h-full w-full" id="sponsors">
             <SectionTitle title="SPONSORS" lineGradient="purple-white" />
-                        
+
             <div className="hidden lg:absolute lg:w-[280.036px] lg:h-[80.2px] lg:top-2 lg:left-0  z-1 absolute top-2 left-0 w-[180px] h-[70px]">
                 <Image
                     width={280.036}
@@ -52,6 +52,7 @@ const Sponsors = () => {
                 <RotatingDollarIcon />
                 <RotatingDollarBagIcon />
 
+                <SponsorGroup title="Gold" sponsors={sponsorsData.gold} />
                 <SponsorGroup title="Silver" sponsors={sponsorsData.silver} />
                 <SponsorGroup title="Track " sponsors={sponsorsData.track} />
             </div>
