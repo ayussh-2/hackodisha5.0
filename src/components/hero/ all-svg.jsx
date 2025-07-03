@@ -3,6 +3,7 @@ import {
     HERO_ARROW_IMAGE,
     HERO_HAND_IMAGE,
     HERO_SWITCH_IMAGE,
+    registerationLink,
     registerBtn,
 } from "@/config/hero";
 import { DiscordButton } from "../ui/resizable-navbar";
@@ -121,17 +122,19 @@ const Svg = () => {
             ease: "power2.out",
         });
 
-        toast("Starting Soon!", {
-            duration: 2000,
-            style: {
-                background: "#D3AEFF",
-                color: "#000",
-                fontSize: "16px",
-                fontWeight: "bold",
-                textAlign: "center",
-                fontFamily: "Archivo, sans-serif",
-            },
-        });
+        window.open(registerationLink, "_blank");
+
+        // toast("Starting Soon!", {
+        //     duration: 2000,
+        //     style: {
+        //         background: "#D3AEFF",
+        //         color: "#000",
+        //         fontSize: "16px",
+        //         fontWeight: "bold",
+        //         textAlign: "center",
+        //         fontFamily: "Archivo, sans-serif",
+        //     },
+        // });
     };
 
     return (
@@ -154,15 +157,23 @@ const Svg = () => {
                         alt="ellipse"
                         className="w-12 sm:w-16 md:w-20 absolute left-35 -top-2 sm:left-40 md:left-50"
                     />
-                    <Link href={registerBtn.link}>
-                        <div
-                            ref={btnRef}
-                            onClick={handleClick}
-                            className="text-black border border-black text-center text-[17px] sm:text-[22px] md:text-3xl not-italic font-semibold leading-none uppercase bg-white px-4 py-4 relative top-4 sm:top-6 md:top-8 rotate-4 hover:-rotate-0 transition-all duration-300 rounded-2xl shadow-[8px_7px_6.6px_0px_#F1C20E] cursor-pointer"
-                        >
-                            {registerBtn.text}
-                        </div>
-                    </Link>
+
+                    <div
+                        ref={btnRef}
+                        onClick={handleClick}
+                        className="text-black border border-black text-center text-[17px] sm:text-[1rem] md:text-2xl not-italic leading-none bg-white  py-2  md:py-3 relative top-4 sm:top-6 md:top-8 rotate-4 hover:-rotate-0 transition-all duration-300 rounded-[0.25rem] shadow-[8px_7px_6.6px_0px_#F1C20E] cursor-pointer font-nunito-sans font-semibold"
+                    >
+                        <span className="flex items-center justify-center gap-2">
+                            <Image
+                                src="https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751529224/Layer_3_wnzgst.svg"
+                                width={30}
+                                height={30}
+                                alt="devfolio"
+                            />
+                            Apply with Devfolio
+                        </span>
+                    </div>
+
                     <Image
                         ref={heroArrowImageRef}
                         src={HERO_ARROW_IMAGE}

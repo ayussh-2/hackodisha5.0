@@ -1,4 +1,11 @@
-import { Archivo, Archivo_Black, Bricolage_Grotesque, Bebas_Neue, Oxanium } from "next/font/google";
+import {
+    Archivo,
+    Archivo_Black,
+    Bricolage_Grotesque,
+    Bebas_Neue,
+    Oxanium,
+    Nunito_Sans,
+} from "next/font/google";
 
 import localFont from "next/font/local";
 
@@ -9,9 +16,9 @@ export const archivo = Archivo({
 });
 
 export const archivoBlack = Archivo_Black({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-archivo-black",
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-archivo-black",
 });
 
 export const bricolageGrotesque = Bricolage_Grotesque({
@@ -39,9 +46,9 @@ export const bebasNeue = Bebas_Neue({
 });
 
 export const oxanium = Oxanium({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-oxanium',
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700", "800"],
+    variable: "--font-oxanium",
 });
 
 export const clashDisplay = localFont({
@@ -52,4 +59,10 @@ export const clashDisplay = localFont({
         },
     ],
     variable: "--font-clash-display",
+});
+
+export const nunitoSans = Nunito_Sans({
+    subsets: ["latin"],
+    weight: ["400"],
+    variable: "--font-nunito-sans",
 });

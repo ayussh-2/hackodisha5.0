@@ -6,6 +6,7 @@ import {
     bricolageGrotesque,
     clashDisplay,
     helvetica,
+    nunitoSans,
     oxanium,
 } from "@/fonts";
 import HOC from "@/components/shared/hoc";
@@ -95,7 +96,7 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body
-                className={`${archivo.variable} ${archivoBlack.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} ${oxanium.variable} antialiased`}
+                className={`${archivo.variable} ${archivoBlack.variable} ${bebasNeue.variable} ${bricolageGrotesque.variable} ${clashDisplay.variable} ${helvetica.variable} ${oxanium.variable} ${nunitoSans.variable} antialiased`}
             >
                 <Toaster position="top-right" />
                 <Navbar />

@@ -51,7 +51,7 @@ const Sponsors = () => {
                 <RotatingDollarIcon />
                 <RotatingDollarBagIcon />
 
-                {/* <SponsorGroup title="Gold" sponsors={sponsorsData.gold} /> */}
+                <SponsorGroup title="Gold" sponsors={sponsorsData.gold} />
                 <SponsorGroup title="Silver" sponsors={sponsorsData.silver} />
                 <SponsorGroup title="Track " sponsors={sponsorsData.track} />
             </div>

@@ -34,3 +34,5 @@ export const registerBtn = {
     link: "#",
     text: "Register now",
 };
+
+export const registerationLink = "https://hackodisha-4.devfolio.co/";
