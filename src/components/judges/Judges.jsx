@@ -10,7 +10,7 @@ const Judges = () => {
   const judges = [
     {
       name: "Alejandro Acuna Rodriguez",
-      title: 'Brooklyn, United States\nHead of StableCoins at CrossMint',
+      title: 'Brooklyn , United States\nHead of StableCoins at CrossMint',
       imageUrl: "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531154/j1_qrdwt2.jpg",
       socialLinks: {
         x: "https://twitter.com/Utkarsh_Web3/",
@@ -20,7 +20,8 @@ const Judges = () => {
     }, 
     {
       name: "Siddhart Raja",
-      title: "San Francisco, United States\n- Senior Software Engineer, Google\nEx- Uber",
+      
+      title: " San Francisco\n United States\n Senior Software Engineer (Google)\n -   Software Engineer Ex-Uber",
       imageUrl: "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531780/j2_k3pdp2.jpg",
       socialLinks: {
         x: "https://twitter.com/Utkarsh_Web3/",
@@ -30,7 +31,7 @@ const Judges = () => {
     },
     {
       name: "Utkarsh Shrivastava",
-      title: "An Entrepreneur, Advisor, Public Speaker & Mentor\nEx-Polygon, currently building Threeway Studio, Web3 Carnival & Degen Summit",
+      title: "An Entrepreneur, Public Speaker\nEx-Polygon - Threeway Studio - Web3 Carnival & Degen Summit",
       imageUrl: "https://res.cloudinary.com/dpidvvdgr/image/upload/c_crop,w_255,h_180,g_auto,e_improve/v1751531780/j4_x5baf2.jpg",
       socialLinks: {
         x: "https://twitter.com/Utkarsh_Web3/",
@@ -66,10 +67,8 @@ const Judges = () => {
 
   return (
     <>
-      <SectionTitle
-        title={"MENTORS & JUDGES"} 
-        lineGradient="purple"
-      />
+ 
+      <SectionTitle title={"MENTORS & JUDGES"}  lineGradient="white-purple" />
 
       <div 
         ref={sectionRef}

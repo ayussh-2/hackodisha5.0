@@ -18,9 +18,9 @@ export default function Page() {
             <Prize />
             <Teams />
             <Community />
+            <Judges/>
             <Sponsors />
             <FaqSection />
-            <Judges/>
         </main>
     );
 }

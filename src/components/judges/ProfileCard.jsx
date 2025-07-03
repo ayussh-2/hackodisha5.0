@@ -7,7 +7,7 @@ const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
   };
 
   return (
-    <div className="bg-[#fbfdfd] w-full max-h-[30rem] max-w-[19rem] mx-auto p-4 sm:p-5 lg:p-6 border-[1.5px] border-[#030303] shadow-[2px_5px_5px_rgba(0,0,0,1)] text-center text-[#0e0e0e] transition-all rounded-3xl duration-300 hover:-translate-y-[5px] flex flex-col
+    <div className="bg-[#fbfdfd] w-full sm:min-h-[2rem]  max-w-[19rem] mx-auto p-4 sm:p-5 lg:p-6 border-[1.5px] border-[#030303] shadow-[2px_5px_5px_rgba(0,0,0,1)] text-center text-[#0e0e0e] transition-all rounded-3xl duration-300 hover:-translate-y-[5px] flex flex-col
       max-lg:max-w-[16rem]
       max-md:max-w-[14rem]
       max-sm:max-w-[12rem]
@@ -19,7 +19,7 @@ const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
         max-md:max-w-[140px]
         max-sm:max-w-[120px]
         max-[360px]:max-w-[100px]">
-        <div className="relative w-full h-full rounded-3xl overflow-hidden">
+        <div className="relative w-full h-full rounded-3xl overflow-hidden  ">
           <Image 
             src={imageUrl} 
             alt={name} 
@@ -47,7 +47,7 @@ const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
 
         {/* Social Links */}
         <div className="mt-4 sm:mt-5 lg:mt-6 mb-2 flex justify-center">
-          <div className="flex justify-center gap-3 sm:gap-4">
+          <div className="flex justify-center gap-3 sm:gap-4   relative  ">
             {socialLinks?.instagram && (
               <button
                 onClick={() => handleSocialClick(socialLinks.instagram)}
