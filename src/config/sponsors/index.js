@@ -151,6 +151,13 @@ const trackSponsorsData = [
         image: "https://res.cloudinary.com/ddycqjdeu/image/upload/v1751033236/balsamiq_logomark_bnvucp.png",
         name: "balsamiq",
     },
+
+    {
+        id: "UIOPA",
+        alt: "AoPs",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751573737/WhatsApp_Image_2025-07-03_at_23.32.39_gmpt1w.jpg",
+        name: "AoPs",
+    },
 ];
 
 export const sponsorsData = {
