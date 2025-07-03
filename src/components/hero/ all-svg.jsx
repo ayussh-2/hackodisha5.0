@@ -122,7 +122,9 @@ const Svg = () => {
             ease: "power2.out",
         });
 
-        window.open(registerationLink, "_blank");
+        setTimeout(() => {
+            window.open(registerationLink, "_blank");
+        }, 200);
 
         // toast("Starting Soon!", {
         //     duration: 2000,
