@@ -1,77 +1,98 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 
-const links = [
-  {
-    src: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/insta_cqxnrd.svg",
-    alt: "Instagram",
-    href: "https://www.instagram.com/webwiz.nitr/",
-    className: "hover:scale-110",
-  },
-  {
-    src: "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751393821/ficon_lbevyi.svg",
-    alt: "Facebook",
-    href: "https://discord.com/invite/ewun7cxkJh",
-    className: "hover:scale-110",
-  },
-  {
-    src: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/twitter_rdcoxx.svg",
-    alt: "Twitter",
-    href: "https://x.com/hackodisha",
-    className: "hover:scale-110",
-  },
-];
+const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
+  const handleSocialClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
-const ProfileCard = ({ name, title, imageUrl }) => {
   return (
-    <div className="bg-[#fbfdfd] w-full max-w-[19rem] mx-auto p-3 sm:p-4 lg:p-6 border-[1.5px] border-[#030303] shadow-[2px_5px_5px_rgba(0,0,0,1)] text-center text-[#0e0e0e] transition-all rounded-3xl duration-300 hover:-translate-y-[5px] flex flex-col
-      max-lg:max-w-[15rem] max-lg:p-2
-      max-md:max-w-[10rem] max-md:p-1.5
-      max-sm:max-w-[9rem] max-sm:p-1
-      max-[360px]:max-w-[8rem] max-[360px]:p-1">
-      <div className="mx-auto mb-4 sm:mb-5 lg:mb-6 w-0 h-20 sm:w-48 sm:h-40 lg:w-32 lg:h-32 xl:w-36 xl:h-36 border-2 border-dashed border-[#191a1ac7] rounded-3xl overflow-hidden p-1 flex items-center justify-center
-        max-lg:w-44 max-lg:h-40 max-lg:border-[2.5px]
-        max-md:w-28 max-md:h-24 max-md:border-2 max-md:p-0.5
-        max-sm:w-24 max-sm:h-20 max-sm:border-2
-        max-[360px]:w-20 max-[360px]:h-16 max-[360px]:border-[1.5px]">
-        <Image 
-          src={imageUrl} 
-          alt={name} 
-          width={144}
-          height={144}
-          className="w-full h-full object-cover rounded-3xl"
-        />
+    <div className="bg-[#fbfdfd] w-full max-h-[30rem] max-w-[19rem] mx-auto p-4 sm:p-5 lg:p-6 border-[1.5px] border-[#030303] shadow-[2px_5px_5px_rgba(0,0,0,1)] text-center text-[#0e0e0e] transition-all rounded-3xl duration-300 hover:-translate-y-[5px] flex flex-col
+      max-lg:max-w-[16rem]
+      max-md:max-w-[14rem]
+      max-sm:max-w-[12rem]
+      max-[360px]:max-w-[10rem]">
+      
+      {/* Image Container */}
+      <div className="mx-auto mb-4 sm:mb-5 lg:mb-6 w-full aspect-square max-w-[180px] border-2 border-dashed border-[#191a1ac7] rounded-3xl overflow-hidden p-1 flex items-center justify-center
+        max-lg:max-w-[160px]
+        max-md:max-w-[140px]
+        max-sm:max-w-[120px]
+        max-[360px]:max-w-[100px]">
+        <div className="relative w-full h-full rounded-3xl overflow-hidden">
+          <Image 
+            src={imageUrl} 
+            alt={name} 
+            fill
+            sizes="(max-width: 640px) 100px, (max-width: 768px) 120px, (max-width: 1024px) 140px, 160px"
+            className="rounded-3xl object-cover scale-[0.95] hover:scale-[1.02] transition-transform duration-300"
+            quality={80}
+          />
+        </div>
       </div>
-      <p className="px-1 mt-5 text-center
-        max-md:mt-3 max-md:text-[1.1rem]
-        max-sm:mt-2.5 max-sm:text-[1rem]
-        max-[360px]:mt-2 max-[360px]:text-[0.9rem]">
-        <span className="text-base sm:text-lg lg:text-xl xl:text-2xl font-black text-gray-800">{name}</span>
-        <span className="block text-sm sm:text-base lg:text-lg text-black mt-1 lg:mt-2 font-light
-          max-md:text-xs
-          max-sm:text-[11px]
-          max-[360px]:text-[10px]">{title}</span>
-      </p>
-      <div className="mt-5 sm:mt-5 lg:mt-6 mb-2 flex justify-center
-        max-md:mt-3
-        max-sm:mt-2.5
-        max-[360px]:mt-2">
-        <div className="flex justify-center gap-3 sm:gap-4">
-          {links.map(({ src, alt, href, className }) => (
-            <Link key={alt} href={href} target='_blank'>
-              <Image
-                src={src}
-                alt={alt}
-                width={32}
-                height={32}
-                className={`w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 transition-all ${className} bg-[rgba(239,231,247)] shadow-[2px_2px_2px_0px_rgba(255,174,255,0.815)] rounded-[10px] hover:bg-[rgba(239,231,247,0.76)]
-                  max-md:mr-2 max-md:rounded-[8px] max-md:w-5 max-md:h-5
-                  max-sm:mr-1.5 max-sm:rounded-[6px] max-sm:w-4 max-sm:h-4
-                  max-[360px]:mr-1 max-[360px]:rounded-[5px] max-[360px]:w-4 max-[360px]:h-4`}
-              />
-            </Link>
-          ))}
+
+      {/* Text Content */}
+      <div className="flex-1 flex flex-col">
+        <p className="px-1 mt-2 text-center">
+          <span className="block text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-2
+            max-md:text-sm
+            max-sm:text-xs">
+            {name}
+          </span>
+          <span className={`${cn} block text-xs sm:text-sm md:text-base
+            max-sm:text-[0.7rem]`}>
+            {title}
+          </span>
+        </p>
+
+        {/* Social Links */}
+        <div className="mt-4 sm:mt-5 lg:mt-6 mb-2 flex justify-center">
+          <div className="flex justify-center gap-3 sm:gap-4">
+            {socialLinks?.instagram && (
+              <button
+                onClick={() => handleSocialClick(socialLinks.instagram)}
+                className="hover:opacity-80 focus:outline-none"
+              >
+                <Image
+                  src="https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/insta_cqxnrd.svg"
+                  alt="Instagram"
+                  width={32}
+                  height={32}
+                  className="rounded-3xl w-6 h-6 sm:w-7 sm:h-7 transition-all hover:scale-110 bg-[rgba(239,231,247)] shadow-[2px_2px_2px_0px_rgba(255,174,255,0.815)] hover:bg-[rgba(239,231,247,0.76)]"
+                />
+              </button>
+            )}
+
+            {socialLinks?.x && (
+              <button
+                onClick={() => handleSocialClick(socialLinks.x)}
+                className="hover:opacity-80 focus:outline-none"
+              >
+                <Image
+                  src="https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/twitter_rdcoxx.svg"
+                  alt="x"
+                  width={32}
+                  height={32}
+                  className="rounded-3xl w-6 h-6 sm:w-7 sm:h-7 transition-all hover:scale-110 bg-[rgba(239,231,247)] shadow-[2px_2px_2px_0px_rgba(255,174,255,0.815)] hover:bg-[rgba(239,231,247,0.76)]"
+                />
+              </button>
+            )}
+            
+            {socialLinks?.linkedin && (
+              <button
+                onClick={() => handleSocialClick(socialLinks.linkedin)}
+                className=" rounded-3xl  hover:opacity-80 focus:outline-none"
+              >
+                <Image
+                  src="https://res.cloudinary.com/dpidvvdgr/image/upload/v1751539394/linkedin-svgrepo-com_sqpxer.svg"
+                  alt="LinkedIn"
+                  width={32}
+                  height={32}
+                  className="rounded-3xl w-6 h-6 sm:w-7 sm:h-7 transition-all hover:scale-110 bg-[rgba(239,231,247)] shadow-[2px_2px_2px_0px_rgba(255,174,255,0.815)] hover:bg-[rgba(239,231,247,0.76)]"
+                />
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
