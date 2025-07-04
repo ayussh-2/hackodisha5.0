@@ -37,16 +37,34 @@ export const socialLinks = [
     //     href: "#",
     // },
     {
-        src: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/twitter_rdcoxx.svg",
+        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751640427/x-social-media-black-icon_anlrxd.svg",
         alt: "Twitter",
         href: "https://x.com/hackodisha",
-        className: "hover:scale-115",
+        className: "scale-75 hover:scale-90",
     },
     {
         src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751045831/icons8-whatsapp_axltbb.svg",
         alt: "Whatsapp Channel Invite",
         href: "https://whatsapp.com/channel/0029Vb66nT830LKKS2CXla0B",
         className: "scale-75 hover:scale-90",
+    },
+    {
+        target: "div",
+    },
+    {
+        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751638692/Group_1430102903_joizcr.png",
+        alt: "The NAMESPACE Community Instagram",
+        href: "https://www.instagram.com/namespacecomm/",
+        className: " !h-6 !w-auto md:!h-12 hover:scale-115",
+    },
+    {
+        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751639893/Group_1430102907_gcwil1.svg",
+        alt: "The NAMESPACE Community LinkedIn",
+        href: "https://www.linkedin.com/company/namespacecomm/",
+        className: " !h-6 !w-auto md:!h-12 hover:scale-110",
+    },
+    {
+        target: "div",
     },
 ];
 

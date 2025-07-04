@@ -38,15 +38,14 @@ const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
             <div className="flex-1 flex flex-col">
                 <p className="px-1 mt-2 text-center">
                     <span
-                        className="block text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-2
+                        className="block text-base sm:text-lg lg:text-xl font-bricolage-grotesque font-bold text-black mb-2
             max-md:text-sm
             max-sm:text-xs"
                     >
                         {name}
                     </span>
                     <span
-                        className={`${cn} block text-xs sm:text-sm md:text-base
-            max-sm:text-[0.7rem]`}
+                        className={`${cn} font-archivo text-gray-600 !text-sm font-normal`}
                     >
                         {title}
                     </span>

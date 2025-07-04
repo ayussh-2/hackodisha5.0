@@ -8,6 +8,7 @@ import {
     sponsorCTA,
     footerAssets,
 } from "@/config/footer";
+import { shared } from "@/config/shared";
 
 export default function Footer() {
     return (
@@ -63,38 +64,49 @@ export default function Footer() {
                         </div>
 
                         {/* Social Icons */}
-                        <div className="flex justify-center gap-4 md:gap-[26.57px] mt-4 z-0 relative">
+                        <div className="grid grid-cols-4 gap-4 md:gap-[26.57px] mt-4 z-0 relative justify-items-center max-w-fit mx-auto">
                             {socialLinks.map(
-                                ({ src, alt, href, className }) => (
-                                    <Link
-                                        key={alt}
-                                        href={href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <Image
-                                            src={src}
-                                            alt={alt}
-                                            width={48}
-                                            height={48}
-                                            className={`md:w-[48px] md:h-[48px] w-[24px] h-[24px] transition-all ${className}`}
-                                        />
-                                    </Link>
-                                )
+                                ({ src, alt, href, className }, idx) => {
+                                    if (!src || !alt || !href)
+                                        return (
+                                            <div
+                                                key={`social-icons-div-${idx}`}
+                                            ></div>
+                                        );
+                                    return (
+                                        <Link
+                                            key={alt}
+                                            href={href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Image
+                                                src={src}
+                                                alt={alt}
+                                                width={48}
+                                                height={48}
+                                                className={`md:w-[48px] md:h-[48px] w-[24px] h-[24px] transition-all ${className}`}
+                                            />
+                                        </Link>
+                                    );
+                                }
                             )}
                         </div>
                     </div>
 
                     {/* Decorative Images */}
                     <div className="absolute bottom-80 md:bottom-7 left-0 z-0 md:w-[160px] md:h-[175px] w-[108px] h-[88px]">
-                        <Image
-                            src={footerAssets.presents}
-                            alt="Namespace Community"
-                            width={185}
-                            height={175}
-                        />
+                        <Link href={shared.NAMESPACE.website} target="_blank">
+                            <Image
+                                src={footerAssets.presents}
+                                alt="The NAMESPACE Community Community"
+                                width={185}
+                                height={175}
+                                className="hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
+                            />
+                        </Link>
                     </div>
-                    <div className="absolute bottom-4.5 md:bottom-12 right-0 z-0 md:w-[191.36px] md:h-[191.36px] w-[108px] h-[108px]">
+                    <div className="absolute bottom-4.5 md:bottom-12 right-0 z-0 md:w-[191.36px] md:h-[191.36px] size-[100px] ssm:w-[108px] ssm:h-[108px]">
                         <Image
                             src={footerAssets.circle}
                             alt="Webwiz Circle"
@@ -106,11 +118,20 @@ export default function Footer() {
             </div>
 
             {/* Footer Bottom Bar */}
-            <div className="text-center flex justify-center items-center text-[8px] ssm:text-[10px] ssmd:text-[12px] smd:text-[15px] mmd:text-[20px] lg:text-[24px] text-[#f6f0de] bg-black py-0 md:py-[14px] tracking-wide font-oxanium font-[600] h-10 md:h-[58px] w-full z-10 relative inset-y-0 bottom-0">
-                Hackodisha 5.0 2025. Powered by&nbsp;
-                <span className="text-[#BC82FE]">Webwiz</span>, NIT Rourkela &
-                <span className="text-[#BC82FE]">&nbsp;Namespace&nbsp;</span>
-                Community.
+            <div className="text-center flex flex-col justify-center items-center text-[16px] md:text-[20px] lg:text-[24px] text-[#f6f0de] bg-black py-2 md:py-4 tracking-wide font-oxanium font-[600] w-full z-10 relative inset-y-0 bottom-0">
+                <span className="max-w-[1200px] w-full px-4 md:px-10 lg:px-16 xl:px-20 2xl:px-36">
+                    Hackodisha <span className="text-[#BC82FE]">5.0</span> 2025{" "}
+                    <br />
+                    Powered by <span className="text-[#BC82FE]">Webwiz</span>,
+                    NIT Rourkela &&nbsp;
+                    <Link href={shared.NAMESPACE.website} target="_blank">
+                        The
+                        <span className="text-[#BC82FE]">
+                            &nbsp;NAMESPACE&nbsp;
+                        </span>
+                        Community.
+                    </Link>
+                </span>
             </div>
         </footer>
     );
