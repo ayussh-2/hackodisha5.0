@@ -122,21 +122,21 @@ const Svg = () => {
             ease: "power2.out",
         });
 
-        // setTimeout(() => {
-        //     window.open(registerationLink, "_blank");
-        // }, 200);
+        setTimeout(() => {
+            window.open(registerationLink, "_blank");
+        }, 200);
 
-        toast("Starting Soon!", {
-            duration: 2000,
-            style: {
-                background: "#D3AEFF",
-                color: "#000",
-                fontSize: "16px",
-                fontWeight: "bold",
-                textAlign: "center",
-                fontFamily: "Archivo, sans-serif",
-            },
-        });
+        // toast("Starting Soon!", {
+        //     duration: 2000,
+        //     style: {
+        //         background: "#D3AEFF",
+        //         color: "#000",
+        //         fontSize: "16px",
+        //         fontWeight: "bold",
+        //         textAlign: "center",
+        //         fontFamily: "Archivo, sans-serif",
+        //     },
+        // });
     };
 
     return (
