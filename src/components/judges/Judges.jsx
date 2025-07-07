@@ -21,7 +21,7 @@ const Judges = () => {
             },
         },
         {
-            name: "Siddhart Raja",
+            name: "Sidharth Raja",
 
             title: " San Francisco\n United States\n Senior Software Engineer (Google)\n -   Software Engineer Ex-Uber",
             imageUrl:
