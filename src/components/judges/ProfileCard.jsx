@@ -8,7 +8,7 @@ const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
 
     return (
         <div
-            className="bg-[#fbfdfd] w-full h-full max-w-[19rem] mx-auto p-4 sm:p-5 lg:p-6 border-[1.5px] border-[#030303] shadow-[2px_5px_5px_rgba(0,0,0,1)] text-center text-[#0e0e0e] transition-all rounded-3xl duration-300 hover:-translate-y-[5px] hover:shadow-[3px_7px_8px_rgba(0,0,0,1)] flex flex-col
+            className="bg-[#fbfdfd] w-full h-full max-w-[19rem] mx-auto p-4 sm:p-5 lg:p-6 border-[1.5px] border-[#030303] shadow-[2px_5px_5px_rgba(0,0,0,1)] text-center text-[#0e0e0e] transition-all rounded-3xl duration-300 hover:-translate-y-[5px] hover:shadow-[3px_7px_8px_rgba(0,0,0,1)] flex flex-col group
       lg:max-w-[18rem]
       
       max-[360px]:p-3"
@@ -28,7 +28,7 @@ const ProfileCard = ({ name, title, imageUrl, cn, socialLinks }) => {
                         alt={name}
                         fill
                         sizes="(max-width: 360px) 90px, (max-width: 640px) 110px, (max-width: 768px) 130px, (max-width: 1024px) 150px, 170px"
-                        className="rounded-3xl object-cover scale-[0.95] hover:scale-[1.02] transition-transform duration-300"
+                        className="rounded-3xl object-cover scale-[0.95] group-hover:scale-[1.02] transition-transform duration-300"
                         quality={80}
                     />
                 </div>
