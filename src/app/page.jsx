@@ -8,19 +8,21 @@ import Statistics from "@/components/statistics/statistics";
 import Timeline from "@/components/timeline/timeline";
 import Judges from "@/components/judges/Judges";
 import Community from "@/components/communityPartners/community";
+import Badge from "@/components/Badge/badge";
 export default function Page() {
-    return (
-        <main>
-            <Hero />
-            <WhatIsHackOdisha />
-            <Statistics />
-            <Timeline />
-            <Prize />
-            <Teams />
-            <Community />
-            <Judges/>
-            <Sponsors />
-            <FaqSection />
-        </main>
-    );
+  return (
+    <main>
+      <Hero />
+      <WhatIsHackOdisha />
+      <Statistics />
+      <Timeline />
+      <Prize />
+      <Teams />
+      <Community />
+      <Judges />
+      <Sponsors />
+      <Badge />
+      <FaqSection />
+    </main>
+  );
 }

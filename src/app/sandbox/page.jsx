@@ -17,8 +17,8 @@ export default function Page() {
       <Prize />
       <Teams />
       <Sponsors />
-      <FaqSection />
       <Badge />
+      <FaqSection />
     </main>
   );
 }
