@@ -231,14 +231,27 @@ const Badge = () => {
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => handleShare("twitter")}
-                className="flex w-full transform items-center justify-center gap-3 rounded-lg border-2 border-solid border-black bg-black py-3 font-['Archivo',_Helvetica] text-xl font-bold text-white transition-transform duration-200 ease-in-out hover:scale-105"
+                className="flex w-full transform items-center justify-center gap-3 rounded-lg border-2 border-solid border-black bg-[#212121] py-3 font-['Archivo',_Helvetica] text-xl font-bold text-white transition-transform duration-200 ease-in-out hover:scale-105"
               >
+                <Image
+                  src="https://img.icons8.com/color/96/twitterx--v1.png"
+                  alt="x"
+                  width={48}
+                  height={48}
+                />
                 Share on Twitter
               </button>
               <button
                 onClick={() => handleShare("linkedin")}
-                className="flex w-full transform items-center justify-center gap-3 rounded-lg   bg-[#0A66C2] py-3 font-['Archivo',_Helvetica] text-xl font-bold text-white transition-transform duration-200 ease-in-out hover:scale-105"
+                className="flex w-full transform items-center justify-center gap-3 rounded-lg   bg-[#0078D4] py-3 font-['Archivo',_Helvetica] text-xl font-bold text-white transition-transform duration-200 ease-in-out hover:scale-105"
               >
+                <Image
+                  src="https://img.icons8.com/fluency/96/linkedin.png"
+                  alt="LinkedIn"
+                  width={48}
+                  height={48}
+                  className=""
+                />
                 Share on LinkedIn
               </button>
             </div>
