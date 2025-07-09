@@ -5,6 +5,7 @@ import RotatingDollarIcon from "./rotate-dollar-icon";
 import RotatingDollarBagIcon from "./rotate-bag-icon";
 import { sponsorsData, sponsorStickerImage } from "@/config/sponsors";
 import SectionTitle from "../shared/section-title";
+import Link from "next/link";
 
 const Sponsors = () => {
     const SponsorGroup = ({ title, sponsors }) => (
@@ -16,20 +17,25 @@ const Sponsors = () => {
             </div>
             <div className="flex flex-wrap justify-evenly items-center gap-4 px-2 md:px-6 py-8 rounded-3xl border-2 border-gray-400 bg-white shadow-md w-full max-w-7xl">
                 {sponsors.map((sponsor) => (
-                    <div
+                    <Link
+                        href={sponsor.link || "#"}
                         key={sponsor.id}
-                        className="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full border border-black bg-white flex items-center justify-center p-1 lg:p-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group"
                     >
-                        <div className="relative w-full h-full rounded-full border-2 border-dashed border-[#380665] flex items-center justify-center p-5 lg:p-[1.5rem] overflow-hidden">
-                            <Image
-                                src={sponsor.image}
-                                alt={sponsor.alt}
-                                width={500}
-                                height={500}
-                                className="w-auto h-auto max-w-full max-h-full object-contain"
-                            />
+                        <div className="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full border border-black bg-white flex items-center justify-center p-1 lg:p-2">
+                            <div className="relative w-full h-full rounded-full border-2 border-dashed border-[#380665] flex items-center justify-center p-5 lg:p-[1.5rem] overflow-hidden group-hover:animate-[spin_10s_linear_infinite] transition-all duration-300">
+                                <Image
+                                    src={sponsor.image}
+                                    alt={sponsor.alt}
+                                    width={500}
+                                    height={500}
+                                    className="w-auto h-auto max-w-full max-h-full object-contain group-hover:animate-[spin_10s_linear_infinite_reverse] "
+                                />
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
@@ -54,6 +60,7 @@ const Sponsors = () => {
 
                 <SponsorGroup title="Gold" sponsors={sponsorsData.gold} />
                 <SponsorGroup title="Silver" sponsors={sponsorsData.silver} />
+                <SponsorGroup title="Bonze" sponsors={sponsorsData.bronze} />
                 <SponsorGroup title="Track " sponsors={sponsorsData.track} />
             </div>
         </div>

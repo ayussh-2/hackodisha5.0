@@ -10,6 +10,7 @@
     --breakpoint-mmd: 860px;
     --breakpoint-smd: 640px;
     --breakpoint-ssmd: 520px;
+    --breakpoint-cmd: 750px;
 }
 
 @theme inline {

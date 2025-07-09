@@ -18,7 +18,7 @@ import { Navbar } from "@/components/navbar/Navbar";
 export const metadata = {
     title: "HackOdisha 5.0",
     description:
-        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour hybrid hackathon organized by Webwiz, Nit Rourkela — an event dedicated to fostering community collaboration.",
+        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour online hackathon organized by Webwiz, Nit Rourkela — an event dedicated to fostering community collaboration.",
     image: "https://hackodisha.com/Images/cover.png",
     url: "https://hackodisha.com/",
     keywords: [
@@ -41,7 +41,7 @@ const jsonLd = {
     name: "HackOdisha 5.0",
     image: "https://hackodisha.com/Images/cover.png",
     description:
-        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour hybrid hackathon organized by Webwiz, Nit Rourkela — an event dedicated to fostering community collaboration.",
+        "Largest Student hackathon of Odisha | HackOdisha 5.0 - a thrilling 36-hour online hackathon organized by Webwiz, Nit Rourkela — an event dedicated to fostering community collaboration.",
 };
 export default function RootLayout({ children }) {
     return (

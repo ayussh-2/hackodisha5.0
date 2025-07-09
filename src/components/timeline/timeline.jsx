@@ -113,10 +113,10 @@ const Timeline = () => {
                                         className="relative z-10 mb-3 sm:mb-7 flex  items-center w-[100%] lg:w-[80%]"
                                     >
                                         <div className="flex items-center px-3 py-2 rounded-full border border-black bg-white w-full justify-start space-x-4 ml-2 flex-shrink-0 max-[640px]:px-2 max-[520px]:px-1.5 max-[480px]:px-1 max-[640px]:space-x-2 max-[480px]:space-x-1 max-[520px]:ml-1 max-[480px]:ml-0.5 ">
-                                            <div className="bg-[#FFD32B] text-[28px] max-sm:text-[14px] sm:text-md font-archivo font-semibold px-6 sm:px-8 py-1 rounded-full border border-black text-black max-[640px]:px-4 max-[520px]:px-3 max-[480px]:px-2 max-[640px]:text-xs max-[480px]:py-0.5">
+                                            <div className="bg-[#FFD32B] text-[28px] max-sm:text-[14px] sm:text-md font-archivo font-semibold px-6 sm:px-8 py-1 rounded-full border border-black text-black max-[640px]:px-4 max-[520px]:px-3 max-[690px]:text-[18px] max-[740px]:text-[24px] max-[480px]:px-2 max-[640px]:text-xs max-[480px]:py-0.5">
                                                 {event.time}
                                             </div>
-                                            <p className="text-[28px] max-sm:text-[14px] font-archivo font-semibold text-black whitespace-nowrap truncate max-[640px]:text-xs max-[480px]:text-[11px]">
+                                            <p className="text-[28px] max-sm:text-[14px] font-archivo font-semibold text-black whitespace-nowrap truncate max-[690px]:text-[18px] max-[740px]:text-[24px] max-[640px]:text-xs max-[480px]:text-[11px]">
                                                 {event.label}
                                             </p>
                                         </div>
