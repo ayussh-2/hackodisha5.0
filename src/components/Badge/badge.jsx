@@ -245,8 +245,8 @@ const Badge = () => {
           </div>
         </div>
       )}
-
       <header className="relative mb-0 flex w-screen justify-center bg-[#bc82fe] py-6 sm:py-8">
+        <div className="absolute left-0 top-0 w-full h-1/2 bg-[#efe7f7] z-0" />
         <div className="absolute left-0 top-1/2 w-full -translate-y-1/2 border-t-[3px] border-black" />
         <div className="relative max-w-2xl rounded-2xl bg-white px-3 py-4 shadow-[4px_4px_0px_#000000,-3px_-4px_0px_#000000]">
           <div
