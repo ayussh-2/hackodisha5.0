@@ -14,7 +14,7 @@ function Bronze() {
                 />
                 <div className="absolute inset-0 flex flex-col items-center -left-14 top-3 md:-left-20 md:top-1 justify-center rotate-[-15deg] px-2">
                     <span className="text-black font-extrabold font-clash-display text-[8px] sm:text-[10px] md:text-base text-center leading-tight">
-                        CASH PRIZE <br /> WORTH
+                        TOTAL PRIZE <br /> WORTH
                     </span>
                     <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
                         ₹{prizeAmounts.bronze.amount}
@@ -32,7 +32,7 @@ function Bronze() {
                     />
                     <div className="absolute inset-0 flex flex-col items-center justify-center left-12 top-1 rotate-[-15deg] px-2">
                         <span className="text-black font-extrabold font-clash-display text-[8px] sm:text-[10px] md:text-base text-center leading-tight">
-                            CASH PRIZE <br /> WORTH
+                            TOTAL PRIZE <br /> WORTH
                         </span>
 
                         <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
@@ -78,7 +78,7 @@ function Bronze() {
                 </div>
 
                 <div className="text-center text-[#8D31EC] font-extrabold font-clash-display text-[20px] sm:text-2xl md:text-4xl leading-relaxed">
-                    Goodies , T-shirts , 2 PPIs and 5 Domains <br />
+                    Goodies , T-shirts , Cash ,2 PPIs and 5 Domains <br />
                     <div className="inline-flex items-center justify-center gap-2 ">
                         <span>&nbsp;</span>
                         <div className="transform rotate-[5deg] bg-white px-3 py-2 shadow-md border border-black md:border-white xl:border-black xl:shadow-md md:shadow-none flex items-center justify-center ">

@@ -48,6 +48,13 @@ const bronzeSponsorsData = [
         name: "Endless Domains",
         link: "https://endlessdomains.io/",
     },
+    {
+        id: "prepverse",
+        alt: "Prepverse",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752333765/Screenshot_2025-07-12_205041_l6ypy6.png",
+        name: "Prepverse",
+        link: "https://www.prepverse.xyz/",
+    },
 ];
 
 const trackSponsorsData = [

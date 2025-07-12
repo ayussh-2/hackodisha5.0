@@ -14,7 +14,7 @@ function Gold() {
                 />
                 <div className="absolute inset-0 flex flex-col items-center left-12 -top-0 sm:left-15 md:left-17 sm-top-1 justify-center rotate-[-16deg] px-2">
                     <span className="text-black font-extrabold font-clash-display text-[8px] sm:text-[10px] md:text-base text-center leading-tight">
-                        CASH PRIZE <br /> WORTH
+                        TOTAL PRIZE <br /> WORTH
                     </span>
 
                     <span className="text-[#FFD32B] font-extrabold font-clash-display text-xl sm:text-2xl md:text-3xl text-center  leading-tight [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]">
@@ -59,7 +59,7 @@ function Gold() {
                 </div>
 
                 <p className="text-center hidden md:block text-[#8D31EC] font-clash-display font-extrabold text-4xl xl:text-5xl leading-[130%] mb-10">
-                    Goodies , T-shirts ,<br />3 PPIs and 5 Domains
+                    Goodies , T-shirts, Cash ,<br />3 PPIs and 5 Domains
                 </p>
 
                 <div className="transform hidden md:block rotate-[-5deg] bg-white px-8 py-2 shadow-md border border-black">
@@ -68,7 +68,8 @@ function Gold() {
                     </span>
                 </div>
                 <div className="text-center md:hidden text-[#8D31EC] font-clash-display font-bold text-[20px] sm:text-2xl leading-relaxed">
-                    Goodies , T-shirts , 3 PPI Offers <br />
+                    Goodies , T-shirts , 3 PPI Offers, Cash
+                    <br />
                     <div className="inline-flex items-center justify-center font-clash-display gap-2 mt-2">
                         <span>& 5 Domains</span>
                         <div className="transform rotate-[5deg] bg-white px-2 py-1 shadow-md border border-black">
