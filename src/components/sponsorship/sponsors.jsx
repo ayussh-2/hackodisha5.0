@@ -60,7 +60,7 @@ const Sponsors = () => {
 
                 <SponsorGroup title="Gold" sponsors={sponsorsData.gold} />
                 <SponsorGroup title="Silver" sponsors={sponsorsData.silver} />
-                <SponsorGroup title="Bonze" sponsors={sponsorsData.bronze} />
+                <SponsorGroup title="Bronze" sponsors={sponsorsData.bronze} />
                 <SponsorGroup title="Track " sponsors={sponsorsData.track} />
             </div>
         </div>
