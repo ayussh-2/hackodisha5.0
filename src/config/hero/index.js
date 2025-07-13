@@ -9,7 +9,7 @@ export const HERO_ARROW_IMAGE =
 export const DISCORD_IMAGE =
     "https://res.cloudinary.com/du5qoczcn/image/upload/v1749667520/5883eb5eae1f47fad1608d0488577c57036af72d_kwi4yd.png";
 
-export const DISCORD_LINK = "https://discord.com/invite/ewun7cxkJh";
+export const DISCORD_LINK = "https://discord.gg/R4t5HwT3";
 
 export const navItems = [
     {
