@@ -10,7 +10,7 @@ const Judges = () => {
     const judges = [
         {
             name: "Alejandro Acuna Rodriguez",
-            title: "Brooklyn , United States\nHead of StableCoins at CrossMint",
+            title: "Brooklyn, United States - Head of StableCoins at CrossMint",
             imageUrl:
                 "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531154/j1_qrdwt2.jpg",
             socialLinks: {
@@ -23,7 +23,7 @@ const Judges = () => {
         {
             name: "Sidharth Raja",
 
-            title: " San Francisco\n United States\n Senior Software Engineer (Google)\n -   Software Engineer Ex-Uber",
+            title: "San Francisco, United States - Senior Software Engineer (Google)\n -   Software Engineer Ex-Uber",
             imageUrl:
                 "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531780/j2_k3pdp2.jpg",
             socialLinks: {
