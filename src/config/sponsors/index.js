@@ -57,6 +57,16 @@ const bronzeSponsorsData = [
     },
 ];
 
+const platinumSponsorsData = [
+    {
+        id: "BlockDag",
+        alt: "BlockDag",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752697797/809_r0dfuo.png",
+        name: "BlockDag",
+        link: "https://blockdag.network/",
+    },
+];
+
 const trackSponsorsData = [
     {
         id: "EDCRF",
@@ -133,6 +143,7 @@ const trackSponsorsData = [
 ];
 
 export const sponsorsData = {
+    platinum: platinumSponsorsData,
     gold: goldSponsorsData,
     silver: silverSponsorsData,
     bronze: bronzeSponsorsData,

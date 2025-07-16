@@ -57,11 +57,14 @@ const Sponsors = () => {
             <div className="bg-[#EFE7F7] px-8 relative overflow-hidden mt-20">
                 <RotatingDollarIcon />
                 <RotatingDollarBagIcon />
-
+                <SponsorGroup
+                    title="Platinum"
+                    sponsors={sponsorsData.platinum}
+                />
                 <SponsorGroup title="Gold" sponsors={sponsorsData.gold} />
                 <SponsorGroup title="Silver" sponsors={sponsorsData.silver} />
                 <SponsorGroup title="Bronze" sponsors={sponsorsData.bronze} />
-                <SponsorGroup title="Track " sponsors={sponsorsData.track} />
+                <SponsorGroup title="Track" sponsors={sponsorsData.track} />
             </div>
         </div>
     );

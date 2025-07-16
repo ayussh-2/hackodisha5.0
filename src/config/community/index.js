@@ -161,6 +161,54 @@ const communityPartners = [
         image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751526191/Frame_1430102940_cehah0.png",
         name: "GDG RCET Bhilai",
     },
+    {
+        id: "community28",
+        alt: "Community Partner 28",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698160/Frame_1430103009_rtwceo.png",
+        name: "Community Partner 28",
+    },
+    {
+        id: "community29",
+        alt: "Community Partner 29",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698156/Frame_1430103006_qcmjxj.png",
+        name: "Community Partner 29",
+    },
+    {
+        id: "community30",
+        alt: "Community Partner 30",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698157/Frame_1430103007_jrn5t1.png",
+        name: "Community Partner 30",
+    },
+    {
+        id: "community31",
+        alt: "Community Partner 31",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698156/Frame_1430103008_lchbf4.png",
+        name: "Community Partner 31",
+    },
+    {
+        id: "community32",
+        alt: "Community Partner 32",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698155/Frame_1430103005_qolswl.png",
+        name: "Community Partner 32",
+    },
+    {
+        id: "community33",
+        alt: "Community Partner 33",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698155/Frame_1430103004_uejkbv.png",
+        name: "Community Partner 33",
+    },
+    {
+        id: "community34",
+        alt: "Community Partner 34",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698155/Frame_1430103002_l9tlrj.png",
+        name: "Community Partner 34",
+    },
+    {
+        id: "community35",
+        alt: "Community Partner 35",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752698155/Frame_1430103003_a7tn7c.png",
+        name: "Community Partner 35",
+    },
 ];
 
 export { communityPartners };
