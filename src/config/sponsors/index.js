@@ -68,6 +68,13 @@ const platinumSponsorsData = [
 ];
 
 const trackSponsorsData = [
+    { 
+        id: "verbwire",
+        alt: "VERBWIRE",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1752747001/437_ts3upr.png",
+        name: "VERBWIRE",
+        link: "https://www.verbwire.com/"
+    },
     {
         id: "EDCRF",
         alt: "code crafters",
