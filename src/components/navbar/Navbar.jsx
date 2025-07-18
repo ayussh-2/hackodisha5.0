@@ -50,7 +50,14 @@ export function Navbar() {
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative font-archivo font-semibold  text-black hover:text-[#7920D0] "
+                                className={`relative font-archivo font-semibold ${
+                                    item.type === "special"
+                                        ? " text-[#7920D0] hover:text-[#000]"
+                                        : " text-black hover:text-[#7920D0]"
+                                } hover:text-primary transition-colors duration-300`}
+                                {...(item.type === "special" && {
+                                    target: "_blank",
+                                })}
                             >
                                 <span className="block">{item.name}</span>
                             </a>

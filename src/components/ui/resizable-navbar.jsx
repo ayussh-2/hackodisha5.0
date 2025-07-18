@@ -63,10 +63,10 @@ export const NavBody = ({ children, className, visible }) => {
                 damping: 50,
             }}
             style={{
-                minWidth: "1000px",
+                minWidth: "1100px",
             }}
             className={cn(
-                "relative z-[60] mx-auto hidden w-full lg:max-w-4xl xl:max-w-7xl flex-row items-center justify-between self-start rounded-3xl border-black border-1 bg-white px-10 py-4 lg:flex ",
+                "relative z-[60] mx-auto hidden w-full lmd:max-w-4xl xl:max-w-7xl flex-row items-center justify-between self-start rounded-3xl border-black border-1 bg-white px-10 py-4 lmd:flex ",
                 visible && "bg-white/80",
                 className
             )}
@@ -91,9 +91,16 @@ export const NavItems = ({ items, className, onItemClick }) => {
                 <a
                     onMouseEnter={() => setHovered(idx)}
                     onClick={onItemClick}
-                    className=" relative px-4 py-2 text-black  text-base not-italic font-semibold leading-none "
+                    className={` relative px-4 py-2  text-base not-italic font-semibold leading-none ${
+                        item.type === "special"
+                            ? " text-[#7920D0] hover:underline underline-offset-4"
+                            : " text-black hover:text-[#7920D0]"
+                    }`}
                     key={`link-${idx}`}
                     href={item.link}
+                    {...(item.type === "special" && {
+                        target: "_blank",
+                    })}
                 >
                     {/* {hovered === idx && (
                         <motion.div
@@ -122,7 +129,6 @@ export const MobileNav = ({ children, className, visible }) => {
                 // paddingRight: visible ? "12px" : "12px",
                 // paddingLeft: visible ? "12px" : "12px",
                 // borderRadius: visible ? "4px" : "12px",
-                y: visible ? 20 : 0,
             }}
             transition={{
                 type: "spring",
@@ -130,7 +136,7 @@ export const MobileNav = ({ children, className, visible }) => {
                 damping: 50,
             }}
             className={cn(
-                "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] rounded-2xl flex-col items-center justify-between bg-white border border-black px-3 py-2 lg:hidden",
+                "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] rounded-2xl flex-col items-center justify-between bg-white border border-black px-3 py-2 lmd:hidden",
                 // visible && "bg-white/80 dark:bg-neutral-950/80",
                 className
             )}
