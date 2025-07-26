@@ -20,11 +20,11 @@ export const navItems = [
         name: "About us",
         link: "/#about",
     },
-    {
-        name: "Score your resume",
-        link: "https://app.prepverse.xyz/login?ref=PGKXSX",
-        type: "special",
-    },
+    // {
+    //     name: "Score your resume",
+    //     link: "https://app.prepverse.xyz/login?ref=PGKXSX",
+    //     type: "special",
+    // },
     {
         name: "Contact us",
         link: "mailto:webwiz.nitrkl@gmail.com",

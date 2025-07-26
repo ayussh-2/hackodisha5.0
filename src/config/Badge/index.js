@@ -7,7 +7,7 @@ export const share =
 export const hacklogo =
     "https://res.cloudinary.com/dmvdbpyqk/image/upload/e_background_removal/f_png/v1752082724/Group_jp8yv2.png";
 export const namespace =
-    "https://res.cloudinary.com/dtis6vqc5/image/upload/v1751949957/namespace_wwzk3m.svg";
+    "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1753506909/Frame_80_dtwvgz.png";
 export const exclamation =
     "https://res.cloudinary.com/dtis6vqc5/image/upload/v1751949956/exclamation_bq45tl.svg";
 export const default_avatar =

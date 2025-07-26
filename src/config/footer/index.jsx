@@ -52,15 +52,15 @@ export const socialLinks = [
         target: "div",
     },
     {
-        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751638692/Group_1430102903_joizcr.png",
-        alt: "The NAMESPACE Community Instagram",
-        href: "https://www.instagram.com/namespacecomm/",
+        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1753508322/Group_1430102908_gywqd3.svg",
+        alt: "NAMESPACE Instagram",
+        href: "https://www.instagram.com/namespaceworld/",
         className: " !h-6 !w-auto md:!h-12 hover:scale-115",
     },
     {
-        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751639893/Group_1430102907_gcwil1.svg",
-        alt: "The NAMESPACE Community LinkedIn",
-        href: "https://www.linkedin.com/company/namespacecomm/",
+        src: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1753508317/Group_1430102907_nqvcwv.svg",
+        alt: "NAMESPACE LinkedIn",
+        href: "https://www.linkedin.com/company/namespaceworld/",
         className: " !h-6 !w-auto md:!h-12 hover:scale-110",
     },
     {
@@ -77,7 +77,7 @@ export const sponsorCTA = {
 export const footerAssets = {
     logo: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1750832596/Frame_lyzhrl.svg",
     presents:
-        "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1751094661/Frame_61_ha3iwx.png",
+        "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1753506874/Frame_71_w2p95z.png",
     circle: "https://res.cloudinary.com/dtztahzfk/image/upload/v1749850891/wmain_d21xmo.png",
     baseCloudinaryPath:
         "https://res.cloudinary.com/dtztahzfk/image/upload/v1749845049/",

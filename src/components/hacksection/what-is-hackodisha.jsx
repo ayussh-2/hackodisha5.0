@@ -1,6 +1,12 @@
-import { Boom, Pencil, Question } from "@/config/whatisho";
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+
+import Image from 'next/image';
+
+import {
+  Boom,
+  Pencil,
+  Question,
+} from '@/config/whatisho';
 
 function WhatIsHackOdisha() {
     return (
@@ -74,7 +80,7 @@ function WhatIsHackOdisha() {
                             organized by
                             <span className="text-[#7920D0]">
                                 {" "}
-                                Webwiz, Nit Rourkela & The NAMESPACE Community
+                                Webwiz, Nit Rourkela & NAMESPACE&nbsp;
                             </span>
                             — an event dedicated to fostering community
                             collaboration. With an impressive turnout of over

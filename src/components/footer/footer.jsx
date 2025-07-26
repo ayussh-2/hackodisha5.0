@@ -1,14 +1,15 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+
 import {
-    footerLinks,
-    socialLinks,
-    sponsorCTA,
-    footerAssets,
-} from "@/config/footer";
-import { shared } from "@/config/shared";
+  footerAssets,
+  footerLinks,
+  socialLinks,
+  sponsorCTA,
+} from '@/config/footer';
+import { shared } from '@/config/shared';
 
 export default function Footer() {
     return (
@@ -99,7 +100,7 @@ export default function Footer() {
                         <Link href={shared.NAMESPACE.website} target="_blank">
                             <Image
                                 src={footerAssets.presents}
-                                alt="The NAMESPACE Community Community"
+                                alt="The NAMESPACE "
                                 width={185}
                                 height={175}
                                 className="hover:scale-105 transition-transform duration-300 hover:cursor-pointer"
@@ -125,11 +126,10 @@ export default function Footer() {
                     Powered by <span className="text-[#BC82FE]">Webwiz</span>,
                     NIT Rourkela &&nbsp;
                     <Link href={shared.NAMESPACE.website} target="_blank">
-                        The
                         <span className="text-[#BC82FE]">
                             &nbsp;NAMESPACE&nbsp;
                         </span>
-                        Community.
+                        .
                     </Link>
                 </span>
             </div>

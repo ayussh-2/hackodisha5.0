@@ -1,23 +1,33 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import { toPng } from "html-to-image";
-import ReactCrop, { centerCrop, makeAspectCrop } from "react-image-crop";
-import "react-image-crop/dist/ReactCrop.css";
+import 'react-image-crop/dist/ReactCrop.css';
+
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+
+import { toPng } from 'html-to-image';
+import Image from 'next/image';
+import toast from 'react-hot-toast';
+import ReactCrop, {
+  centerCrop,
+  makeAspectCrop,
+} from 'react-image-crop';
 
 import {
-    download,
-    upload,
-    share,
-    hacklogo,
-    win_icon,
-    default_avatar,
-    namespace,
-    exclamation,
-} from "@/config/Badge";
-import SectionTitle from "../shared/section-title";
-import toast from "react-hot-toast";
+  default_avatar,
+  download,
+  exclamation,
+  hacklogo,
+  namespace,
+  share,
+  upload,
+  win_icon,
+} from '@/config/Badge';
+
+import SectionTitle from '../shared/section-title';
 
 function getCroppedImg(image, crop, targetWidth = 512) {
     const canvas = document.createElement("canvas");
@@ -392,8 +402,8 @@ const Badge = () => {
                                     height={40}
                                 />
                                 <Image
-                                    className="h-8 w-auto object-contain sm:h-10"
-                                    alt="Namespace Community Logo"
+                                    className="h-7 w-auto object-contain sm:h-8"
+                                    alt="Namespace Logo"
                                     src={namespace}
                                     width={150}
                                     height={40}
