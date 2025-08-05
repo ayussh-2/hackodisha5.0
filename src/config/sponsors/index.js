@@ -72,6 +72,13 @@ const platinumSponsorsData = [
         name: "Akash Network",
         link: "https://akash.network/",
     },
+    {
+        id: "Orkes",
+        alt: "Orkes",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1754415491/812_pzxljc.jpg",
+        name: "Orkes",
+        link: "https://www.orkes.io/",
+    },
 ];
 
 const trackSponsorsData = [

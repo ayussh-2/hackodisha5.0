@@ -59,4 +59,30 @@ export const judges = [
             github: "https://github.com/ag-chirag",
         },
     },
+    {
+        name: "Purvesh Gupta",
+        title: "Software Developer Intern @NIC, MeitY, Govt. of India and Founder @TechNexus Community, National Informatics Centre",
+        imageUrl:
+            "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1754415884/image_llkd4v.jpg",
+        description: "Software Developer Intern @NIC, MeitY, Govt. of India and Founder @TechNexus Community, National Informatics Centre",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/purveshgupta/",
+            x: "",
+            instagram: "",
+            github: "",
+        },
+    },
+    {
+        name: "Jeet Mehta",
+        title: "Senior Engineer at Netflix | Ex-Amazon | Ad Tech Expert | Hackathon Judge & Mentor",
+        imageUrl:
+            "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1754415174/image_mdwg7i.jpg",
+        description: "Senior Engineer at Netflix | Ex-Amazon | Ad Tech Expert | Hackathon Judge & Mentor",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/jeetm35/",
+            x: "",
+            instagram: "",
+            github: "",
+        },
+    },
 ];
