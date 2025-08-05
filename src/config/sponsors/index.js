@@ -65,6 +65,13 @@ const platinumSponsorsData = [
         name: "BlockDag",
         link: "https://blockdag.network/",
     },
+     {
+        id: "Akash Network",
+        alt: "Akash Network",
+        image: "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1754413204/akash-sign-red_gmmvyy.png",
+        name: "Akash Network",
+        link: "https://akash.network/",
+    },
 ];
 
 const trackSponsorsData = [
