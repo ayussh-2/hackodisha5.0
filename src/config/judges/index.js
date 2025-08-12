@@ -84,5 +84,17 @@ export const judges = [
             instagram: "",
             github: "",
         },
+    },{
+        name: "Fenil Modi",
+        title: "Akash navigator, Akash Network",
+        imageUrl:
+            "https://res.cloudinary.com/dmvdbpyqk/image/upload/v1755013644/image_hqlbon.jpg",
+        description: "Akash navigator, Akash Network",
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/fenilmodi-li/",
+            x: "",
+            instagram: "",
+            github: "",
+        },
     },
 ];
