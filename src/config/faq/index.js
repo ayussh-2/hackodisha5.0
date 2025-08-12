@@ -32,7 +32,7 @@ export const faqItems = [
     {
       question: "Can I participate remotely?",
       answer:
-        "Yes, we offer both in-person and remote participation options to accommodate everyone.",
+        "Yes, you can perform remotely, hence making the hacking hours comfortable",
     },
     {
       question: "What technologies can I use?",
