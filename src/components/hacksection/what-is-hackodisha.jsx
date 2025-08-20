@@ -80,7 +80,7 @@ function WhatIsHackOdisha() {
                             organized by
                             <span className="text-[#7920D0]">
                                 {" "}
-                                Webwiz, Nit Rourkela & NAMESPACE&nbsp;
+                                Webwiz, NIT Rourkela & NAMESPACE&nbsp;
                             </span>
                             — an event dedicated to fostering community
                             collaboration. With an impressive turnout of over
