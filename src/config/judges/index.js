@@ -1,16 +1,16 @@
 export const judges = [
-    {
-        name: "Alejandro Acuna Rodriguez",
-        title: "Brooklyn, United States - Head of StableCoins at CrossMint",
-        imageUrl:
-            "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531154/j1_qrdwt2.jpg",
-        socialLinks: {
-            x: "",
-            instagram: "",
-            linkedin:
-                "https://www.linkedin.com/in/alexacu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BuyBDWM9pSNW3Vi1nO7IBfQ%3D%3D",
-        },
-    },
+    // {
+    //     name: "Alejandro Acuna Rodriguez",
+    //     title: "Brooklyn, United States - Head of StableCoins at CrossMint",
+    //     imageUrl:
+    //         "https://res.cloudinary.com/dpidvvdgr/image/upload/v1751531154/j1_qrdwt2.jpg",
+    //     socialLinks: {
+    //         x: "",
+    //         instagram: "",
+    //         linkedin:
+    //             "https://www.linkedin.com/in/alexacu?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BuyBDWM9pSNW3Vi1nO7IBfQ%3D%3D",
+    //     },
+    // },
     {
         name: "Sidharth Raja",
 
