@@ -32,7 +32,7 @@ export const faqItems = [
     {
       question: "Can I participate remotely?",
       answer:
-        "Yes, you can perform remotely, hence making the hacking hours comfortable",
+        "Yes! HackOdisha 5.0 will be conducted online for all participants. However, students of IIT Gandhinagar will be required to participate offline at the IIT Gandhinagar campus",
     },
     {
       question: "What technologies can I use?",
@@ -48,5 +48,17 @@ export const faqItems = [
       question: "How can I stay updated?",
       answer:
         "Follow us on our social media channels and subscribe to our newsletter for the latest updates and announcements.",
+    },{
+      question: "How many members can form a team?",
+      answer:
+        "A team can have up to 5 members.",
+    },{
+      question: "Is HackOdisha 5.0 an open-theme hackathon, or will there be problem statements?",
+      answer:
+        `You have two options:
+Work on an open-ended theme of your choice.
+Select from the problem statements provided by our track sponsors, which you can find in the Devfolio - Prizes section.
+You're free to choose either option based on your preference.`
     },
+    
   ];
